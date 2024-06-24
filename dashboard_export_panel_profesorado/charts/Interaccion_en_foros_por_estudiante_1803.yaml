@@ -1,0 +1,110 @@
+slice_name: "Interacci\xF3n en foros por estudiante"
+description: "Lista los estudiantes del curso que han tenido interacciones en los\
+  \ foros y para cada uno las m\xE9tricas correspondientes registradas."
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 161__table
+  viz_type: table
+  slice_id: 1803
+  query_mode: aggregate
+  groupby:
+  - expressionType: SQL
+    label: Nombre de Usuario
+    sqlExpression: username
+    datasourceWarning: false
+  - expressionType: SQL
+    label: Nombre
+    sqlExpression: name
+    datasourceWarning: false
+  - expressionType: SQL
+    label: Email
+    sqlExpression: email
+    datasourceWarning: false
+  - expressionType: SQL
+    label: "Modalidad de inscripci\xF3n"
+    sqlExpression: enrollment_mode
+    datasourceWarning: false
+  - expressionType: SQL
+    label: "Estado de aprobaci\xF3n"
+    sqlExpression: approving_state
+    datasourceWarning: false
+  - expressionType: SQL
+    label: "Estado de Inscripci\xF3n"
+    sqlExpression: enrollment_status
+    datasourceWarning: false
+  - expressionType: SQL
+    label: "Tipo interacci\xF3n"
+    sqlExpression: action_verb
+    datasourceWarning: false
+  - expressionType: SQL
+    label: Objeto
+    sqlExpression: object
+    datasourceWarning: false
+  time_grain_sqla: P1D
+  temporal_columns_lookup: {}
+  metrics:
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: interactions_count
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 2942
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UInt64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Interacciones
+    optionName: metric_dljb3trj42_cdjaxpc9mdt
+    sqlExpression: null
+  all_columns:
+  - object
+  - course_key
+  - interactions_count
+  - course_name
+  - course_run
+  - approving_state
+  - enrollment_mode
+  - enrollment_status
+  - course_grade
+  - grade_bucket
+  - external_user_id
+  - username
+  - name
+  - email
+  percent_metrics: []
+  adhoc_filters: []
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  include_search: true
+  show_cell_bars: false
+  color_pn: false
+  allow_rearrange_columns: true
+  conditional_formatting:
+  - colorScheme: '#ACE1C4'
+    column: Interacciones
+    operator: "\u2265"
+    targetValue: 0
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: c5d95dc9-65e1-4e07-8fb5-b062b75d3e5d
+version: 1.0.0
+dataset_uuid: b2075569-e10e-4937-8a87-b7824ece7369

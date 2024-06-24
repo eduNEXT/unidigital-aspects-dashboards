@@ -1,0 +1,69 @@
+slice_name: "Estudiantes con actividad en los \xFAltimos 7 d\xEDas"
+description: "Conteo de los estudiantes que han tenido alg\xFAn registro de actividad\
+  \ en los \xFAltimos 7 d\xEDas."
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 157__table
+  viz_type: big_number_total
+  slice_id: 1773
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: actor_id
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 2830
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "N\xFAmero de Aprendices"
+    optionName: metric_xpyhmdna8a_d4bv1mgv569
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_135q0xueo5a_kl5d2u516qk
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: emission_time
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_m0uyrg9gp_t94ycbvdto
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: "toDateTime(emission_time) > now() - INTERVAL 7 DAY\r\n"
+    subject: null
+  header_font_size: 0.5
+  subheader_font_size: 0.3
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: eaa73b5d-25ec-4149-8d19-91947fb6a4da
+version: 1.0.0
+dataset_uuid: 3c19b952-cc03-49c8-ac40-3ae1ccd9d337

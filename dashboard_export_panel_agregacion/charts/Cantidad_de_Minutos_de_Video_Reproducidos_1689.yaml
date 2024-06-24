@@ -1,0 +1,37 @@
+slice_name: "Cantidad de Minutos de V\xEDdeo Reproducidos"
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 158__table
+  viz_type: big_number_total
+  slice_id: 1689
+  metric:
+    aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: "N\xFAmero de Minutos Reproducidos"
+    optionName: metric_fa2yyy7p0ct_6xvicjeuhzu
+    sqlExpression: SUM(video_position)/60
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  header_font_size: 0.5
+  subheader_font_size: 0.3
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: 0f57e3e0-2ec4-49cc-b36b-554c92bfb538
+version: 1.0.0
+dataset_uuid: e158f1c6-bbef-4ddb-826c-bf9e2aa7d838

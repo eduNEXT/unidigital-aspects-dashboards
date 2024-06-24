@@ -1,0 +1,256 @@
+table_name: forum_summary
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: reporting
+sql: "SELECT \r\n    fs.object AS object,\r\n    fs.discussion_id AS discussion_id,\r\
+  \n    fs.course_key AS course_key,\r\n    fs.interactions_count AS interactions_count,\r\
+  \n    fss.course_name AS course_name,\r\n    fss.course_run AS course_run,\r\n \
+  \   fss.approving_state AS approving_state,\r\n    fss.enrollment_mode AS enrollment_mode,\r\
+  \n    fss.enrollment_status AS enrollment_status,\r\n    fss.course_grade AS course_grade,\r\
+  \n    fss.grade_bucket AS grade_bucket,\r\n    dup.external_user_id AS external_user_id,\r\
+  \n    dup.username AS username,\r\n    dup.name AS name,\r\n    dup.email AS email,\r\
+  \n    splitByString('/', fs.verb_id)[-1] AS action_verb,\r\n    COUNTIf(fs.object\
+  \ = 'comments' AND splitByString('/', fs.verb_id)[-1] = 'posted') AS posted_comments_count\r\
+  \nFROM \r\n    (SELECT \r\n        splitByString('/', object_id)[-2] AS object,\r\
+  \n        splitByString('/', object_id)[-1] AS discussion_id,\r\n        course_key,\
+  \ \r\n        COUNT(*) AS interactions_count,\r\n        MAX(verb_id) AS verb_id\r\
+  \n     FROM `reporting`.`fact_forum_interactions`\r\n     WHERE object_id IS NOT\
+  \ NULL\r\n     GROUP BY splitByString('/', object_id)[-2], splitByString('/', object_id)[-1],\
+  \ course_key) AS fs\r\nLEFT JOIN `reporting`.`fact_student_status` fss ON fs.course_key\
+  \ = fss.course_key\r\nLEFT JOIN `reporting`.`dim_user_pii` dup ON fss.actor_id =\
+  \ toString(dup.external_user_id)\r\nWHERE NOT (dup.username = '' AND dup.name =\
+  \ '' AND dup.email = '')\r\nGROUP BY \r\n    fs.object, \r\n    fs.discussion_id,\
+  \ \r\n    fs.course_key, \r\n    fs.interactions_count, \r\n    fss.course_name,\
+  \ \r\n    fss.course_run, \r\n    fss.approving_state, \r\n    fss.enrollment_mode,\
+  \ \r\n    fss.enrollment_status, \r\n    fss.course_grade, \r\n    fss.grade_bucket,\
+  \ \r\n    dup.external_user_id, \r\n    dup.username, \r\n    dup.name, \r\n   \
+  \ dup.email, \r\n    action_verb;\r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: b2075569-e10e-4937-8a87-b7824ece7369
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: course_grade
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: posted_comments_count
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: interactions_count
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: external_user_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UUID
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: approving_state
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: grade_bucket
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: action_verb
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: enrollment_status
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: discussion_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_run
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: enrollment_mode
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: username
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: email
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: object
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

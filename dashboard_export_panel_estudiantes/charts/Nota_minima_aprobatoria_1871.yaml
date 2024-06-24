@@ -1,0 +1,49 @@
+slice_name: "Nota m\xEDnima aprobatoria"
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 212__table
+  viz_type: big_number_total
+  slice_id: 1871
+  metric:
+    aggregate: AVG
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-26T16:29:24'
+      column_name: lowest_passing_grade
+      created_on: '2024-04-26T16:29:24'
+      description: null
+      expression: null
+      extra: '{"warning_markdown":null}'
+      filterable: true
+      groupby: true
+      id: 4005
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: NEWDECIMAL
+      type_generic: null
+      uuid: dd0cd6c2-3410-425e-81b0-8bbc466a0544
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: AVG(lowest_passing_grade)
+    optionName: metric_y6oiejrvub_c977u8at5p
+    sqlExpression: null
+  adhoc_filters: []
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: ',.1%'
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 241
+query_context: null
+cache_timeout: null
+uuid: 4fae28f0-1bb2-4d1c-b886-4f43ae13e827
+version: 1.0.0
+dataset_uuid: 9d46508b-59f0-4212-a055-ea40f5249ec4

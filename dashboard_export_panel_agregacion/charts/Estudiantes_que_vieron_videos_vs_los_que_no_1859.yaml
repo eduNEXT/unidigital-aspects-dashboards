@@ -1,0 +1,71 @@
+slice_name: Estudiantes que vieron videos vs los que no
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 209__table
+  viz_type: pie
+  slice_id: 1859
+  groupby:
+  - expressionType: SQL
+    label: watched_video
+    sqlExpression: "CASE \n    WHEN watched_video THEN 'S\xED'\n    ELSE 'No'\nEND\
+      \ \n"
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-25T23:21:01'
+      column_name: actor_id
+      created_on: '2024-04-25T23:21:01'
+      description: null
+      expression: ''
+      extra: null
+      filterable: true
+      groupby: true
+      id: 3879
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      uuid: 3aae1e66-8dee-439d-87dd-9349d646c6ca
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: COUNT_DISTINCT(actor_id)
+    optionName: metric_x2h5sdj0d8_hhjb8klt24s
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  row_limit: 100
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: 5
+  show_legend: false
+  legendType: scroll
+  legendOrientation: top
+  legendMargin: null
+  label_type: key_value_percent
+  number_format: SMART_NUMBER
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  show_total: true
+  outerRadius: 70
+  donut: true
+  innerRadius: 55
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: aa397eee-7c9e-49d5-867a-7aaf9b79ecef
+version: 1.0.0
+dataset_uuid: 72f4b99b-fd71-4114-9277-683b2596b055

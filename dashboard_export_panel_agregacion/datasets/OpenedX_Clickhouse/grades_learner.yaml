@@ -1,0 +1,290 @@
+table_name: grades_learner
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: reporting
+sql: "with\r\n    most_recent_user_profile as (\r\n        select\r\n            user_id,\r\
+  \n            name,\r\n            email,\r\n            language,\r\n         \
+  \   toUInt16OrZero(year_of_birth) as year_of_birth,\r\n            gender,\r\n \
+  \           level_of_education,\r\n            country,\r\n            ROW_NUMBER()\
+  \ over (\r\n                partition by user_id order by id DESC, time_last_dumped\
+  \ DESC\r\n            ) as rn\r\n        from event_sink.user_profile\r\n    ),\r\
+  \n    user_profile_with_age as (\r\n        select \r\n            mrup.user_id\
+  \ as user_id, \r\n            ex.external_user_id, \r\n            ex.username,\
+  \ \r\n            mrup.name, \r\n            mrup.email, \r\n            mrup.language,\r\
+  \n            mrup.year_of_birth,\r\n            mrup.gender,\r\n            mrup.level_of_education,\r\
+  \n            mrup.country,\r\n            toYear(now()) - mrup.year_of_birth as\
+  \ age\r\n        from event_sink.external_id ex\r\n        left outer join most_recent_user_profile\
+  \ mrup on mrup.user_id = ex.user_id\r\n        where mrup.rn = 1\r\n    )\r\nselect\
+  \ \r\n    fss.org,\r\n    fss.course_key,\r\n    fss.actor_id,\r\n    fss.course_name,\r\
+  \n    fss.course_run,\r\n    fss.approving_state,\r\n    fss.enrollment_mode,\r\n\
+  \    fss.enrollment_status,\r\n    fss.course_grade,\r\n    fss.grade_bucket,\r\n\
+  \    upa.external_user_id,\r\n    upa.username,\r\n    upa.name,\r\n    upa.email,\r\
+  \n    upa.language,\r\n    upa.year_of_birth,\r\n    upa.gender,\r\n    upa.level_of_education,\r\
+  \n    upa.country,\r\n    upa.age\r\nfrom \r\n    reporting.fact_student_status\
+  \ fss\r\nleft outer join\r\n    user_profile_with_age upa on toString(upa.external_user_id)\
+  \ = fss.actor_id\r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: bb2b2e72-03bb-430d-8981-948e2ca50b51
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: upa.username
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: upa.email
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: upa.name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: year_of_birth
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt16
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: age
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Int32
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_grade
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: external_user_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UUID
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: level_of_education
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: approving_state
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: grade_bucket
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: actor_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: enrollment_status
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_run
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: enrollment_mode
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: language
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: country
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: gender
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: org
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

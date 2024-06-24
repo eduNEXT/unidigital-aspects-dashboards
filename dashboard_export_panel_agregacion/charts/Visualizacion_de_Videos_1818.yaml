@@ -1,0 +1,84 @@
+slice_name: "Visualizaci\xF3n de V\xEDdeos"
+description: "Evoluci\xF3n de la visualizaci\xF3n registrada en los v\xEDdeos."
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 160__table
+  viz_type: echarts_timeseries_line
+  slice_id: 1818
+  x_axis: emission_time
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-17T18:42:34'
+      column_name: event_id
+      created_on: '2024-04-17T18:42:33'
+      description: null
+      expression: ''
+      extra: '{"warning_markdown":null}'
+      filterable: true
+      groupby: true
+      id: 2908
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: UUID
+      type_generic: 1
+      uuid: de5fa3d6-8707-478c-bc4d-1400e5cd0c0b
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Vistas
+    optionName: metric_y8jr0lvhysd_1a2zy52lwyp
+    sqlExpression: null
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  order_desc: true
+  row_limit: 1000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerSize: 6
+  zoomable: true
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: 4c254f91-a481-46b1-b099-59baed002369
+version: 1.0.0
+dataset_uuid: 810bf917-c2a3-42e1-8c80-4893c94a177c

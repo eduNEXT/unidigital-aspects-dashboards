@@ -1,0 +1,102 @@
+slice_name: "# de estudiantes que han trabajado cada secci\xF3n"
+description: "Lista las secciones del curso en orden y para cada secci\xF3n presenta\
+  \ los indicadores de actividad de los estudiantes."
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 196__table
+  viz_type: table
+  slice_id: 1846
+  query_mode: aggregate
+  groupby:
+  - section_with_name
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    visited_on: true
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      changed_on: '2024-05-16T04:06:00'
+      column_name: actor_id
+      created_on: '2024-04-19T14:17:47'
+      description: null
+      expression: ''
+      extra: '{"warning_markdown":null}'
+      filterable: true
+      groupby: true
+      id: 3464
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      uuid: 74d7223b-47b8-4d75-afbd-a25eb249f1b2
+      verbose_name: Actor Id
+    aggregate: COUNT_DISTINCT
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: '# estudiantes con actividad'
+    optionName: metric_3wp3g0gckdp_mh7rx4brc8
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      changed_on: '2024-05-16T04:06:00'
+      column_name: block_id
+      created_on: '2024-04-19T14:17:47'
+      description: null
+      expression: ''
+      extra: '{"warning_markdown":null}'
+      filterable: true
+      groupby: true
+      id: 3466
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      uuid: 12979e7c-9d19-4e89-b6ee-cf5e756027ab
+      verbose_name: Block Id
+    aggregate: COUNT_DISTINCT
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: '# componentes'
+    optionName: metric_bw4xvzrrixs_xc130do2nob
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: visited_on
+  timeseries_limit_metric: null
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: false
+  table_timestamp_format: smart_date
+  include_search: true
+  show_cell_bars: false
+  color_pn: false
+  allow_rearrange_columns: true
+  conditional_formatting:
+  - column: '# estudiantes con actividad'
+    colorScheme: '#ACE1C4'
+    operator: "\u2265"
+    targetValue: 0
+  - column: '# componentes'
+    colorScheme: '#FDE380'
+    operator: '>'
+    targetValue: 0
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: 25d2b206-0fc8-4af4-9047-a7c7d826c064
+version: 1.0.0
+dataset_uuid: 1b1cbf0a-1193-4251-ad52-724c2f0190ae

@@ -1,0 +1,258 @@
+table_name: problem_results_learner
+main_dttm_col: emission_time
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: reporting
+sql: "WITH problem_responses AS (\r\n    WITH problem_responses_base AS (\r\n    \
+  \    SELECT *\r\n        FROM reporting.fact_problem_responses\r\n        WHERE\
+  \ 1=1\r\n        {% if filter_values('org') != [] %}\r\n            AND org IN {{\
+  \ filter_values('org') | where_in }}\r\n        {% endif %}\r\n        {% if filter_values('course_name')\
+  \ != [] %}\r\n            AND course_key IN (\r\n                SELECT course_key\r\
+  \n                FROM event_sink.course_names\r\n                WHERE course_name\
+  \ IN {{ filter_values('course_name') | where_in }}\r\n            )\r\n        {%\
+  \ endif %}\r\n    )\r\n    SELECT\r\n        emission_time,\r\n        org,\r\n\
+  \        course_key,\r\n        course_name,\r\n        course_run,\r\n        problem_id,\r\
+  \n        problem_name,\r\n        problem_name_with_location,\r\n        actor_id,\r\
+  \n        attempts,\r\n        success,\r\n        responses\r\n    FROM\r\n   \
+  \     problem_responses_base\r\n),\r\nextended_blocks AS (\r\n    SELECT\r\n   \
+  \     org AS extended_org,\r\n        course_key AS extended_course_key,\r\n   \
+  \     course_name AS extended_course_name,\r\n        course_run AS extended_course_run,\r\
+  \n        block_id AS extended_block_id,\r\n        block_name AS extended_block_name,\r\
+  \n        CAST(splitByChar(':', section_number)[1] AS Int32) AS section_location,\r\
+  \n        CAST(splitByChar(':', section_number)[2] AS Int32) AS subsection_location,\r\
+  \n        CAST(splitByChar(':', section_number)[3] AS Int32) AS block_location,\r\
+  \n        graded AS extended_graded,\r\n        block_type AS extended_block_type,\r\
+  \n        section_with_name AS extended_section_with_name,\r\n        subsection_with_name\
+  \ AS extended_subsection_with_name\r\n    FROM\r\n        reporting.dim_course_blocks_extended\r\
+  \n    WHERE\r\n        block_type = 'problem'\r\n        AND section_with_name <>\
+  \ ''\r\n        AND subsection_with_name <> ''\r\n)\r\n\r\nSELECT\r\n    pr.emission_time\
+  \ AS emission_time,\r\n    pr.org AS org,\r\n    pr.course_key AS course_key,\r\n\
+  \    pr.course_name AS course_name,\r\n    pr.course_run AS course_run,\r\n    pr.problem_id\
+  \ AS problem_id,\r\n    pr.problem_name AS problem_name,\r\n    pr.problem_name_with_location\
+  \ AS problem_name_with_location,\r\n    pr.actor_id AS actor_id,\r\n    pr.attempts\
+  \ AS attempts,\r\n    pr.success AS success,\r\n    arrayJoin(\r\n        IF(\r\n\
+  \            JSONArrayLength(pr.responses) > 0,\r\n            JSONExtractArrayRaw(pr.responses),\r\
+  \n            [pr.responses]\r\n        )\r\n    ) AS response,\r\n    eb.extended_graded\
+  \ AS graded,\r\n    upi.username AS username,\r\n    upi.name AS name,\r\n    upi.email\
+  \ AS email\r\nFROM\r\n    problem_responses pr\r\nLEFT JOIN extended_blocks eb\r\
+  \n    ON pr.problem_id = eb.extended_block_id\r\nLEFT JOIN reporting.dim_user_pii\
+  \ upi\r\n    ON pr.actor_id = toString(upi.external_user_id)\r\nWHERE\r\n    {%\
+  \ if get_filters('problem_name_with_location', remove_filter=True) == [] %}\r\n\
+  \        1=1\r\n    {% elif filter_values('problem_name_with_location') != [] %}\r\
+  \n        pr.problem_name_with_location IN {{ filter_values('problem_name_with_location')\
+  \ | where_in }}\r\n    {% else %}\r\n        1=0\r\n    {% endif %}\r\n\r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: b25cc7bd-895a-46b5-9c68-dc14ddbd0d77
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: attempts
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Int16
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: graded
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Bool
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: success
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Bool
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: emission_time
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: DateTime
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: problem_name_with_location
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: problem_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: actor_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: problem_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_run
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: username
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: email
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: response
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: org
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

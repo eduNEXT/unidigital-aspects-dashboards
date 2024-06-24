@@ -1,0 +1,101 @@
+slice_name: Unidades
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 206__table
+  viz_type: table
+  slice_id: 1959
+  query_mode: aggregate
+  groupby:
+  - section_with_name
+  - subsection_with_name
+  - unit_name
+  time_grain_sqla: P1D
+  temporal_columns_lookup: {}
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: block_name
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 4502
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      verbose_name: Componente
+      warning_markdown: null
+    aggregate: COUNT
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: '# Componentes'
+    optionName: metric_131ln2uxayuo_nbqc9qrgkh
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_omzrcjvddt_s767q01e0m
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: 'section_number <> ''0:0:0''and subsection_number <> ''0:0:0''
+      and unit_name  NOT LIKE ''%0:0:0%''
+
+
+      '
+    subject: null
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_y29is62jrhe_vaqoqaouvs
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: block_type <> 'section' and block_type <> 'subsection' and block_type
+      <> 'unit'
+    subject: null
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_mr705uwlp5f_w40coysfo2
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: section_with_name <> '' and subsection_with_name <> '' and unit_name
+      <> ''
+    subject: null
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  show_totals: false
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  conditional_formatting:
+  - colorScheme: '#ACE1C4'
+    column: '# Componentes'
+    operator: "\u2265"
+    targetValue: 0
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: ac8e4ca2-edb0-455a-bc9d-e512457eaf13
+version: 1.0.0
+dataset_uuid: f34fa716-da94-4ace-b8ab-ed25beb48ac1

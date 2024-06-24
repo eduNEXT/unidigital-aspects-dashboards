@@ -1,0 +1,16 @@
+database_name: MySQL
+sqlalchemy_uri: mysql+mysqldb://root:password@mysql:3306/openedx
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+  engine_params: {}
+  metadata_params: {}
+  schemas_allowed_for_file_upload: []
+uuid: b9dd68f2-5915-4082-8818-9b163bd3537a
+version: 1.0.0

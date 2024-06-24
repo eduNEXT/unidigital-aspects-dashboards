@@ -1,0 +1,224 @@
+slice_name: "Riesgo de Deserci\xF3n"
+description: "Este modelo calcula 5 indicadores de la actividad y resultados de cada\
+  \ estudiante con relaci\xF3n a la mediana obtenida para ese mismo indicador por\
+  \ los estudiantes del curso.\n\n\n**IM**:  Porcentaje relativo de **Interacci\xF3\
+  n con los materiales** del curso.\n\n**AV**:  Porcentaje relativo de **Avance**\
+  \ en el curso.\n\n**IF**:  Porcentaje relativo de **Interacci\xF3n con la comunidad**\
+  \ a trav\xE9s de los foros.\n\n**CA**:  Porcentaje relativo de **Calificaci\xF3\
+  n** obtenida.\n\n**UI**:  Actualidad relativa de la **\xFAltima interacci\xF3n**\
+  \ en el curso.\n\n\nPosteriormente se calcula un indicador de compromiso del estudiante\
+  \ en el curso asi:\n\n\n**Indicador de compromiso** =  a * IM  +  b * AV  + c *\
+  \ IF  +  d * CA  + e * UI\n\n\n\nDonde a, b, c, d, y e son coeficientes configurables.\n\
+  \nSiendo calculado como: \n 0.2 * IM + 0.3 * AV + 0.1 * IF + 0.2 * CA + 0.2 * UI\n\
+  \nY finalmente se infiere un nivel de riesgo de fracaso estudiantil para cada estudiante\
+  \ seg\xFAn su indicador de compromiso, as\xED:\n\n- Desde 0% y menor a 30%:  Nivel\
+  \ de Riesgo Alto. \n\n- Desde 30% y menor a 70%:  Nivel de Riesgo Medio.\n\n- Desde\
+  \ 70% y menor a 100%:  Nivel de Riesgo Bajo."
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 215__table
+  viz_type: table
+  slice_id: 1877
+  query_mode: aggregate
+  groupby:
+  - username
+  - name
+  - email
+  - enrollment_mode
+  - enrollment_date
+  - CA
+  - IM
+  - AV
+  - IF
+  - UI
+  - datasourceWarning: false
+    expressionType: SQL
+    label: commitment_indicator
+    sqlExpression: ROUND(commitment_indicator,2)
+  - desertion_risk
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    enrollment_date: true
+    max_emission_time: true
+  all_columns:
+  - org
+  - course_key
+  - actor_id
+  - enrollment_status
+  - enrollment_mode
+  - enrollment_date
+  - username
+  - name
+  - email
+  - course_name
+  - course_run
+  - approving_state
+  - course_grade
+  - grade_bucket
+  - median_grade
+  - CA
+  - visits
+  - median_visits
+  - IM
+  - completions
+  - median_completions
+  - AV
+  - forum_interactions
+  - median_forum_interactions
+  - IF
+  - last_interaction_days
+  - max_emission_time
+  - median_last_interaction
+  - UI
+  - commitment_indicator
+  - desertion_risk
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: enrollment_date
+  timeseries_limit_metric:
+    aggregate: AVG
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: commitment_indicator
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 4095
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: Float64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: AVG(commitment_indicator)
+    optionName: metric_nnxjmxv1ug_1v3udabuyyr
+    sqlExpression: null
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: false
+  table_timestamp_format: smart_date
+  include_search: true
+  show_cell_bars: false
+  color_pn: true
+  allow_rearrange_columns: true
+  column_config:
+    AV:
+      d3NumberFormat: ',.1%'
+      d3SmallNumberFormat: ',.1%'
+    CA:
+      d3NumberFormat: ',.1%'
+      d3SmallNumberFormat: ',.1%'
+    IF:
+      d3NumberFormat: ',.1%'
+      d3SmallNumberFormat: ',.1%'
+    IM:
+      d3NumberFormat: ',.1%'
+      d3SmallNumberFormat: ',.1%'
+    UI:
+      d3NumberFormat: ',.1%'
+      d3SmallNumberFormat: ',.1%'
+    commitment_indicator:
+      d3NumberFormat: ',.1%'
+      d3SmallNumberFormat: ',.1%'
+  conditional_formatting:
+  - colorScheme: '#ACE1C4'
+    column: CA
+    operator: '>'
+    targetValue: 0.7
+  - colorScheme: '#FDE380'
+    column: CA
+    operator: "\u2264 x \u2264"
+    targetValueLeft: '0.3'
+    targetValueRight: '0.7'
+  - colorScheme: '#EFA1AA'
+    column: CA
+    operator: <
+    targetValue: 0.3
+  - colorScheme: '#ACE1C4'
+    column: IM
+    operator: '>'
+    targetValue: 0.7
+  - colorScheme: '#FDE380'
+    column: IM
+    operator: "\u2264 x \u2264"
+    targetValueLeft: '0.3'
+    targetValueRight: '0.7'
+  - colorScheme: '#EFA1AA'
+    column: IM
+    operator: <
+    targetValue: 0.3
+  - colorScheme: '#ACE1C4'
+    column: AV
+    operator: '>'
+    targetValue: 0.7
+  - colorScheme: '#FDE380'
+    column: AV
+    operator: "\u2264 x \u2264"
+    targetValueLeft: '0.3'
+    targetValueRight: '0.7'
+  - colorScheme: '#EFA1AA'
+    column: AV
+    operator: <
+    targetValue: 0.3
+  - colorScheme: '#ACE1C4'
+    column: IF
+    operator: '>'
+    targetValue: 0.7
+  - colorScheme: '#FDE380'
+    column: IF
+    operator: "\u2264 x \u2264"
+    targetValueLeft: '0.3'
+    targetValueRight: '0.7'
+  - colorScheme: '#EFA1AA'
+    column: IF
+    operator: <
+    targetValue: 0.3
+  - colorScheme: '#ACE1C4'
+    column: UI
+    operator: '>'
+    targetValue: 0.7
+  - colorScheme: '#EFA1AA'
+    column: UI
+    operator: <
+    targetValue: 0.3
+  - colorScheme: '#ACE1C4'
+    column: UI
+    operator: "\u2264 x \u2264"
+    targetValueLeft: '0.3'
+    targetValueRight: '0.7'
+  - colorScheme: '#ACE1C4'
+    column: commitment_indicator
+    operator: '>'
+    targetValue: 0.7
+  - colorScheme: '#FDE380'
+    column: commitment_indicator
+    operator: "\u2264 x \u2264"
+    targetValueLeft: '0.3'
+    targetValueRight: '0.7'
+  - colorScheme: '#EFA1AA'
+    column: commitment_indicator
+    operator: <
+    targetValue: 0.3
+  extra_form_data: {}
+  dashboards:
+  - 251
+  - 260
+query_context: null
+cache_timeout: null
+uuid: 3150a51a-f24a-450b-b79b-2dd07ea6067b
+version: 1.0.0
+dataset_uuid: a7084ba6-2d4f-4b15-897d-091187567104

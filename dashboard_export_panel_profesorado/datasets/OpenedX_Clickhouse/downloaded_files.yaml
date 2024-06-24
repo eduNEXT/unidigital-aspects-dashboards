@@ -1,0 +1,218 @@
+table_name: downloaded_files
+main_dttm_col: emission_time
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: reporting
+sql: "SELECT \r\n    a.event_id AS event_id,\r\n    a.verb_id AS verb_id,\r\n    a.actor_id\
+  \ AS actor_id,\r\n    a.object_id AS object_id,\r\n    a.course_id AS course_id,\r\
+  \n    a.course_key AS course_key,\r\n    a.org AS org,\r\n    a.emission_time AS\
+  \ emission_time,\r\n    a.file AS file,\r\n    b.course_name AS course_name,\r\n\
+  \    b.course_run AS course_run,\r\n    c.username AS username,\r\n    c.name AS\
+  \ name,\r\n    c.email AS email\r\nFROM (\r\n    SELECT \r\n        event_id,\r\n\
+  \        verb_id,\r\n        actor_id,\r\n        object_id,\r\n        course_id,\r\
+  \n        substring(course_id, position('course/' in course_id) + 7) AS course_key,\r\
+  \n        org,\r\n        emission_time,\r\n        JSON_QUERY(event, '$.context.contextActivities.grouping[0].id')\
+  \ AS file\r\n    FROM xapi.xapi_events_all_parsed\r\n    WHERE verb_id = 'http://id.tincanapi.com/verb/downloaded'\r\
+  \n      AND org <> ''\r\n      AND JSON_QUERY(event, '$.context.contextActivities.grouping[0].id')\
+  \ != ''\r\n    \r\n    UNION ALL\r\n    \r\n    SELECT \r\n        event_id,\r\n\
+  \        verb_id,\r\n        actor_id,\r\n        object_id,\r\n        course_id,\r\
+  \n        substring(course_id, position('course/' in course_id) + 7) AS course_key,\r\
+  \n        org,\r\n        emission_time,\r\n        JSON_QUERY(event, '$.context.contextActivities.grouping[1].id')\
+  \ AS file\r\n    FROM xapi.xapi_events_all_parsed\r\n    WHERE verb_id = 'http://id.tincanapi.com/verb/downloaded'\r\
+  \n      AND org <> ''\r\n      AND JSON_QUERY(event, '$.context.contextActivities.grouping[1].id')\
+  \ != ''\r\n) a\r\nLEFT JOIN (\r\n    SELECT \r\n        course_key,\r\n        course_name,\r\
+  \n        course_run\r\n    FROM reporting.dim_course_blocks\r\n) b ON a.course_key\
+  \ = b.course_key\r\nLEFT JOIN (\r\n    SELECT \r\n        toString(external_user_id)\
+  \ AS external_user_id,\r\n        username,\r\n        name,\r\n        email\r\n\
+  \    FROM reporting.dim_user_pii\r\n) c ON a.actor_id = c.external_user_id;\r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: fb5d2770-ee0d-46e3-891c-4a95efa427ee
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: emission_time
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: DateTime64(6)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: event_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UUID
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: actor_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: object_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: verb_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_run
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: username
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: email
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: file
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: org
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

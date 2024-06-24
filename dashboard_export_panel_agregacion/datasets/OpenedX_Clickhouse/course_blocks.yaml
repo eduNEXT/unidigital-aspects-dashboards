@@ -1,0 +1,259 @@
+table_name: course_blocks
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: reporting
+sql: "select\r\n    blocks.org as org,\r\n    blocks.course_key as course_key,\r\n\
+  \    blocks.course_name as course_name,\r\n    blocks.course_run as course_run,\r\
+  \n    blocks.block_id as block_id,\r\n    blocks.block_name as block_name,\r\n \
+  \   blocks.section_number as section_number,\r\n    blocks.subsection_number as\
+  \ subsection_number,\r\n    blocks.hierarchy_location as hierarchy_location,\r\n\
+  \    blocks.display_name_with_location as display_name_with_location,\r\n    blocks.graded\
+  \ as graded,\r\n    blocks.course_order as course_order,\r\n    blocks.block_type\
+  \ as block_type,\r\n    section_blocks.display_name_with_location as section_with_name,\r\
+  \n    subsection_blocks.display_name_with_location as subsection_with_name,\r\n\
+  \    unit_blocks.display_name_with_location as unit_name\r\nfrom reporting.dim_course_blocks\
+  \ blocks\r\nleft join\r\n    reporting.dim_course_blocks section_blocks\r\n    on\
+  \ (\r\n        blocks.section_number = section_blocks.hierarchy_location\r\n   \
+  \     and blocks.org = section_blocks.org\r\n        and blocks.course_key = section_blocks.course_key\r\
+  \n        and section_blocks.block_id like '%@chapter+block@%'\r\n    )\r\nleft\
+  \ join\r\n    reporting.dim_course_blocks subsection_blocks\r\n    on (\r\n    \
+  \    blocks.subsection_number = subsection_blocks.hierarchy_location\r\n       \
+  \ and blocks.org = subsection_blocks.org\r\n        and blocks.course_key = subsection_blocks.course_key\r\
+  \n        and subsection_blocks.block_id like '%@sequential+block@%'\r\n    )\r\n\
+  left join\r\n    reporting.dim_course_blocks unit_blocks\r\n    on (\r\n       \
+  \ blocks.subsection_number = subsection_blocks.hierarchy_location\r\n        and\
+  \ blocks.org = unit_blocks.org\r\n        and blocks.course_key = unit_blocks.course_key\r\
+  \n        and unit_blocks.block_id like '%@vertical+block@%'\r\n    )"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: f34fa716-da94-4ace-b8ab-ed25beb48ac1
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: block_type
+  verbose_name: Tipo de Componente
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: block_name
+  verbose_name: Componente
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: subsection_with_name
+  verbose_name: "Subsecci\xF3n"
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: section_with_name
+  verbose_name: "Secci\xF3n"
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: unit_name
+  verbose_name: Unidad
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: course_order
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Int32
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: graded
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Bool
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: display_name_with_location
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: hierarchy_location
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: course_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: subsection_number
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: block_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: section_number
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: course_run
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: org
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+version: 1.0.0
+database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

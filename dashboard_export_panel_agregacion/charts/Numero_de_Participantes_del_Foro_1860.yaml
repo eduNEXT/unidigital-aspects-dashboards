@@ -1,0 +1,71 @@
+slice_name: "N\xFAmero de Participantes del Foro"
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 209__table
+  viz_type: big_number_total
+  slice_id: 1860
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-25T23:51:30'
+      column_name: actor_id
+      created_on: '2024-04-25T23:51:29'
+      description: null
+      expression: ''
+      extra: null
+      filterable: true
+      groupby: true
+      id: 3891
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      uuid: 29a5cf53-d4c9-4e56-aca0-788b60b64ef4
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: COUNT_DISTINCT(actor_id)
+    optionName: metric_mkjphcdyzw_j7mt7t82t58
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_a1i3cd7414d_zedzfwk0c3a
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: emission_time
+  - clause: WHERE
+    comparator:
+    - 'true'
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_d2hv0l0915v_78h8umft4uh
+    isExtra: false
+    isNew: false
+    operator: IN
+    operatorId: IN
+    sqlExpression: null
+    subject: participated_in_forum
+  header_font_size: 0.6
+  subheader_font_size: 0.4
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: 67ed32ad-9475-4a4c-8ece-8614c9fe0411
+version: 1.0.0
+dataset_uuid: 72f4b99b-fd71-4114-9277-683b2596b055

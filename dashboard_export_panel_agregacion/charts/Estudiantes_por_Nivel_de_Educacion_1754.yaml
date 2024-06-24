@@ -1,0 +1,113 @@
+slice_name: "Estudiantes por Nivel de Educaci\xF3n"
+description: "Distribuci\xF3n de los estudiantes de acuerdo al m\xE1ximo nivel educativo\
+  \ alcanzado reportado en el perfil de usuario."
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_bar
+params:
+  datasource: 159__table
+  viz_type: echarts_timeseries_bar
+  slice_id: 1754
+  x_axis:
+    expressionType: SQL
+    label: Nivel Educativo
+    sqlExpression: "CASE\r\n    WHEN level_of_education IS NULL THEN 'No Reportado'\r\
+      \n    WHEN level_of_education = 'p' THEN 'Doctorado'\r\n    WHEN level_of_education\
+      \ = 'm' THEN 'Master o mag\xEDster'\r\n    WHEN level_of_education = 'b' THEN\
+      \ 'Pregrado o Licenciatura'\r\n    WHEN level_of_education = 'a' THEN 'T\xE9\
+      cnico-profesional'\r\n    WHEN level_of_education = 'hs' THEN 'Ense\xF1anza\
+      \ secundaria'\r\n    WHEN level_of_education = 'jhs' THEN 'Formaci\xF3n media'\r\
+      \n    WHEN level_of_education = 'el' THEN 'Ense\xF1anza primaria'\r\n    WHEN\
+      \ level_of_education = 'none' THEN 'Ninguna educaci\xF3n formal'\r\n    WHEN\
+      \ level_of_education = 'other' THEN 'Otra educaci\xF3n'\r\n    ELSE 'No Reportado'\r\
+      \nEND"
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-16T18:46:44'
+      column_name: actor_id
+      created_on: '2024-04-16T18:46:44'
+      description: null
+      expression: null
+      extra: null
+      filterable: true
+      groupby: true
+      id: 2855
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      uuid: 4cd1eb10-ee76-4528-88e9-6870d55a1157
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "N\xFAmero de aprendices"
+    optionName: metric_ramsdz0dqj_0in6cj2wbe0j
+    sqlExpression: null
+  groupby:
+  - expressionType: SQL
+    label: Nivel educativo
+    sqlExpression: "CASE\r\n    WHEN level_of_education IS NULL THEN 'No Reportado'\r\
+      \n    WHEN level_of_education = 'p' THEN 'Doctorado'\r\n    WHEN level_of_education\
+      \ = 'm' THEN 'Master o mag\xEDster'\r\n    WHEN level_of_education = 'b' THEN\
+      \ 'Pregrado o Licenciatura'\r\n    WHEN level_of_education = 'a' THEN 'T\xE9\
+      cnico-profesional'\r\n    WHEN level_of_education = 'hs' THEN 'Ense\xF1anza\
+      \ secundaria'\r\n    WHEN level_of_education = 'jhs' THEN 'Formaci\xF3n media'\r\
+      \n    WHEN level_of_education = 'el' THEN 'Ense\xF1anza primaria'\r\n    WHEN\
+      \ level_of_education = 'none' THEN 'Ninguna educaci\xF3n formal'\r\n    WHEN\
+      \ level_of_education = 'other' THEN 'Otra educaci\xF3n'\r\n    ELSE 'No Reportado'\r\
+      \nEND"
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_ug568cdx4t_ou8j9xi27s
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    operatorId: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: Fecha de Registo
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  orientation: vertical
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  show_value: true
+  only_total: true
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  xAxisLabelRotation: 0
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: f2cb1899-814b-4ca0-97a1-27aa99de7584
+version: 1.0.0
+dataset_uuid: bb2b2e72-03bb-430d-8981-948e2ca50b51

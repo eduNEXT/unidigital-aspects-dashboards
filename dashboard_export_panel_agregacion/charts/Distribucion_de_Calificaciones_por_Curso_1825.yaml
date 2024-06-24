@@ -1,0 +1,98 @@
+slice_name: "Distribuci\xF3n de Calificaciones por Curso"
+description: "Comparativo entre cursos del porcentaje de estudiantes que obtienen\
+  \ cada uno de los rangos de calificaci\xF3n."
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_bar
+params:
+  datasource: 144__table
+  viz_type: echarts_timeseries_bar
+  slice_id: 1825
+  x_axis:
+    expressionType: SQL
+    label: Curso
+    sqlExpression: CONCAT(course_name, ' - ', course_run)
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      changed_on: '2023-09-18T16:16:50'
+      column_name: actor_id
+      created_on: '2023-09-18T16:16:50'
+      description: null
+      expression: null
+      extra: '{}'
+      filterable: true
+      groupby: true
+      id: 187
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: STRING
+      type_generic: 1
+      uuid: a5296d21-0e54-41e8-8cab-fa9a761807f5
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "N\xFAmero de aprendices"
+    optionName: metric_fphmkq0037e_f0ynqa2n3jf
+    sqlExpression: null
+  groupby:
+  - grade_bucket
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  orientation: horizontal
+  x_axis_title: ''
+  x_axis_title_margin: 15
+  y_axis_title: ''
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  sort_series_type: name
+  sort_series_ascending: true
+  color_scheme: supersetColors
+  show_value: false
+  stack: Stack
+  only_total: true
+  minorTicks: false
+  zoomable: false
+  show_legend: true
+  legendType: plain
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  xAxisLabelRotation: 0
+  y_axis_format: SMART_NUMBER
+  logAxis: false
+  minorSplitLine: false
+  truncateXAxis: false
+  truncateYAxis: false
+  y_axis_bounds:
+  - null
+  - null
+  rich_tooltip: true
+  tooltipSortByMetric: false
+  tooltipTimeFormat: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: 736abf95-71a6-432d-bbe4-d6ce34f09045
+version: 1.0.0
+dataset_uuid: 633a1d4e-cd40-482f-a5dc-d5901c2181c2

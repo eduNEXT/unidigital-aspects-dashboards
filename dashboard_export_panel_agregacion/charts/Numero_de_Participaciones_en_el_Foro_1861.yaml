@@ -1,0 +1,54 @@
+slice_name: "N\xFAmero de Participaciones en el Foro"
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 31__table
+  viz_type: big_number_total
+  slice_id: 1861
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-11T16:59:29'
+      column_name: event_id
+      created_on: '2023-10-19T17:14:20'
+      description: null
+      expression: ''
+      extra: '{}'
+      filterable: true
+      groupby: true
+      id: 359
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: UUID
+      type_generic: 1
+      uuid: 8b12a52d-a57b-4f94-b9ba-e369a127eee1
+      verbose_name: Event ID
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: COUNT_DISTINCT(Event ID)
+    optionName: metric_19sgvtbbyjmi_4l2msq9p4ga
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  header_font_size: 0.5
+  subheader_font_size: 0.3
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: c9140584-b060-45fa-8935-75c459814223
+version: 1.0.0
+dataset_uuid: 39d1e786-c0c8-4c56-81c8-56fb0df88001

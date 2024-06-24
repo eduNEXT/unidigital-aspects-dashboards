@@ -1,0 +1,32 @@
+slice_name: "Posici\xF3n en Ranking"
+description: "Posici\xF3n del estudiante el ranking del curso seg\xFAn la calificaci\xF3\
+  n total."
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 166__table
+  viz_type: big_number_total
+  slice_id: 1831
+  metric:
+    aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: false
+    label: ranking
+    optionName: metric_ffdgpsqltg7_quky6d3inr
+    sqlExpression: ranking
+  adhoc_filters: []
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 241
+query_context: null
+cache_timeout: null
+uuid: 5521cd90-b59e-4603-88d6-142fa3be2e9b
+version: 1.0.0
+dataset_uuid: 12fd4023-3469-4fa7-a552-92a04fe34862

@@ -1,0 +1,59 @@
+slice_name: Estudiantes que han trabajado
+description: "Conteo de estudiantes que tienen alg\xFAn registro de actividad en el\
+  \ curso."
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 157__table
+  viz_type: big_number_total
+  slice_id: 1774
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: actor_id
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 2830
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "N\xFAmero de Aprendices"
+    optionName: metric_xpyhmdna8a_d4bv1mgv569
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_135q0xueo5a_kl5d2u516qk
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: emission_time
+  header_font_size: 0.5
+  subheader_font_size: 0.3
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: d57281e3-b08d-42ba-9192-135109cf4b7e
+version: 1.0.0
+dataset_uuid: 3c19b952-cc03-49c8-ac40-3ae1ccd9d337

@@ -1,0 +1,117 @@
+slice_name: Problemas realizados por estudiante
+description: "Lista a los estudiantes del curso y presenta las estad\xEDsticas que\
+  \ cada uno registra en la resoluci\xF3n de problemas"
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 210__table
+  viz_type: table
+  slice_id: 1775
+  query_mode: aggregate
+  groupby:
+  - label: Nombre de Usuario
+    sqlExpression: username
+    expressionType: SQL
+  - label: Nombre
+    sqlExpression: name
+    expressionType: SQL
+  - label: Email
+    sqlExpression: email
+    expressionType: SQL
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    emission_time: true
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: problem_id
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 3711
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Total Problemas
+    optionName: metric_4d8aurwi3he_d91hfu84exr
+    sqlExpression: null
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: Avg Intentos
+    optionName: metric_t000g81mk4_xpk9s60urli
+    sqlExpression: ROUND(AVG(attempts),2)
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: '% Correcto'
+    optionName: metric_59sajh7n3q7_047gb4qebxy8
+    sqlExpression: "  ROUND(\r\n    (SUM(CASE WHEN success THEN attempts ELSE 0 END))\
+      \ /\r\n    SUM(attempts), 2\r\n  )\r\n"
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: '% Incorrecto'
+    optionName: metric_n8vxe65ycc_et3tswwjpyh
+    sqlExpression: " ROUND(\r\n    (SUM(CASE WHEN NOT success THEN attempts ELSE 0\
+      \ END)) /\r\n    SUM(attempts), 2\r\n  )"
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  include_search: true
+  show_cell_bars: false
+  color_pn: false
+  allow_rearrange_columns: true
+  column_config:
+    '% Correcto':
+      d3NumberFormat: ',.1%'
+      d3SmallNumberFormat: ',.1%'
+    '% Incorrecto':
+      d3NumberFormat: ',.1%'
+    Avg Intentos:
+      d3NumberFormat: ~g
+  conditional_formatting:
+  - colorScheme: '#ACE1C4'
+    column: '% Correcto'
+    operator: "\u2265"
+    targetValue: 0
+  - colorScheme: '#EFA1AA'
+    column: '% Incorrecto'
+    operator: "\u2265"
+    targetValue: 0
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: e954a37f-a1f6-4b87-83c1-0a152a1978d1
+version: 1.0.0
+dataset_uuid: b25cc7bd-895a-46b5-9c68-dc14ddbd0d77

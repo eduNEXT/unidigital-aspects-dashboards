@@ -1,0 +1,154 @@
+slice_name: "Visitas por subsecci\xF3n"
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 163__table
+  viz_type: table
+  slice_id: 1806
+  query_mode: aggregate
+  groupby:
+  - expressionType: SQL
+    label: "Secci\xF3n"
+    sqlExpression: section_with_name
+    datasourceWarning: false
+  - expressionType: SQL
+    label: "Subsecci\xF3n"
+    sqlExpression: subsection_with_name
+    datasourceWarning: false
+  - expressionType: SQL
+    label: Evaluable
+    sqlExpression: "CASE \n    WHEN graded = true THEN 'Evaluable'\n    WHEN graded\
+      \ = false THEN 'No Evaluable'\nEND"
+    datasourceWarning: false
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    visited_on: true
+  metrics:
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: page_count
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 4574
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UInt64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Mis visitas
+    optionName: metric_wyccg2uov8n_sljpwp5qbi
+    sqlExpression: null
+  - aggregate: AVG
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: average_views_per_subsection
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 4589
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: Float64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Visitas promedio del curso
+    optionName: metric_ck8s1bv5meh_mjvbs2whf9b
+    sqlExpression: null
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: Mis Calificaciones
+    optionName: metric_goh3zrc4lmh_3uiahu2hu8n
+    sqlExpression: ROUND(AVG(scaled_score), 2)
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: Calificaciones promedio del curso
+    optionName: metric_dj8w4si5pra_iky2pedb0l
+    sqlExpression: ROUND(AVG(average_subsection_scaled_score), 2)
+  all_columns:
+  - visited_on
+  - org
+  - course_key
+  - course_run
+  - section_with_name
+  - subsection_with_name
+  - page_count
+  - actor_id
+  - block_id
+  - course_name
+  - block_name
+  - section_number
+  - subsection_number
+  - hierarchy_location
+  - display_name_with_location
+  - graded
+  - block_type
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: visited_on
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  include_search: true
+  show_cell_bars: false
+  color_pn: false
+  allow_rearrange_columns: true
+  column_config:
+    Mis visitas:
+      d3NumberFormat: ',d'
+  conditional_formatting:
+  - colorScheme: '#ACE1C4'
+    column: Mis visitas
+    operator: "\u2265"
+    targetValue: 0
+  - colorScheme: '#FDE380'
+    column: Visitas promedio del curso
+    operator: '>'
+    targetValue: 0
+  - colorScheme: '#ACE1C4'
+    column: Mis Calificaciones
+    operator: "\u2265"
+    targetValue: 0
+  - colorScheme: '#FDE380'
+    column: Calificaciones promedio del curso
+    operator: "\u2265"
+    targetValue: 0
+  extra_form_data: {}
+  dashboards:
+  - 241
+query_context: null
+cache_timeout: null
+uuid: a6441d83-c077-4c09-8991-9279541fec02
+version: 1.0.0
+dataset_uuid: 18706f59-37c1-4ca2-909b-55bb3e74c8b8

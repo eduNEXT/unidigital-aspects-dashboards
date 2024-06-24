@@ -1,0 +1,85 @@
+slice_name: Participaciones en Foros
+description: "Evoluci\xF3n de la actividad registrada en los foros."
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 164__table
+  viz_type: echarts_timeseries_line
+  slice_id: 1819
+  x_axis: emission_time
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-17T20:57:23'
+      column_name: event_id
+      created_on: '2024-04-17T20:57:23'
+      description: null
+      expression: null
+      extra: null
+      filterable: true
+      groupby: true
+      id: 2987
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: UUID
+      type_generic: 1
+      uuid: 1ab38059-b25e-4577-98d9-86a496eac399
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: interacciones
+    optionName: metric_yxs3gxdrfpr_joe93xa157a
+    sqlExpression: null
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  rolling_type: cumsum
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerSize: 6
+  zoomable: true
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: 9eb703e9-461f-4c80-84ca-3ee0b003f39b
+version: 1.0.0
+dataset_uuid: c1ffa3f4-ae8a-42be-8087-a17e13f446f6

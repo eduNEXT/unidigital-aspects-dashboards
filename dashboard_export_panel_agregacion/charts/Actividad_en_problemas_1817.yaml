@@ -1,0 +1,85 @@
+slice_name: Actividad en problemas
+description: "Evoluci\xF3n de la actividad registrada en los problemas."
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 208__table
+  viz_type: echarts_timeseries_line
+  slice_id: 1817
+  x_axis: emission_time
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-25T21:56:40'
+      column_name: actor_id
+      created_on: '2024-04-25T21:56:40'
+      description: null
+      expression: null
+      extra: null
+      filterable: true
+      groupby: true
+      id: 3839
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      uuid: f975e55f-c3c0-41ab-b486-102e5b347883
+      verbose_name: null
+    aggregate: COUNT_DISTINCT
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: estudiantes
+    optionName: metric_p46a6ztrct_k0ucqqx8li8
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  rolling_type: cumsum
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerSize: 6
+  zoomable: true
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: f07815bd-c293-42aa-b997-c969c16237e5
+version: 1.0.0
+dataset_uuid: 4b09edf1-69b0-4e5e-a3e5-e4c18d19780a

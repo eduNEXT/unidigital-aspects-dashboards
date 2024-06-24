@@ -1,0 +1,484 @@
+table_name: desertion_query
+main_dttm_col: enrollment_date
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: reporting
+sql: "WITH MedianGrades AS (\r\n    SELECT\r\n        course_key,\r\n        quantile(0.5)(round(course_grade,\
+  \ 2) * 100) AS median_grade\r\n    FROM\r\n        `reporting`.`fact_student_status`\r\
+  \n    GROUP BY\r\n        course_key\r\n),\r\nVisits AS (\r\n    SELECT\r\n    \
+  \    course_key,\r\n        actor_id,\r\n        count(actor_id) AS visits\r\n \
+  \   FROM\r\n        `reporting`.`fact_navigation`\r\n    GROUP BY\r\n        course_key,\
+  \ actor_id\r\n),\r\nMedianVisits AS (\r\n    SELECT\r\n        course_key,\r\n \
+  \       quantile(0.5)(visits) AS median_visits\r\n    FROM\r\n        Visits\r\n\
+  \    GROUP BY\r\n        course_key\r\n),\r\nCompletions AS (\r\n    SELECT\r\n\
+  \        course_key,\r\n        actor_id,\r\n        count(actor_id) AS completions\r\
+  \n    FROM\r\n        `reporting`.`fact_completions`\r\n    GROUP BY\r\n       \
+  \ course_key, actor_id\r\n),\r\nMedianCompletions AS (\r\n    SELECT\r\n       \
+  \ course_key,\r\n        quantile(0.5)(completions) AS median_completions\r\n  \
+  \  FROM\r\n        Completions\r\n    GROUP BY\r\n        course_key\r\n),\r\nForumInteractions\
+  \ AS (\r\n    SELECT\r\n        course_key,\r\n        actor_id,\r\n        count(actor_id)\
+  \ AS forum_interactions\r\n    FROM\r\n        `reporting`.`fact_forum_interactions`\r\
+  \n    GROUP BY\r\n        course_key, actor_id\r\n),\r\nMedianForumInteractions\
+  \ AS (\r\n    SELECT\r\n        course_key,\r\n        quantile(0.5)(forum_interactions)\
+  \ AS median_forum_interactions\r\n    FROM\r\n        ForumInteractions\r\n    GROUP\
+  \ BY\r\n        course_key\r\n),\r\nLastInteraction AS (\r\n    SELECT\r\n     \
+  \   course_key,\r\n        actor_id,\r\n        max(emission_time) AS max_emission_time,\r\
+  \n        today() - toDate(max(emission_time)) AS last_interaction_days\r\n    FROM\r\
+  \n        `reporting`.`fact_navigation`\r\n    GROUP BY\r\n        course_key, actor_id\r\
+  \n),\r\nMedianLastInteraction AS (\r\n    SELECT\r\n        course_key,\r\n    \
+  \    quantile(0.5)(last_interaction_days) AS median_last_interaction\r\n    FROM\r\
+  \n        LastInteraction\r\n    GROUP BY\r\n        course_key\r\n)\r\n\r\nSELECT\
+  \ \r\n    fes.org AS org,\r\n    fes.course_key AS course_key,\r\n    fes.actor_id\
+  \ AS actor_id,\r\n    fes.enrollment_status AS enrollment_status,\r\n    fes.enrollment_mode\
+  \ AS enrollment_mode,\r\n    fes.emission_time AS enrollment_date,\r\n    dup.username\
+  \ AS username,\r\n    dup.name AS name,\r\n    dup.email AS email,\r\n    fss.course_name\
+  \ AS course_name,\r\n    fss.course_run AS course_run,\r\n    fss.approving_state\
+  \ AS approving_state,\r\n    (fss.course_grade * 100) AS course_grade,\r\n    fss.grade_bucket\
+  \ AS grade_bucket,\r\n    mg.median_grade AS median_grade,\r\n    -- CA calculation\r\
+  \n    IF(fss.course_grade = 0 OR mg.median_grade = 0, 0,\r\n       IF(fss.course_grade\
+  \ > mg.median_grade / 100, 1, round((fss.course_grade / (mg.median_grade / 100)),\
+  \ 2))\r\n    ) AS CA,\r\n    v.visits AS visits,\r\n    mv.median_visits AS median_visits,\r\
+  \n    -- IM calculation\r\n    IF(v.visits = 0 OR mv.median_visits = 0, 0,\r\n \
+  \      IF(v.visits > mv.median_visits, 1, round((v.visits / mv.median_visits), 2))\r\
+  \n    ) AS IM,\r\n    c.completions AS completions,\r\n    mc.median_completions\
+  \ AS median_completions,\r\n    -- AV calculation\r\n    IF(c.completions = 0 OR\
+  \ mc.median_completions = 0, 0,\r\n       IF(c.completions > mc.median_completions,\
+  \ 1, round((c.completions / mc.median_completions), 2))\r\n    ) AS AV,\r\n    fi.forum_interactions\
+  \ AS forum_interactions,\r\n    mfi.median_forum_interactions AS median_forum_interactions,\r\
+  \n    -- IF calculation\r\n    IF(fi.forum_interactions = 0 OR mfi.median_forum_interactions\
+  \ = 0, 0,\r\n       IF(fi.forum_interactions > mfi.median_forum_interactions, 1,\
+  \ round((fi.forum_interactions / mfi.median_forum_interactions), 2))\r\n    ) AS\
+  \ IF,\r\n    li.last_interaction_days AS last_interaction_days,\r\n    li.max_emission_time\
+  \ AS max_emission_time,\r\n    mli.median_last_interaction AS median_last_interaction,\r\
+  \n    -- UI calculation\r\n    IF(li.last_interaction_days = 0, 1,\r\n        IF(li.last_interaction_days\
+  \ >= mli.median_last_interaction, 0,\r\n           round(1 - (li.last_interaction_days\
+  \ / mli.median_last_interaction), 2)\r\n        )\r\n    ) AS UI,\r\n    -- Commitment\
+  \ Indicator Calculation\r\n    {% if filter_values('IM_peso') != [] %}\r\n     \
+  \ {{ filter_values('IM_peso')[0] }}/100\r\n      {% else %}\r\n      0.2\r\n   \
+  \ {% endif %}*IM\r\n    + \r\n    {% if filter_values('AV_peso') != [] %}\r\n  \
+  \    {{ filter_values('AV_peso')[0] }}/100\r\n      {% else %}\r\n      0.3\r\n\
+  \    {% endif %}*AV\r\n    + \r\n    {% if filter_values('IF_peso') != [] %}\r\n\
+  \      {{ filter_values('IF_peso')[0] }}/100\r\n      {% else %}\r\n      0.2\r\n\
+  \    {% endif %}*IF\r\n    +\r\n    {% if filter_values('CA_peso') != [] %}\r\n\
+  \      {{ filter_values('CA_peso')[0] }}/100\r\n      {% else %}\r\n      0.2\r\n\
+  \    {% endif %}*CA\r\n    +\r\n    {% if filter_values('UI_peso') != [] %}\r\n\
+  \      {{ filter_values('UI_peso')[0] }}/100\r\n      {% else %}\r\n      0.2\r\n\
+  \    {% endif %}*UI\r\n    AS commitment_indicator,\r\n    -- Desertion Risk Calculation\r\
+  \n    CASE\r\n        WHEN commitment_indicator >= 0 AND commitment_indicator <\
+  \ 0.3 THEN 'Alto'\r\n        WHEN commitment_indicator >= 0.3 AND commitment_indicator\
+  \ < 0.7 THEN 'Medio'\r\n        WHEN commitment_indicator >= 0.7 AND commitment_indicator\
+  \ <= 1.0 THEN 'Bajo'\r\n        ELSE 'Unknown'\r\n    END AS desertion_risk\r\n\r\
+  \nFROM \r\n    `reporting`.`fact_enrollment_status` fes\r\nLEFT JOIN \r\n    `reporting`.`dim_user_pii`\
+  \ dup\r\nON \r\n    toString(dup.external_user_id) = fes.actor_id\r\nLEFT JOIN \r\
+  \n    `reporting`.`fact_student_status` fss\r\nON \r\n    fes.org = fss.org AND\
+  \ \r\n    fes.course_key = fss.course_key AND\r\n    fes.actor_id = fss.actor_id\
+  \ AND \r\n    fes.enrollment_mode = fss.enrollment_mode AND\r\n    fes.enrollment_status\
+  \ = fss.enrollment_status\r\nLEFT JOIN \r\n    MedianGrades mg\r\nON\r\n    fss.course_key\
+  \ = mg.course_key\r\nLEFT JOIN\r\n    Visits v\r\nON\r\n    fes.course_key = v.course_key\
+  \ AND\r\n    fes.actor_id = v.actor_id\r\nLEFT JOIN \r\n    MedianVisits mv\r\n\
+  ON\r\n    fes.course_key = mv.course_key\r\nLEFT JOIN\r\n    Completions c\r\nON\r\
+  \n    fes.course_key = c.course_key AND\r\n    fes.actor_id = c.actor_id\r\nLEFT\
+  \ JOIN \r\n    MedianCompletions mc\r\nON\r\n    fes.course_key = mc.course_key\r\
+  \nLEFT JOIN\r\n    ForumInteractions fi\r\nON\r\n    fes.course_key = fi.course_key\
+  \ AND\r\n    fes.actor_id = fi.actor_id\r\nLEFT JOIN \r\n    MedianForumInteractions\
+  \ mfi\r\nON\r\n    fes.course_key = mfi.course_key\r\nLEFT JOIN\r\n    LastInteraction\
+  \ li\r\nON\r\n    fes.course_key = li.course_key AND\r\n    fes.actor_id = li.actor_id\r\
+  \nLEFT JOIN\r\n    MedianLastInteraction mli\r\nON\r\n    fes.course_key = mli.course_key\r\
+  \nWHERE \r\n    (dup.username <> '' OR dup.name <> '' OR dup.email <> '')\r\n\r\n\
+  \r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: a7084ba6-2d4f-4b15-897d-091187567104
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: commitment_indicator
+  verbose_name: Indicador de Compromiso
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: enrollment_date
+  verbose_name: "Fecha de Inscripci\xF3n"
+  is_dttm: true
+  is_active: true
+  type: DateTime
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: desertion_risk
+  verbose_name: "Riesgo de Deserci\xF3n"
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: enrollment_mode
+  verbose_name: "Modalidad de Inscripci\xF3n"
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: username
+  verbose_name: Nombre de Usuario
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: email
+  verbose_name: Email
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: name
+  verbose_name: Nombre
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: last_interaction_days
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Int32
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: CA
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: AV
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: IF
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: IM
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: UI
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: median_last_interaction
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: median_forum_interactions
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: median_grade
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: course_grade
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: median_completions
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: median_visits
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: forum_interactions
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: completions
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: visits
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: max_emission_time
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: DateTime
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: approving_state
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: grade_bucket
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: actor_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: course_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: enrollment_status
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: course_run
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: org
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

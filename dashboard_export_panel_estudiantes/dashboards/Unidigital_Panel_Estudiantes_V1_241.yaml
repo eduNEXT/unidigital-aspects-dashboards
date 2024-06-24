@@ -1,0 +1,550 @@
+dashboard_title: Unidigital Panel Estudiantes V1
+description: null
+css: ''
+slug: panel-estudiantes-v1
+certified_by: ''
+certification_details: ''
+published: false
+uuid: 53c896c8-1712-408e-b86b-9dce50fa5cd7
+position:
+  CHART-40Q1JkC8tI:
+    children: []
+    id: CHART-40Q1JkC8tI
+    meta:
+      chartId: 1805
+      height: 50
+      sliceName: "Visitas por secci\xF3n"
+      uuid: d4d765d6-b5a1-4253-b79e-fe93dba9359c
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-gKLEzn0wq
+    - ROW-HO0aTAn2-S
+    type: CHART
+  CHART-7vMm9f4YJz:
+    children: []
+    id: CHART-7vMm9f4YJz
+    meta:
+      chartId: 1831
+      height: 45
+      sliceName: "Posici\xF3n en Ranking"
+      sliceNameOverride: "Mi Posici\xF3n en el Ranking del curso"
+      uuid: 5521cd90-b59e-4603-88d6-142fa3be2e9b
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-PQCs51FRG
+    - ROW-WoomX25Sw
+    type: CHART
+  CHART-explore-1795-1:
+    children: []
+    id: CHART-explore-1795-1
+    meta:
+      chartId: 1795
+      height: 47
+      sliceName: "Calificaci\xF3n Promedio del Curso"
+      uuid: fadd8271-d1d4-4343-a199-cc431462bd38
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-PQCs51FRG
+    - ROW--4SnHvS8Y
+    type: CHART
+  CHART-explore-1799-1:
+    children: []
+    id: CHART-explore-1799-1
+    meta:
+      chartId: 1799
+      height: 45
+      sliceName: "M\xE1xima calificaci\xF3n de todos los estudiantes"
+      uuid: 7c158832-c417-42c0-8060-187344df7567
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-PQCs51FRG
+    - ROW--4SnHvS8Y
+    type: CHART
+  CHART-explore-1806-1:
+    children: []
+    id: CHART-explore-1806-1
+    meta:
+      chartId: 1806
+      height: 50
+      sliceName: "Visitas por subsecci\xF3n"
+      sliceNameOverride: "Estad\xEDsticas de trabajo por subsecci\xF3n"
+      uuid: a6441d83-c077-4c09-8991-9279541fec02
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-gKLEzn0wq
+    - ROW-xwcniNzYH
+    type: CHART
+  CHART-explore-1813-1:
+    children: []
+    id: CHART-explore-1813-1
+    meta:
+      chartId: 1813
+      height: 50
+      sliceName: Accesos a lo largo del tiempo
+      uuid: 8d34f4bb-a3e3-40ae-8cc4-cc31b9582680
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-RhEkU7fx0
+    - ROW-_Gta596rY
+    type: CHART
+  CHART-explore-1837-1:
+    children: []
+    id: CHART-explore-1837-1
+    meta:
+      chartId: 1837
+      height: 45
+      sliceName: "Calificaci\xF3n del estudiante"
+      sliceNameOverride: "Mi Calificaci\xF3n"
+      uuid: 566ce208-a214-4b80-a4da-addbf06709a2
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-PQCs51FRG
+    - ROW-WoomX25Sw
+    type: CHART
+  CHART-explore-1851-1:
+    children: []
+    id: CHART-explore-1851-1
+    meta:
+      chartId: 1851
+      height: 29
+      sliceName: "Informaci\xF3n del estudiante"
+      uuid: 0555236f-9dba-486e-8979-2283c9fb922e
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-vg_Zex3RX
+    type: CHART
+  CHART-explore-1871-1:
+    children: []
+    id: CHART-explore-1871-1
+    meta:
+      chartId: 1871
+      height: 46
+      sliceName: "Nota m\xEDnima aprobatoria"
+      uuid: 4fae28f0-1bb2-4d1c-b886-4f43ae13e827
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-PQCs51FRG
+    - ROW--4SnHvS8Y
+    type: CHART
+  CHART-gOpvtQKL38:
+    children: []
+    id: CHART-gOpvtQKL38
+    meta:
+      chartId: 1739
+      height: 50
+      sliceName: Total de estudiantes
+      uuid: b6cea62f-caaa-4b3e-a2c0-055f4e0a9850
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-PQCs51FRG
+    - ROW-WoomX25Sw
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-vg_Zex3RX
+    - TABS-p6HItakA13
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Unidigital Panel Estudiantes V1
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW--4SnHvS8Y:
+    children:
+    - CHART-explore-1795-1
+    - CHART-explore-1799-1
+    - CHART-explore-1871-1
+    id: ROW--4SnHvS8Y
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-PQCs51FRG
+    type: ROW
+  ROW-HO0aTAn2-S:
+    children:
+    - CHART-40Q1JkC8tI
+    - CHART-explore-1806-1
+    id: ROW-HO0aTAn2-S
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-gKLEzn0wq
+    type: ROW
+  ROW-WoomX25Sw:
+    children:
+    - CHART-gOpvtQKL38
+    - CHART-7vMm9f4YJz
+    - CHART-explore-1837-1
+    id: ROW-WoomX25Sw
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-PQCs51FRG
+    type: ROW
+  ROW-_Gta596rY:
+    children:
+    - CHART-explore-1813-1
+    id: ROW-_Gta596rY
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    - TAB-RhEkU7fx0
+    type: ROW
+  ROW-vg_Zex3RX:
+    children:
+    - CHART-explore-1851-1
+    id: ROW-vg_Zex3RX
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  TAB-PQCs51FRG:
+    children:
+    - ROW-WoomX25Sw
+    - ROW--4SnHvS8Y
+    id: TAB-PQCs51FRG
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Ranking
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    type: TAB
+  TAB-RhEkU7fx0:
+    children:
+    - ROW-_Gta596rY
+    id: TAB-RhEkU7fx0
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Accesos
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    type: TAB
+  TAB-gKLEzn0wq:
+    children:
+    - ROW-HO0aTAn2-S
+    id: TAB-gKLEzn0wq
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Estado de trabajo en el curso
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-p6HItakA13
+    type: TAB
+  TABS-p6HItakA13:
+    children:
+    - TAB-PQCs51FRG
+    - TAB-gKLEzn0wq
+    - TAB-RhEkU7fx0
+    id: TABS-p6HItakA13
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: TABS
+metadata:
+  chart_configuration:
+    '1795':
+      id: 1795
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1799
+        - 1805
+        - 1806
+        - 1813
+        - 1831
+        - 1837
+        - 1851
+        - 1871
+    '1805':
+      id: 1805
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1795
+        - 1799
+        - 1806
+        - 1813
+        - 1831
+        - 1837
+        - 1851
+        - 1871
+    '1806':
+      id: 1806
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1795
+        - 1799
+        - 1805
+        - 1813
+        - 1831
+        - 1837
+        - 1851
+        - 1871
+    '1813':
+      id: 1813
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1795
+        - 1799
+        - 1805
+        - 1806
+        - 1831
+        - 1837
+        - 1851
+        - 1871
+    '1851':
+      id: 1851
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1795
+        - 1799
+        - 1805
+        - 1806
+        - 1813
+        - 1831
+        - 1837
+        - 1871
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 1739
+    - 1795
+    - 1799
+    - 1805
+    - 1806
+    - 1813
+    - 1831
+    - 1837
+    - 1851
+    - 1871
+  color_scheme: supersetColors
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-6hHOnzKTF
+    controlValues:
+      enableEmptyFilter: true
+      defaultToFirstItem: true
+      multiSelect: false
+      searchAllOptions: true
+      inverseSelection: false
+    name: Nombre del Curso
+    filterType: filter_select
+    targets:
+    - column:
+        name: course_name
+      datasetUuid: bb2b2e72-03bb-430d-8981-948e2ca50b51
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1739
+    - 1795
+    - 1799
+    - 1805
+    - 1806
+    - 1807
+    - 1813
+    - 1831
+    - 1837
+    - 1851
+    - 1868
+    - 1871
+    - 1872
+    tabsInScope:
+    - TAB-PQCs51FRG
+    - TAB-RhEkU7fx0
+    - TAB-gKLEzn0wq
+    requiredFirst: true
+  - id: NATIVE_FILTER-VV6GToNXN
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: "Versi\xF3n"
+    filterType: filter_select
+    targets:
+    - column:
+        name: course_run
+      datasetUuid: bb2b2e72-03bb-430d-8981-948e2ca50b51
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds:
+    - NATIVE_FILTER-6hHOnzKTF
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1739
+    - 1795
+    - 1799
+    - 1805
+    - 1806
+    - 1807
+    - 1813
+    - 1831
+    - 1837
+    - 1851
+    - 1868
+    - 1871
+    - 1872
+    tabsInScope:
+    - TAB-PQCs51FRG
+    - TAB-RhEkU7fx0
+    - TAB-gKLEzn0wq
+  - id: NATIVE_FILTER-TV_uewFgE
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: false
+      searchAllOptions: true
+      inverseSelection: false
+    name: Nombre de usuario
+    filterType: filter_select
+    targets:
+    - column:
+        name: username
+      datasetUuid: 3dec51b3-4590-4652-95dc-427a12b8e3fb
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds:
+    - NATIVE_FILTER-6hHOnzKTF
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded:
+      - 1795
+      - 1799
+      - 1739
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1739
+    - 1805
+    - 1806
+    - 1807
+    - 1813
+    - 1831
+    - 1837
+    - 1851
+    - 1868
+    tabsInScope:
+    - TAB-PQCs51FRG
+    - TAB-RhEkU7fx0
+    - TAB-gKLEzn0wq
+  shared_label_colors: {}
+  color_scheme_domain:
+  - '#1FA8C9'
+  - '#454E7C'
+  - '#5AC189'
+  - '#FF7F44'
+  - '#666666'
+  - '#E04355'
+  - '#FCC700'
+  - '#A868B7'
+  - '#3CCCCB'
+  - '#A38F79'
+  - '#8FD3E4'
+  - '#A1A6BD'
+  - '#ACE1C4'
+  - '#FEC0A1'
+  - '#B2B2B2'
+  - '#EFA1AA'
+  - '#FDE380'
+  - '#D3B3DA'
+  - '#9EE5E5'
+  - '#D1C6BC'
+version: 1.0.0

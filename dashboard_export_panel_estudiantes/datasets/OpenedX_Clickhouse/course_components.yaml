@@ -1,0 +1,356 @@
+table_name: course_components
+main_dttm_col: visited_on
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: reporting
+sql: "WITH MaxGrades AS (\r\n    SELECT\r\n        `course_key`,\r\n        `actor_id`,\r\
+  \n        `entity_name_with_location` AS subsection_with_name,\r\n        MAX(`scaled_score`)\
+  \ AS max_scaled_score\r\n    FROM `reporting`.`fact_grades`\r\n    WHERE `grade_type`\
+  \ = 'subsection'\r\n    GROUP BY `course_key`, `actor_id`, `entity_name_with_location`\r\
+  \n)\r\nSELECT \r\n    fnc.visited_on AS visited_on,\r\n    fnc.org AS org,\r\n \
+  \   fnc.course_key AS course_key,\r\n    fnc.course_run AS course_run,\r\n    fnc.section_with_name\
+  \ AS section_with_name,\r\n    fnc.subsection_with_name AS subsection_with_name,\r\
+  \n    fnc.page_count AS page_count,\r\n    fnc.actor_id AS actor_id,\r\n    fnc.block_id\
+  \ AS block_id,\r\n    dcb.course_name AS course_name,\r\n    dcb.block_name AS block_name,\r\
+  \n    dcb.section_number AS section_number,\r\n    dcb.subsection_number AS subsection_number,\r\
+  \n    dcb.hierarchy_location AS hierarchy_location,\r\n    dcb.display_name_with_location\
+  \ AS display_name_with_location,\r\n    dcb.graded AS graded,\r\n    dcb.block_type\
+  \ AS block_type,\r\n    fnc.username AS username,\r\n    fnc.name AS name,\r\n \
+  \   fnc.email AS email,\r\n    SUM(fnc.page_count) OVER (PARTITION BY fnc.course_key,\
+  \ fnc.section_with_name) * 1.0 / COUNT(DISTINCT fnc.actor_id) OVER (PARTITION BY\
+  \ fnc.course_key, fnc.section_with_name) AS average_views_per_section,\r\n    SUM(fnc.page_count)\
+  \ OVER (PARTITION BY fnc.course_key, fnc.subsection_with_name) * 1.0 / COUNT(DISTINCT\
+  \ fnc.actor_id) OVER (PARTITION BY fnc.course_key, fnc.subsection_with_name) AS\
+  \ average_views_per_subsection,\r\n    SUM(fnc.page_count) OVER (PARTITION BY fnc.course_key,\
+  \ dcb.block_name) * 1.0 / COUNT(DISTINCT fnc.actor_id) OVER (PARTITION BY fnc.course_key,\
+  \ dcb.block_name) AS average_views_per_block_name,\r\n    lg.max_scaled_score AS\
+  \ scaled_score,\r\n    AVG(lg.max_scaled_score) OVER (PARTITION BY fnc.course_key,\
+  \ fnc.subsection_with_name) AS average_subsection_scaled_score\r\nFROM \r\n    `reporting`.`fact_navigation_completion`\
+  \ fnc\r\nLEFT JOIN\r\n    `reporting`.`dim_course_blocks` dcb \r\nON \r\n    fnc.block_id\
+  \ = dcb.block_id\r\nLEFT JOIN\r\n    MaxGrades lg\r\nON \r\n    fnc.course_key =\
+  \ lg.course_key \r\n    AND fnc.actor_id = lg.actor_id \r\n    AND fnc.subsection_with_name\
+  \ = lg.subsection_with_name;\r\n\r\n\r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 18706f59-37c1-4ca2-909b-55bb3e74c8b8
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: average_views_per_block_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: average_subsection_scaled_score
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: average_views_per_subsection
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: average_views_per_section
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: scaled_score
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: page_count
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: graded
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Bool
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: visited_on
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: Date
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: display_name_with_location
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: subsection_with_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: section_with_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: hierarchy_location
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: block_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: actor_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: course_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: subsection_number
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: block_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: section_number
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: block_type
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: course_run
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: username
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: email
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: org
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

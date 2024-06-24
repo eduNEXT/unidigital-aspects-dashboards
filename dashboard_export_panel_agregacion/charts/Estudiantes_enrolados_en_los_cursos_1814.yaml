@@ -1,0 +1,106 @@
+slice_name: Estudiantes enrolados en los cursos
+description: "Evoluci\xF3n del n\xFAmero acumulado de inscritos en los cursos a lo\
+  \ largo del tiempo en las distintas modalidades."
+certified_by: null
+certification_details: null
+viz_type: echarts_area
+params:
+  datasource: 150__table
+  viz_type: echarts_area
+  slice_id: 1814
+  x_axis: emission_time
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-11T18:08:47'
+      column_name: actor_id
+      created_on: '2024-04-11T18:08:47'
+      description: null
+      expression: null
+      extra: '{}'
+      filterable: true
+      groupby: true
+      id: 2755
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      uuid: c5cb48e5-bee3-4614-a10a-c3e51933b208
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "N\xFAmero de Aprendices"
+    optionName: metric_mz24vf9azq_f1cimk4bk9d
+    sqlExpression: null
+  groupby:
+  - enrollment_mode
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_o4krb2r4w1_dp2ifwl2gua
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: emission_time
+  - clause: WHERE
+    comparator:
+    - registered
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_dsc6yacw6h_6x17mkuj89j
+    isExtra: false
+    isNew: false
+    operator: IN
+    operatorId: IN
+    sqlExpression: null
+    subject: enrollment_status
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  rolling_type: cumsum
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  seriesType: line
+  opacity: 0.2
+  show_value: false
+  only_total: true
+  markerSize: 6
+  zoomable: true
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  truncateYAxis: false
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: 6c5f6afa-3134-414b-bd5a-b18af892e8a8
+version: 1.0.0
+dataset_uuid: a4b350bd-5ec3-4baf-8835-074d1d6e106e

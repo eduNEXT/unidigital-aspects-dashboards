@@ -1,0 +1,71 @@
+slice_name: "Informaci\xF3n del estudiante"
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 144__table
+  viz_type: table
+  slice_id: 1851
+  query_mode: aggregate
+  groupby:
+  - label: Nombre de Usuario
+    sqlExpression: username
+    expressionType: SQL
+  - label: Nombre
+    sqlExpression: name
+    expressionType: SQL
+  - label: Email
+    sqlExpression: email
+    expressionType: SQL
+  - label: "Estado de inscripci\xF3n"
+    sqlExpression: enrollment_status
+    expressionType: SQL
+  - label: "Modalidad de inscripci\xF3n"
+    sqlExpression: enrollment_mode
+    expressionType: SQL
+  - label: "Estado de Aprobaci\xF3n"
+    sqlExpression: approving_state
+    expressionType: SQL
+  - datasourceWarning: true
+    expressionType: SQL
+    label: Rango de Calificaciones
+    sqlExpression: grade_bucket
+  - datasourceWarning: true
+    expressionType: SQL
+    label: "Calificaci\xF3n del curso"
+    sqlExpression: ROUND(course_grade,2)
+  time_grain_sqla: P1D
+  temporal_columns_lookup: {}
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters: []
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  conditional_formatting:
+  - column: "Calificaci\xF3n del curso"
+    colorScheme: '#EFA1AA'
+    operator: <
+    targetValue: 0.5
+  - column: "Calificaci\xF3n del curso"
+    colorScheme: '#FDE380'
+    targetValueLeft: '0.5'
+    operator: "\u2264 x \u2264"
+    targetValueRight: '0.7'
+  - column: "Calificaci\xF3n del curso"
+    colorScheme: '#ACE1C4'
+    operator: '>'
+    targetValue: 0.7
+  extra_form_data: {}
+  dashboards:
+  - 241
+query_context: null
+cache_timeout: null
+uuid: 0555236f-9dba-486e-8979-2283c9fb922e
+version: 1.0.0
+dataset_uuid: 633a1d4e-cd40-482f-a5dc-d5901c2181c2

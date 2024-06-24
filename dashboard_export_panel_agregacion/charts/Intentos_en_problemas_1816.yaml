@@ -1,0 +1,85 @@
+slice_name: Intentos en problemas
+description: "Evoluci\xF3n de los intentos registrados en los problemas."
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 208__table
+  viz_type: echarts_timeseries_line
+  slice_id: 1816
+  x_axis: emission_time
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-12T14:17:04'
+      column_name: attempts
+      created_on: '2024-04-12T14:17:04'
+      description: null
+      expression: null
+      extra: null
+      filterable: true
+      groupby: true
+      id: 2772
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: Int16
+      type_generic: 0
+      uuid: 82e6b9dc-ea4e-4485-ac55-afc1e43b1433
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Intentos
+    optionName: metric_7o0otdnxmu2_74r0xoogqx2
+    sqlExpression: null
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  rolling_type: cumsum
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerSize: 6
+  zoomable: true
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: d857a326-072f-4f98-8435-9ec5cd8f2c9e
+version: 1.0.0
+dataset_uuid: 4b09edf1-69b0-4e5e-a3e5-e4c18d19780a

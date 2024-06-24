@@ -1,0 +1,80 @@
+slice_name: "Estudiantes por G\xE9nero"
+description: "Distribuci\xF3n de los estudiantes de acuerdo al G\xE9nero reportado\
+  \ en el perfil de usuario."
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 159__table
+  viz_type: pie
+  slice_id: 1752
+  groupby:
+  - datasourceWarning: false
+    expressionType: SQL
+    label: "G\xE9nero"
+    sqlExpression: "CASE\r\n    WHEN gender = 'f' THEN 'Femenino'\r\n    WHEN gender\
+      \ = 'm' THEN 'Masculino'\r\n    WHEN gender = 'o' THEN 'Otro / Prefiero no especificar'\r\
+      \n    ELSE 'No Reportado'\r\nEND"
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-16T18:46:44'
+      column_name: actor_id
+      created_on: '2024-04-16T18:46:44'
+      description: null
+      expression: null
+      extra: null
+      filterable: true
+      groupby: true
+      id: 2855
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      uuid: 4cd1eb10-ee76-4528-88e9-6870d55a1157
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "N\xFAmero de Aprendices"
+    optionName: metric_izge61zh1a_xu61x664qsm
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_vbcgrm5ie_i0dfy2aennj
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    operatorId: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: Fecha de Registo
+  row_limit: 100
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: 5
+  show_legend: false
+  legendType: scroll
+  legendOrientation: top
+  legendMargin: null
+  label_type: key_value_percent
+  number_format: SMART_NUMBER
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  show_total: true
+  outerRadius: 70
+  donut: true
+  innerRadius: 55
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: 3cb11e48-c3f3-47ad-add1-bb9b00ce1b9f
+version: 1.0.0
+dataset_uuid: bb2b2e72-03bb-430d-8981-948e2ca50b51

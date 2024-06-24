@@ -1,0 +1,140 @@
+slice_name: "Trabajo de los aprendices los \xFAltimos 7 d\xEDas"
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 196__table
+  viz_type: table
+  slice_id: 1848
+  query_mode: aggregate
+  groupby:
+  - section_with_name
+  - subsection_with_name
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    visited_on: true
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: actor_id
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 3464
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "N\xFAmero de Aprendices"
+    optionName: metric_zk9hi7ebrq_r08xmkoeszt
+    sqlExpression: null
+  - aggregate: AVG
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: page_count
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 3460
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UInt64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "Avg p\xE1ginas visitadas"
+    optionName: metric_ppj8n5tnf_0w4mndbpogsi
+    sqlExpression: null
+  all_columns:
+  - course_key
+  - course_name
+  - course_run
+  - username
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_1as3srqz9sh_4nrdzw0pl8e
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: visited_on
+  - clause: WHERE
+    comparator: null
+    datasourceWarning: false
+    expressionType: SQL
+    filterOptionName: filter_o5ecrsraz2p_xj1hvm98vwo
+    isExtra: false
+    isNew: false
+    operator: null
+    sqlExpression: toDateTime(visited_on) > now() - INTERVAL 7 DAY
+    subject: null
+  timeseries_limit_metric:
+    expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: section_location
+      description: null
+      expression: 'CAST(splitByChar('':'', section_with_name)[1] AS Int32) '
+      filterable: true
+      groupby: true
+      id: 3897
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: null
+      type_generic: null
+      verbose_name: null
+      warning_markdown: null
+    aggregate: AVG
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: AVG(section_location)
+    optionName: metric_78vze4kfx5_zjvzv8036do
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: false
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  column_config:
+    '% completo':
+      d3NumberFormat: ',.1%'
+  conditional_formatting:
+  - colorScheme: '#ACE1C4'
+    column: "N\xFAmero de Aprendices"
+    operator: '>'
+    targetValue: 0
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: 4e08ff3a-5a37-48c2-8590-7cda6d6f3479
+version: 1.0.0
+dataset_uuid: 1b1cbf0a-1193-4251-ad52-724c2f0190ae

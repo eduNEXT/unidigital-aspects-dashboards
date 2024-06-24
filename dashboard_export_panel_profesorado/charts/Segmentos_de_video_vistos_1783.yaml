@@ -1,0 +1,46 @@
+slice_name: "Segmentos de v\xEDdeo vistos"
+description: "Este gr\xE1fico divide los videos en segmentos de 5 segundos y presenta\
+  \ la cantidad de eventos de visualizaci\xF3n que est\xE1n registrados para cada\
+  \ segmento. \n\nInicialmente va a mostrar el an\xE1lisis conjunto de todos los videos\
+  \ del curso, pero tambi\xE9n es posible usar la barra de filtros en el lado izquierdo\
+  \ para filtrar un v\xEDdeo espec\xEDfico."
+certified_by: null
+certification_details: null
+viz_type: dist_bar
+params:
+  datasource: 7__table
+  viz_type: dist_bar
+  slice_id: 1783
+  metrics:
+  - unique_viewers
+  - repeat_views
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: started_at
+  groupby:
+  - segment_start
+  columns: []
+  row_limit: 10000
+  order_desc: true
+  color_scheme: supersetColors
+  show_legend: true
+  rich_tooltip: true
+  bar_stacked: true
+  order_bars: true
+  y_axis_format: SMART_NUMBER
+  y_axis_bounds:
+  - null
+  - null
+  bottom_margin: auto
+  x_ticks_layout: auto
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: 95bfda0a-52e8-4417-952c-3b26a75f814c
+version: 1.0.0
+dataset_uuid: c2c391b3-3403-4f05-bc0b-3de53bd366ec

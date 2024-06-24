@@ -1,0 +1,90 @@
+slice_name: Ranking de interacciones
+description: Listado de estudiantes del curso, ordenados inicialmente por la cantidad
+  total de interacciones en orden descendente.
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 203__table
+  viz_type: table
+  slice_id: 1838
+  query_mode: aggregate
+  groupby:
+  - username
+  - name
+  - email
+  - enrollment_mode
+  - approving_state
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    emission_time: true
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: event_id
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 3602
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UUID
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Interacciones
+    optionName: metric_vfxpujei4dn_qx9owr576s
+    sqlExpression: null
+  all_columns:
+  - event_id
+  - emission_time
+  - actor_id
+  - block_id
+  - course_key
+  - org
+  - verb_id
+  - object_type
+  - starting_position
+  - ending_point
+  - course_name
+  - course_run
+  - username
+  - name
+  - email
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  include_search: true
+  show_cell_bars: false
+  color_pn: false
+  allow_rearrange_columns: true
+  conditional_formatting:
+  - colorScheme: '#ACE1C4'
+    column: Interacciones
+    operator: "\u2265"
+    targetValue: 0
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: 91b558fa-89ba-495f-b0d1-f10a75592588
+version: 1.0.0
+dataset_uuid: d879ad0c-5bbe-4b1c-bb57-aded6ddca878

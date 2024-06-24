@@ -1,0 +1,44 @@
+slice_name: "Calificaci\xF3n Promedio del Curso"
+description: null
+certified_by: null
+certification_details: null
+viz_type: gauge_chart
+params:
+  datasource: 159__table
+  viz_type: gauge_chart
+  slice_id: 1795
+  groupby: []
+  metric:
+    aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: "Calificaci\xF3n Promedio"
+    optionName: metric_y6gk1ja3cl_bqfjjmdjj1m
+    sqlExpression: ROUND(AVG(course_grade), 2)
+  adhoc_filters: []
+  row_limit: 10
+  max_val: 1
+  start_angle: 225
+  end_angle: -45
+  color_scheme: supersetColors
+  font_size: 11
+  number_format: ',.1%'
+  value_formatter: '{value}'
+  show_pointer: true
+  animation: true
+  show_axis_tick: false
+  show_split_line: true
+  split_number: 10
+  show_progress: true
+  overlap: true
+  round_cap: true
+  extra_form_data: {}
+  dashboards:
+  - 241
+query_context: null
+cache_timeout: null
+uuid: fadd8271-d1d4-4343-a199-cc431462bd38
+version: 1.0.0
+dataset_uuid: bb2b2e72-03bb-430d-8981-948e2ca50b51

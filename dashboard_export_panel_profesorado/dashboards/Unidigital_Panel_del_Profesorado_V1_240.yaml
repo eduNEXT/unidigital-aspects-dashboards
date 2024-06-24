@@ -1,0 +1,4636 @@
+dashboard_title: Unidigital Panel del Profesorado V1
+description: null
+css: ''
+slug: panel-profesorado-v1
+certified_by: ''
+certification_details: ''
+published: true
+uuid: c9f0651f-0a7b-4f20-8d16-5fd8f650a066
+position:
+  CHART--WMShAWckK:
+    children: []
+    id: CHART--WMShAWckK
+    meta:
+      chartId: 1740
+      height: 41
+      sliceName: Total de inscripciones
+      sliceNameOverride: Inscripciones acumuladas
+      uuid: 91249874-8f85-43cf-80ab-f87a3658026e
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-w7N2hsxiq
+    type: CHART
+  CHART-DrwwRxNfJs:
+    children: []
+    id: CHART-DrwwRxNfJs
+    meta:
+      chartId: 1739
+      height: 42
+      sliceName: Total de estudiantes
+      sliceNameOverride: Inscritos actualmente
+      uuid: b6cea62f-caaa-4b3e-a2c0-055f4e0a9850
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-w7N2hsxiq
+    type: CHART
+  CHART-b1yetRgqM6:
+    children: []
+    id: CHART-b1yetRgqM6
+    meta:
+      chartId: 1757
+      height: 49
+      sliceName: "Distribuci\xF3n de estudiantes por rango de Calificaci\xF3n"
+      sliceNameOverride: "Distribuci\xF3n de estudiantes por rango de calificaci\xF3\
+        n en el curso"
+      uuid: 70d927a0-9b64-47ec-a0c0-44bab2c2190e
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-K1XFvA4Fzi
+    - ROW-Xvidur-xd
+    type: CHART
+  CHART-explore-1773-1:
+    children: []
+    id: CHART-explore-1773-1
+    meta:
+      chartId: 1773
+      height: 42
+      sliceName: "Estudiantes con actividad en los \xFAltimos 7 d\xEDas"
+      uuid: eaa73b5d-25ec-4149-8d19-91947fb6a4da
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-12y_bEs2q9
+    type: CHART
+  CHART-explore-1774-1:
+    children: []
+    id: CHART-explore-1774-1
+    meta:
+      chartId: 1774
+      height: 42
+      sliceName: Estudiantes que han trabajado
+      sliceNameOverride: Estudiantes con actividad
+      uuid: d57281e3-b08d-42ba-9192-135109cf4b7e
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-12y_bEs2q9
+    type: CHART
+  CHART-explore-1775-1:
+    children: []
+    id: CHART-explore-1775-1
+    meta:
+      chartId: 1775
+      height: 44
+      sliceName: Problemas realizados por estudiante
+      sliceNameOverride: Problemas realizados por estudiante
+      uuid: e954a37f-a1f6-4b87-83c1-0a152a1978d1
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    - TAB-LtP3yV-2l
+    - ROW-qwjh2TtmQ
+    type: CHART
+  CHART-explore-1776-1:
+    children: []
+    id: CHART-explore-1776-1
+    meta:
+      chartId: 1776
+      height: 21
+      sliceName: '# de problemas intentados'
+      sliceNameOverride: '# de problemas intentados'
+      uuid: c2564e69-f02b-459f-a245-865fa3ce3fa4
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    - TAB-HmSGljqxcv
+    - ROW-0teFr2NNd
+    type: CHART
+  CHART-explore-1779-1:
+    children: []
+    id: CHART-explore-1779-1
+    meta:
+      chartId: 1779
+      height: 50
+      sliceName: Cantidad de accesos semanales
+      uuid: 90151aa8-e117-43fd-80a1-3255e7ddc33b
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    - ROW-_44ZKrJo1
+    type: CHART
+  CHART-explore-1780-1:
+    children: []
+    id: CHART-explore-1780-1
+    meta:
+      chartId: 1780
+      height: 50
+      sliceName: Cantidad de accesos mensuales
+      uuid: 2723d6ab-b205-457a-8a6b-faf3faced8ab
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    - ROW-Pna5SzzGU
+    type: CHART
+  CHART-explore-1781-1:
+    children: []
+    id: CHART-explore-1781-1
+    meta:
+      chartId: 1781
+      height: 50
+      sliceName: Cantidad de accesos Anuales
+      uuid: cf4c0ea0-1c50-4e8a-9b09-98d1a93fd201
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    - ROW-Pna5SzzGU
+    type: CHART
+  CHART-explore-1782-1:
+    children: []
+    id: CHART-explore-1782-1
+    meta:
+      chartId: 1782
+      height: 50
+      sliceName: Cantidad de accesos diarios
+      uuid: 5ff22af1-48b9-475a-8b25-86b9a2d9735b
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    - ROW-XDyeaB-WN
+    type: CHART
+  CHART-explore-1783-1:
+    children: []
+    id: CHART-explore-1783-1
+    meta:
+      chartId: 1783
+      height: 50
+      sliceName: "Segmentos de v\xEDdeo vistos"
+      uuid: 95bfda0a-52e8-4417-952c-3b26a75f814c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-BmrMWYiW4
+    - ROW-rMTf4aJ9g
+    type: CHART
+  CHART-explore-1784-1:
+    children: []
+    id: CHART-explore-1784-1
+    meta:
+      chartId: 1784
+      height: 50
+      sliceName: "Vistas por secci\xF3n"
+      sliceNameOverride: "# reproducciones por secci\xF3n"
+      uuid: cd8d31bc-c28d-497d-8ec8-2470339e6d72
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    - ROW-1Kakc4Ly8
+    type: CHART
+  CHART-explore-1785-1:
+    children: []
+    id: CHART-explore-1785-1
+    meta:
+      chartId: 1785
+      height: 50
+      sliceName: "Visualizaciones detalladas por secci\xF3n"
+      sliceNameOverride: "Tiempo de reproducci\xF3n por secci\xF3n"
+      uuid: 55b8d622-32eb-49ae-a7d1-da4de8f16693
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    - ROW-1Kakc4Ly8
+    type: CHART
+  CHART-explore-1789-1:
+    children: []
+    id: CHART-explore-1789-1
+    meta:
+      chartId: 1789
+      height: 50
+      sliceName: "Cantidad de estudiantes por d\xEDa"
+      uuid: a6a9e654-3519-4f0c-abf9-5d4e30a24586
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    - ROW-XusiVnfD1
+    type: CHART
+  CHART-explore-1792-1:
+    children: []
+    id: CHART-explore-1792-1
+    meta:
+      chartId: 1792
+      height: 63
+      sliceName: Ranking de calificaciones
+      uuid: 204313c8-1d63-4fd6-ad9c-87fdfcfe9ccc
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB--m_SEUs8c
+    - TABS-U_9I9yxEAJ
+    - TAB-lZ_J2qcyUq
+    - ROW-bk_0_b2L7
+    type: CHART
+  CHART-explore-1800-1:
+    children: []
+    id: CHART-explore-1800-1
+    meta:
+      chartId: 1800
+      height: 50
+      sliceName: "Estad\xEDsticas de visualizaci\xF3n por curso"
+      sliceNameOverride: "% de visualizaci\xF3n por curso"
+      uuid: 8e1bfcec-e5ff-4c3e-87cb-94be8dc27441
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    - ROW-Cm7Fcf2xhq
+    type: CHART
+  CHART-explore-1802-1:
+    children: []
+    id: CHART-explore-1802-1
+    meta:
+      chartId: 1802
+      height: 50
+      sliceName: "Estad\xEDsticas de visualizaci\xF3n por v\xEDdeo"
+      uuid: 30afee97-849f-40a3-8fc0-c470a8d8b897
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-eK1q2A42I
+    - ROW-6OHiblWtr
+    type: CHART
+  CHART-explore-1803-1:
+    children: []
+    id: CHART-explore-1803-1
+    meta:
+      chartId: 1803
+      height: 50
+      sliceName: "Interacci\xF3n en foros por estudiante"
+      uuid: c5d95dc9-65e1-4e07-8fb5-b062b75d3e5d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-ibV5S05pO
+    - TABS-9GM-ZQeYae
+    - TAB-vJI8iex0Ap
+    - ROW-OUlBaUg2_
+    type: CHART
+  CHART-explore-1804-1:
+    children: []
+    id: CHART-explore-1804-1
+    meta:
+      chartId: 1804
+      height: 46
+      sliceName: Actividad de los estudiantes
+      sliceNameOverride: Actividad de los estudiantes
+      uuid: 0a19e013-8534-4f5d-95b1-a04445efd9e4
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-RIn8WYAob
+    - ROW-388YkU8m3
+    type: CHART
+  CHART-explore-1826-1:
+    children: []
+    id: CHART-explore-1826-1
+    meta:
+      chartId: 1826
+      height: 50
+      sliceName: "Visualizaciones detalladas por subsecci\xF3n"
+      sliceNameOverride: "Tiempo de reproducci\xF3n por subsecci\xF3n"
+      uuid: 8e6d60bd-5b4d-4540-b2e5-3c823f56b551
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    - ROW-U9SrKFuKo
+    type: CHART
+  CHART-explore-1827-1:
+    children: []
+    id: CHART-explore-1827-1
+    meta:
+      chartId: 1827
+      height: 50
+      sliceName: "Vistas por subsecci\xF3n"
+      sliceNameOverride: "# reproducciones por subsecci\xF3n"
+      uuid: 0f211be6-3d36-4441-a6a1-364269880506
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    - ROW-U9SrKFuKo
+    type: CHART
+  CHART-explore-1828-1:
+    children: []
+    id: CHART-explore-1828-1
+    meta:
+      chartId: 1828
+      height: 50
+      sliceName: "Estad\xEDsticas de visualizaci\xF3n por secci\xF3n"
+      sliceNameOverride: "% de visualizaci\xF3n por secci\xF3n"
+      uuid: 00cc0f77-af45-45ab-84ba-7b80fdada62a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    - ROW-1Kakc4Ly8
+    type: CHART
+  CHART-explore-1829-1:
+    children: []
+    id: CHART-explore-1829-1
+    meta:
+      chartId: 1829
+      height: 50
+      sliceName: "Estad\xEDsticas de visualizaci\xF3n por subsecci\xF3n"
+      sliceNameOverride: "% de visualizaci\xF3n por subsecci\xF3n"
+      uuid: 4313fd5a-60e2-47c1-9dba-66eaee48edf4
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    - ROW-U9SrKFuKo
+    type: CHART
+  CHART-explore-1830-1:
+    children: []
+    id: CHART-explore-1830-1
+    meta:
+      chartId: 1830
+      height: 50
+      sliceName: "Estad\xEDsticas de visualizaci\xF3n por estudiante en cada v\xED\
+        deo"
+      uuid: afb7330c-6626-40bf-bcc8-6232d288d002
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-9OJS-EqjY
+    - ROW-lyQiUFlly
+    type: CHART
+  CHART-explore-1838-1:
+    children: []
+    id: CHART-explore-1838-1
+    meta:
+      chartId: 1838
+      height: 50
+      sliceName: Ranking de interacciones
+      uuid: 91b558fa-89ba-495f-b0d1-f10a75592588
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB--m_SEUs8c
+    - TABS-U_9I9yxEAJ
+    - TAB-FlQNe0nLM
+    - ROW-_ZzPbLEIj
+    type: CHART
+  CHART-explore-1839-1:
+    children: []
+    id: CHART-explore-1839-1
+    meta:
+      chartId: 1839
+      height: 21
+      sliceName: Total respuestas correctas recibidas
+      sliceNameOverride: Total respuestas correctas
+      uuid: 8d615ab7-45db-4e2b-89ae-53586f418c7d
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    - TAB-HmSGljqxcv
+    - ROW-DhPBAAkyXj
+    type: CHART
+  CHART-explore-1840-1:
+    children: []
+    id: CHART-explore-1840-1
+    meta:
+      chartId: 1840
+      height: 21
+      sliceName: '# de intentos realizados'
+      sliceNameOverride: '# de intentos realizados'
+      uuid: 64a32504-165f-42ab-9ea0-edddac9e2c42
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    - TAB-HmSGljqxcv
+    - ROW-0teFr2NNd
+    type: CHART
+  CHART-explore-1841-1:
+    children: []
+    id: CHART-explore-1841-1
+    meta:
+      chartId: 1841
+      height: 21
+      sliceName: Total respuestas incorrectas
+      uuid: dbe1206a-72bb-4f4f-b19d-ea8981d92f1a
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    - TAB-HmSGljqxcv
+    - ROW-DhPBAAkyXj
+    type: CHART
+  CHART-explore-1843-1:
+    children: []
+    id: CHART-explore-1843-1
+    meta:
+      chartId: 1843
+      height: 50
+      sliceName: "Problemas realizados por secci\xF3n y subsecci\xF3n"
+      uuid: db1a185b-849f-4604-8998-2cbaab8ecc7d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    - TAB-X4Ke70cz3
+    - ROW-FCbZFk-C2
+    type: CHART
+  CHART-explore-1844-1:
+    children: []
+    id: CHART-explore-1844-1
+    meta:
+      chartId: 1844
+      height: 50
+      sliceName: "Accesos por d\xEDa de la semana"
+      uuid: 49117d7a-76f3-4fba-83eb-7c5a9e28f6d8
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-CRka4pvh7
+    - ROW-L_76lj6Mt
+    type: CHART
+  CHART-explore-1845-1:
+    children: []
+    id: CHART-explore-1845-1
+    meta:
+      chartId: 1845
+      height: 50
+      sliceName: "Accesos por hora del d\xEDa"
+      uuid: 4c36b335-3efc-44fa-95ee-7580fef54114
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-CRka4pvh7
+    - ROW-eg4Q3dd31
+    type: CHART
+  CHART-explore-1846-1:
+    children: []
+    id: CHART-explore-1846-1
+    meta:
+      chartId: 1846
+      height: 50
+      sliceName: "# de estudiantes que han trabajado cada secci\xF3n"
+      uuid: 25d2b206-0fc8-4af4-9047-a7c7d826c064
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-k6FE43xKx
+    - ROW-SIOf3RI6D
+    type: CHART
+  CHART-explore-1847-1:
+    children: []
+    id: CHART-explore-1847-1
+    meta:
+      chartId: 1847
+      height: 50
+      sliceName: "# de estudiantes que han trabajado en cada subsecci\xF3n"
+      uuid: 0cb62e45-03be-47aa-a5c9-8d143579ab84
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-k6FE43xKx
+    - ROW-sHN-cxF5A
+    type: CHART
+  CHART-explore-1848-1:
+    children: []
+    id: CHART-explore-1848-1
+    meta:
+      chartId: 1848
+      height: 56
+      sliceName: "Trabajo de los aprendices los \xFAltimos 7 d\xEDas"
+      uuid: 4e08ff3a-5a37-48c2-8590-7cda6d6f3479
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GPcf2G2Ew
+    - ROW-zLl_oNlWc
+    type: CHART
+  CHART-explore-1849-1:
+    children: []
+    id: CHART-explore-1849-1
+    meta:
+      chartId: 1849
+      height: 50
+      sliceName: Vistas por Curso
+      sliceNameOverride: '# reproducciones por curso'
+      uuid: d8528a8a-d616-4c21-95db-e5e163a8ab6b
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    - ROW-Cm7Fcf2xhq
+    type: CHART
+  CHART-explore-1850-1:
+    children: []
+    id: CHART-explore-1850-1
+    meta:
+      chartId: 1850
+      height: 50
+      sliceName: Visualizaciones detalladas por curso
+      sliceNameOverride: "Tiempo de reproducci\xF3n por curso"
+      uuid: e72fe31a-d8c4-467a-a589-d2eedbcdee4a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    - ROW-Cm7Fcf2xhq
+    type: CHART
+  CHART-explore-1863-1:
+    children: []
+    id: CHART-explore-1863-1
+    meta:
+      chartId: 1863
+      height: 50
+      sliceName: "Estad\xEDsticas de visualizaci\xF3n por estudiante"
+      uuid: 31e8394c-abfe-4906-9ab8-acbeddff8224
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-9OJS-EqjY
+    - ROW-GutNEwlH_
+    type: CHART
+  CHART-explore-1870-1:
+    children: []
+    id: CHART-explore-1870-1
+    meta:
+      chartId: 1870
+      height: 50
+      sliceName: "Interacci\xF3n por discusi\xF3n"
+      uuid: 8a38db8b-71cd-4ae4-9fa1-f8ddc2575df0
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-ibV5S05pO
+    - TABS-9GM-ZQeYae
+    - TAB-7hR_w_zXb
+    - ROW-2uBsHv2wZ
+    type: CHART
+  CHART-explore-1874-1:
+    children: []
+    id: CHART-explore-1874-1
+    meta:
+      chartId: 1874
+      height: 50
+      sliceName: "Calificaci\xF3n de estudiantes por componentes"
+      uuid: 9fbe823e-79f5-49f7-bb54-656f7a164daa
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-K1XFvA4Fzi
+    - ROW-6Fec0R-mS
+    type: CHART
+  CHART-explore-1875-1:
+    children: []
+    id: CHART-explore-1875-1
+    meta:
+      chartId: 1875
+      height: 50
+      sliceName: "Calificaci\xF3n de estudiantes por subsecci\xF3n"
+      uuid: 3bebc3c3-a1d6-4548-af90-1b499bc5876a
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-K1XFvA4Fzi
+    - ROW-bxdau8nES
+    type: CHART
+  CHART-explore-1876-1:
+    children: []
+    id: CHART-explore-1876-1
+    meta:
+      chartId: 1876
+      height: 60
+      sliceName: "Cantidad de visitas en cada rango de calificaci\xF3n"
+      uuid: 1533bf59-e12b-4c7c-bf90-ba6f6eec00f0
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-p6DPLycKa
+    - ROW-sPzcEA-v6
+    type: CHART
+  CHART-explore-1957-1:
+    children: []
+    id: CHART-explore-1957-1
+    meta:
+      chartId: 1957
+      height: 50
+      sliceName: Subsecciones
+      uuid: f7484474-98c7-47a9-b2db-90cba5e24271
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-NMilfFLpx
+    - COLUMN-Ygs-Y4kMil
+    type: CHART
+  CHART-explore-1958-1:
+    children: []
+    id: CHART-explore-1958-1
+    meta:
+      chartId: 1958
+      height: 50
+      sliceName: Secciones
+      uuid: dbb07bf0-2e10-4e46-b369-f3522aa94c6a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-NMilfFLpx
+    - COLUMN-H6AsHXvaqB
+    type: CHART
+  CHART-explore-1959-1:
+    children: []
+    id: CHART-explore-1959-1
+    meta:
+      chartId: 1959
+      height: 50
+      sliceName: Unidades
+      uuid: ac8e4ca2-edb0-455a-bc9d-e512457eaf13
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-NMilfFLpx
+    - COLUMN-H6AsHXvaqB
+    type: CHART
+  CHART-explore-1960-1:
+    children: []
+    id: CHART-explore-1960-1
+    meta:
+      chartId: 1960
+      height: 50
+      sliceName: Componentes
+      uuid: dd502394-ba1a-4ed3-8362-06b926d4413a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-NMilfFLpx
+    - COLUMN-Ygs-Y4kMil
+    type: CHART
+  CHART-explore-1961-1:
+    children: []
+    id: CHART-explore-1961-1
+    meta:
+      chartId: 1961
+      height: 50
+      sliceName: Descargas por Estudiante
+      uuid: e22c62a0-9b59-4275-805c-334d96297508
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-D0CoEMdbw
+    - TABS-GYouFCcNa3
+    - TAB-f3E9Ukpu3
+    - ROW-BV8NWRP8L
+    type: CHART
+  CHART-explore-1962-1:
+    children: []
+    id: CHART-explore-1962-1
+    meta:
+      chartId: 1962
+      height: 50
+      sliceName: Descargas por Archivo
+      uuid: ca575658-14b0-40e6-bd34-9e251ea36904
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-D0CoEMdbw
+    - TABS-GYouFCcNa3
+    - TAB-073fvdd4u7
+    - ROW-8eZTph-RZ
+    type: CHART
+  CHART-fsy9UPZ4sj:
+    children: []
+    id: CHART-fsy9UPZ4sj
+    meta:
+      chartId: 1873
+      height: 22
+      sliceName: "Informaci\xF3n del curso"
+      uuid: b3c04452-ca7f-474c-be54-b6dfa2262646
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ZKQuv3P_1b
+    type: CHART
+  CHART-uESIZGcasS:
+    children: []
+    id: CHART-uESIZGcasS
+    meta:
+      chartId: 1778
+      height: 50
+      sliceName: Total accesos
+      sliceNameOverride: Total accesos acumulados
+      uuid: f50c379c-cf53-4931-9375-6096dcd35b89
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    - ROW-jDHWtnGOj
+    type: CHART
+  COLUMN-H6AsHXvaqB:
+    children:
+    - CHART-explore-1958-1
+    - CHART-explore-1959-1
+    id: COLUMN-H6AsHXvaqB
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-NMilfFLpx
+    type: COLUMN
+  COLUMN-Ygs-Y4kMil:
+    children:
+    - CHART-explore-1957-1
+    - CHART-explore-1960-1
+    id: COLUMN-Ygs-Y4kMil
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-NMilfFLpx
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-ZKQuv3P_1b
+    - TABS-qJkT5tDkbG
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER-QuYjxFNkan:
+    children: []
+    id: HEADER-QuYjxFNkan
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: SMALL_HEADER
+      text: "Composici\xF3n del curso"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    type: HEADER
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Unidigital Panel del Profesorado V1
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-0teFr2NNd:
+    children:
+    - CHART-explore-1776-1
+    - CHART-explore-1840-1
+    id: ROW-0teFr2NNd
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    - TAB-HmSGljqxcv
+    type: ROW
+  ROW-12y_bEs2q9:
+    children:
+    - CHART-explore-1774-1
+    - CHART-explore-1773-1
+    id: ROW-12y_bEs2q9
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    type: ROW
+  ROW-1Kakc4Ly8:
+    children:
+    - CHART-explore-1784-1
+    - CHART-explore-1785-1
+    - CHART-explore-1828-1
+    id: ROW-1Kakc4Ly8
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    type: ROW
+  ROW-2uBsHv2wZ:
+    children:
+    - CHART-explore-1870-1
+    id: ROW-2uBsHv2wZ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-ibV5S05pO
+    - TABS-9GM-ZQeYae
+    - TAB-7hR_w_zXb
+    type: ROW
+  ROW-388YkU8m3:
+    children:
+    - CHART-explore-1804-1
+    id: ROW-388YkU8m3
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-RIn8WYAob
+    type: ROW
+  ROW-6Fec0R-mS:
+    children:
+    - CHART-explore-1874-1
+    id: ROW-6Fec0R-mS
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-K1XFvA4Fzi
+    type: ROW
+  ROW-6OHiblWtr:
+    children:
+    - CHART-explore-1802-1
+    id: ROW-6OHiblWtr
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-eK1q2A42I
+    type: ROW
+  ROW-8eZTph-RZ:
+    children:
+    - CHART-explore-1962-1
+    id: ROW-8eZTph-RZ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-D0CoEMdbw
+    - TABS-GYouFCcNa3
+    - TAB-073fvdd4u7
+    type: ROW
+  ROW-BV8NWRP8L:
+    children:
+    - CHART-explore-1961-1
+    id: ROW-BV8NWRP8L
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-D0CoEMdbw
+    - TABS-GYouFCcNa3
+    - TAB-f3E9Ukpu3
+    type: ROW
+  ROW-Cm7Fcf2xhq:
+    children:
+    - CHART-explore-1849-1
+    - CHART-explore-1850-1
+    - CHART-explore-1800-1
+    id: ROW-Cm7Fcf2xhq
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    type: ROW
+  ROW-DhPBAAkyXj:
+    children:
+    - CHART-explore-1839-1
+    - CHART-explore-1841-1
+    id: ROW-DhPBAAkyXj
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    - TAB-HmSGljqxcv
+    type: ROW
+  ROW-FCbZFk-C2:
+    children:
+    - CHART-explore-1843-1
+    id: ROW-FCbZFk-C2
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    - TAB-X4Ke70cz3
+    type: ROW
+  ROW-GutNEwlH_:
+    children:
+    - CHART-explore-1863-1
+    id: ROW-GutNEwlH_
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-9OJS-EqjY
+    type: ROW
+  ROW-L_76lj6Mt:
+    children:
+    - CHART-explore-1844-1
+    id: ROW-L_76lj6Mt
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-CRka4pvh7
+    type: ROW
+  ROW-NMilfFLpx:
+    children:
+    - COLUMN-H6AsHXvaqB
+    - COLUMN-Ygs-Y4kMil
+    id: ROW-NMilfFLpx
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    type: ROW
+  ROW-OUlBaUg2_:
+    children:
+    - CHART-explore-1803-1
+    id: ROW-OUlBaUg2_
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-ibV5S05pO
+    - TABS-9GM-ZQeYae
+    - TAB-vJI8iex0Ap
+    type: ROW
+  ROW-Pna5SzzGU:
+    children:
+    - CHART-explore-1781-1
+    - CHART-explore-1780-1
+    id: ROW-Pna5SzzGU
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    type: ROW
+  ROW-SIOf3RI6D:
+    children:
+    - CHART-explore-1846-1
+    id: ROW-SIOf3RI6D
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-k6FE43xKx
+    type: ROW
+  ROW-U9SrKFuKo:
+    children:
+    - CHART-explore-1827-1
+    - CHART-explore-1826-1
+    - CHART-explore-1829-1
+    id: ROW-U9SrKFuKo
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-xPLTY-auxU
+    type: ROW
+  ROW-XDyeaB-WN:
+    children:
+    - CHART-explore-1782-1
+    id: ROW-XDyeaB-WN
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    type: ROW
+  ROW-XusiVnfD1:
+    children:
+    - CHART-explore-1789-1
+    id: ROW-XusiVnfD1
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    type: ROW
+  ROW-Xvidur-xd:
+    children:
+    - CHART-b1yetRgqM6
+    id: ROW-Xvidur-xd
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-K1XFvA4Fzi
+    type: ROW
+  ROW-ZKQuv3P_1b:
+    children:
+    - CHART-fsy9UPZ4sj
+    id: ROW-ZKQuv3P_1b
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-_44ZKrJo1:
+    children:
+    - CHART-explore-1779-1
+    id: ROW-_44ZKrJo1
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    type: ROW
+  ROW-_ZzPbLEIj:
+    children:
+    - CHART-explore-1838-1
+    id: ROW-_ZzPbLEIj
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB--m_SEUs8c
+    - TABS-U_9I9yxEAJ
+    - TAB-FlQNe0nLM
+    type: ROW
+  ROW-bk_0_b2L7:
+    children:
+    - CHART-explore-1792-1
+    id: ROW-bk_0_b2L7
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB--m_SEUs8c
+    - TABS-U_9I9yxEAJ
+    - TAB-lZ_J2qcyUq
+    type: ROW
+  ROW-bxdau8nES:
+    children:
+    - CHART-explore-1875-1
+    id: ROW-bxdau8nES
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-K1XFvA4Fzi
+    type: ROW
+  ROW-eg4Q3dd31:
+    children:
+    - CHART-explore-1845-1
+    id: ROW-eg4Q3dd31
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-CRka4pvh7
+    type: ROW
+  ROW-jDHWtnGOj:
+    children:
+    - CHART-uESIZGcasS
+    id: ROW-jDHWtnGOj
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    type: ROW
+  ROW-lyQiUFlly:
+    children:
+    - CHART-explore-1830-1
+    id: ROW-lyQiUFlly
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-9OJS-EqjY
+    type: ROW
+  ROW-qwjh2TtmQ:
+    children:
+    - CHART-explore-1775-1
+    id: ROW-qwjh2TtmQ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    - TAB-LtP3yV-2l
+    type: ROW
+  ROW-rMTf4aJ9g:
+    children:
+    - CHART-explore-1783-1
+    id: ROW-rMTf4aJ9g
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    - TAB-BmrMWYiW4
+    type: ROW
+  ROW-sHN-cxF5A:
+    children:
+    - CHART-explore-1847-1
+    id: ROW-sHN-cxF5A
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-k6FE43xKx
+    type: ROW
+  ROW-sPzcEA-v6:
+    children:
+    - CHART-explore-1876-1
+    id: ROW-sPzcEA-v6
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-p6DPLycKa
+    type: ROW
+  ROW-w7N2hsxiq:
+    children:
+    - CHART-DrwwRxNfJs
+    - CHART--WMShAWckK
+    id: ROW-w7N2hsxiq
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    type: ROW
+  ROW-zLl_oNlWc:
+    children:
+    - CHART-explore-1848-1
+    id: ROW-zLl_oNlWc
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GPcf2G2Ew
+    type: ROW
+  TAB--m_SEUs8c:
+    children:
+    - TABS-U_9I9yxEAJ
+    id: TAB--m_SEUs8c
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Rankings
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    type: TAB
+  TAB-073fvdd4u7:
+    children:
+    - ROW-8eZTph-RZ
+    id: TAB-073fvdd4u7
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Por recurso
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-D0CoEMdbw
+    - TABS-GYouFCcNa3
+    type: TAB
+  TAB-7hR_w_zXb:
+    children:
+    - ROW-2uBsHv2wZ
+    id: TAB-7hR_w_zXb
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "Por discusi\xF3n"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-ibV5S05pO
+    - TABS-9GM-ZQeYae
+    type: TAB
+  TAB-8JHAejhcl:
+    children:
+    - TABS-ExQ__odI92
+    id: TAB-8JHAejhcl
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Vista General
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    type: TAB
+  TAB-9OJS-EqjY:
+    children:
+    - ROW-GutNEwlH_
+    - ROW-lyQiUFlly
+    id: TAB-9OJS-EqjY
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Por estudiante
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    type: TAB
+  TAB-BmrMWYiW4:
+    children:
+    - ROW-rMTf4aJ9g
+    id: TAB-BmrMWYiW4
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Por segmento
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    type: TAB
+  TAB-CRka4pvh7:
+    children:
+    - ROW-L_76lj6Mt
+    - ROW-eg4Q3dd31
+    id: TAB-CRka4pvh7
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Patrones de acceso
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    type: TAB
+  TAB-D0CoEMdbw:
+    children:
+    - TABS-GYouFCcNa3
+    id: TAB-D0CoEMdbw
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Descargas
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    type: TAB
+  TAB-FlQNe0nLM:
+    children:
+    - ROW-_ZzPbLEIj
+    id: TAB-FlQNe0nLM
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Interacciones
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB--m_SEUs8c
+    - TABS-U_9I9yxEAJ
+    type: TAB
+  TAB-GPcf2G2Ew:
+    children:
+    - ROW-zLl_oNlWc
+    id: TAB-GPcf2G2Ew
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "\xDAltimos 7 d\xEDas"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    type: TAB
+  TAB-GW_YOQjlg1:
+    children:
+    - ROW-w7N2hsxiq
+    - ROW-12y_bEs2q9
+    - HEADER-QuYjxFNkan
+    - ROW-NMilfFLpx
+    id: TAB-GW_YOQjlg1
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Datos del Curso
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    type: TAB
+  TAB-HmSGljqxcv:
+    children:
+    - ROW-0teFr2NNd
+    - ROW-DhPBAAkyXj
+    id: TAB-HmSGljqxcv
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Resumen
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    type: TAB
+  TAB-K1XFvA4Fzi:
+    children:
+    - ROW-Xvidur-xd
+    - ROW-bxdau8nES
+    - ROW-6Fec0R-mS
+    id: TAB-K1XFvA4Fzi
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Notas
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    type: TAB
+  TAB-LtP3yV-2l:
+    children:
+    - ROW-qwjh2TtmQ
+    id: TAB-LtP3yV-2l
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Por estudiante
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    type: TAB
+  TAB-RIn8WYAob:
+    children:
+    - ROW-388YkU8m3
+    id: TAB-RIn8WYAob
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Estudiantes
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    type: TAB
+  TAB-Wl0zkDScNS:
+    children:
+    - ROW-Pna5SzzGU
+    - ROW-_44ZKrJo1
+    - ROW-XDyeaB-WN
+    - ROW-jDHWtnGOj
+    - ROW-XusiVnfD1
+    id: TAB-Wl0zkDScNS
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "Hist\xF3rico"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    type: TAB
+  TAB-X4Ke70cz3:
+    children:
+    - ROW-FCbZFk-C2
+    id: TAB-X4Ke70cz3
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Por Problema
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    - TABS-0qDEsDBt8l
+    type: TAB
+  TAB-eK1q2A42I:
+    children:
+    - ROW-6OHiblWtr
+    id: TAB-eK1q2A42I
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "Por v\xEDdeo"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    type: TAB
+  TAB-f3E9Ukpu3:
+    children:
+    - ROW-BV8NWRP8L
+    id: TAB-f3E9Ukpu3
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Por estudiante
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-D0CoEMdbw
+    - TABS-GYouFCcNa3
+    type: TAB
+  TAB-g_5M4wCsU:
+    children:
+    - TABS-zY2tcrCEmh
+    id: TAB-g_5M4wCsU
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Accesos
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    type: TAB
+  TAB-ibV5S05pO:
+    children:
+    - TABS-9GM-ZQeYae
+    id: TAB-ibV5S05pO
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Foros
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    type: TAB
+  TAB-k6FE43xKx:
+    children:
+    - ROW-SIOf3RI6D
+    - ROW-sHN-cxF5A
+    id: TAB-k6FE43xKx
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Esfuerzo
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    type: TAB
+  TAB-lZ_J2qcyUq:
+    children:
+    - ROW-bk_0_b2L7
+    id: TAB-lZ_J2qcyUq
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Calificaciones
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB--m_SEUs8c
+    - TABS-U_9I9yxEAJ
+    type: TAB
+  TAB-n24XvPagi:
+    children:
+    - TABS-rN4Z-pBAyq
+    id: TAB-n24XvPagi
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "V\xEDdeos"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    type: TAB
+  TAB-p4H3aK1ZP7:
+    children:
+    - TABS-0qDEsDBt8l
+    id: TAB-p4H3aK1ZP7
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Ejercicios
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    type: TAB
+  TAB-p6DPLycKa:
+    children:
+    - ROW-sPzcEA-v6
+    id: TAB-p6DPLycKa
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Esfuerzo/Notas
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    type: TAB
+  TAB-vJI8iex0Ap:
+    children:
+    - ROW-OUlBaUg2_
+    id: TAB-vJI8iex0Ap
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Por estudiante
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-ibV5S05pO
+    - TABS-9GM-ZQeYae
+    type: TAB
+  TAB-xPLTY-auxU:
+    children:
+    - ROW-Cm7Fcf2xhq
+    - ROW-1Kakc4Ly8
+    - ROW-U9SrKFuKo
+    id: TAB-xPLTY-auxU
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: "Por secci\xF3n y subsecci\xF3n"
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    - TABS-rN4Z-pBAyq
+    type: TAB
+  TABS-0qDEsDBt8l:
+    children:
+    - TAB-HmSGljqxcv
+    - TAB-X4Ke70cz3
+    - TAB-LtP3yV-2l
+    id: TABS-0qDEsDBt8l
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-p4H3aK1ZP7
+    type: TABS
+  TABS-9GM-ZQeYae:
+    children:
+    - TAB-vJI8iex0Ap
+    - TAB-7hR_w_zXb
+    id: TABS-9GM-ZQeYae
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-ibV5S05pO
+    type: TABS
+  TABS-ExQ__odI92:
+    children:
+    - TAB-GW_YOQjlg1
+    - TAB-k6FE43xKx
+    - TAB-RIn8WYAob
+    - TAB-K1XFvA4Fzi
+    - TAB-p6DPLycKa
+    - TAB-GPcf2G2Ew
+    id: TABS-ExQ__odI92
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    type: TABS
+  TABS-GYouFCcNa3:
+    children:
+    - TAB-f3E9Ukpu3
+    - TAB-073fvdd4u7
+    id: TABS-GYouFCcNa3
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-D0CoEMdbw
+    type: TABS
+  TABS-U_9I9yxEAJ:
+    children:
+    - TAB-lZ_J2qcyUq
+    - TAB-FlQNe0nLM
+    id: TABS-U_9I9yxEAJ
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB--m_SEUs8c
+    type: TABS
+  TABS-qJkT5tDkbG:
+    children:
+    - TAB-8JHAejhcl
+    - TAB--m_SEUs8c
+    - TAB-n24XvPagi
+    - TAB-p4H3aK1ZP7
+    - TAB-ibV5S05pO
+    - TAB-D0CoEMdbw
+    - TAB-g_5M4wCsU
+    id: TABS-qJkT5tDkbG
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: TABS
+  TABS-rN4Z-pBAyq:
+    children:
+    - TAB-xPLTY-auxU
+    - TAB-BmrMWYiW4
+    - TAB-eK1q2A42I
+    - TAB-9OJS-EqjY
+    id: TABS-rN4Z-pBAyq
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-n24XvPagi
+    type: TABS
+  TABS-zY2tcrCEmh:
+    children:
+    - TAB-Wl0zkDScNS
+    - TAB-CRka4pvh7
+    id: TABS-zY2tcrCEmh
+    meta: {}
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    type: TABS
+metadata:
+  chart_configuration:
+    '1757':
+      id: 1757
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1775':
+      id: 1775
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1778':
+      id: 1778
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1779':
+      id: 1779
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1780':
+      id: 1780
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1781':
+      id: 1781
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1782':
+      id: 1782
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1784':
+      id: 1784
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1785':
+      id: 1785
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1789':
+      id: 1789
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1792':
+      id: 1792
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1800':
+      id: 1800
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1802':
+      id: 1802
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1803':
+      id: 1803
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1804':
+      id: 1804
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1826':
+      id: 1826
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1827':
+      id: 1827
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1828':
+      id: 1828
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1829':
+      id: 1829
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1830':
+      id: 1830
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1838':
+      id: 1838
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1843':
+      id: 1843
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1844':
+      id: 1844
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1846':
+      id: 1846
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1847':
+      id: 1847
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1848':
+      id: 1848
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1849':
+      id: 1849
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1850':
+      id: 1850
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1863':
+      id: 1863
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1870':
+      id: 1870
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1873':
+      id: 1873
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1874':
+      id: 1874
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1875':
+      id: 1875
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1876':
+      id: 1876
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1957':
+      id: 1957
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1958':
+      id: 1958
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+    '1959':
+      id: 1959
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1960
+        - 1961
+        - 1962
+    '1960':
+      id: 1960
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1961
+        - 1962
+    '1961':
+      id: 1961
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1962
+    '1962':
+      id: 1962
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1780
+        - 1781
+        - 1782
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1873
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 1739
+    - 1740
+    - 1757
+    - 1773
+    - 1774
+    - 1775
+    - 1776
+    - 1778
+    - 1779
+    - 1780
+    - 1781
+    - 1782
+    - 1783
+    - 1784
+    - 1785
+    - 1789
+    - 1792
+    - 1800
+    - 1802
+    - 1803
+    - 1804
+    - 1826
+    - 1827
+    - 1828
+    - 1829
+    - 1830
+    - 1838
+    - 1839
+    - 1840
+    - 1841
+    - 1843
+    - 1844
+    - 1845
+    - 1846
+    - 1847
+    - 1848
+    - 1849
+    - 1850
+    - 1863
+    - 1870
+    - 1873
+    - 1874
+    - 1875
+    - 1876
+    - 1957
+    - 1958
+    - 1959
+    - 1960
+    - 1961
+    - 1962
+  color_scheme: supersetColors
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-sEvVeSRR7
+    controlValues:
+      enableEmptyFilter: false
+    name: Fecha
+    filterType: filter_time
+    targets:
+    - {}
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1739
+    - 1740
+    - 1757
+    - 1773
+    - 1774
+    - 1775
+    - 1776
+    - 1778
+    - 1779
+    - 1780
+    - 1781
+    - 1782
+    - 1783
+    - 1784
+    - 1785
+    - 1789
+    - 1792
+    - 1800
+    - 1802
+    - 1803
+    - 1804
+    - 1826
+    - 1827
+    - 1828
+    - 1829
+    - 1830
+    - 1838
+    - 1839
+    - 1840
+    - 1841
+    - 1843
+    - 1844
+    - 1845
+    - 1846
+    - 1847
+    - 1848
+    - 1849
+    - 1850
+    - 1863
+    - 1870
+    - 1873
+    - 1874
+    - 1875
+    - 1876
+    - 1957
+    - 1958
+    - 1959
+    - 1960
+    - 1961
+    - 1962
+    tabsInScope:
+    - TAB--m_SEUs8c
+    - TAB-lZ_J2qcyUq
+    - TAB-FlQNe0nLM
+    - TAB-073fvdd4u7
+    - TAB-7hR_w_zXb
+    - TAB-8JHAejhcl
+    - TAB-GW_YOQjlg1
+    - TAB-k6FE43xKx
+    - TAB-RIn8WYAob
+    - TAB-K1XFvA4Fzi
+    - TAB-p6DPLycKa
+    - TAB-GPcf2G2Ew
+    - TAB-9OJS-EqjY
+    - TAB-BmrMWYiW4
+    - TAB-CRka4pvh7
+    - TAB-D0CoEMdbw
+    - TAB-f3E9Ukpu3
+    - TAB-HmSGljqxcv
+    - TAB-LtP3yV-2l
+    - TAB-Wl0zkDScNS
+    - TAB-X4Ke70cz3
+    - TAB-eK1q2A42I
+    - TAB-ibV5S05pO
+    - TAB-vJI8iex0Ap
+    - TAB-n24XvPagi
+    - TAB-xPLTY-auxU
+  - id: NATIVE_FILTER-PYZeArLlQ
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Nombre del Curso
+    filterType: filter_select
+    targets:
+    - column:
+        name: course_name
+      datasetUuid: 3c19b952-cc03-49c8-ac40-3ae1ccd9d337
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1687
+    - 1739
+    - 1740
+    - 1757
+    - 1773
+    - 1774
+    - 1775
+    - 1776
+    - 1777
+    - 1778
+    - 1779
+    - 1780
+    - 1781
+    - 1782
+    - 1783
+    - 1784
+    - 1785
+    - 1786
+    - 1789
+    - 1792
+    - 1800
+    - 1801
+    - 1802
+    - 1803
+    - 1804
+    - 1820
+    - 1826
+    - 1827
+    - 1828
+    - 1829
+    - 1830
+    - 1838
+    tabsInScope:
+    - TAB--m_SEUs8c
+    - TAB-lZ_J2qcyUq
+    - TAB-FlQNe0nLM
+    - TAB-8JHAejhcl
+    - TAB-GW_YOQjlg1
+    - TAB-k6FE43xKx
+    - TAB-RIn8WYAob
+    - TAB-K1XFvA4Fzi
+    - TAB-9OJS-EqjY
+    - TAB-BmrMWYiW4
+    - TAB-CRka4pvh7
+    - TAB-HmSGljqxcv
+    - TAB-Wl0zkDScNS
+    - TAB-X4Ke70cz3
+    - TAB-eK1q2A42I
+    - TAB-ibV5S05pO
+    - TAB-vJI8iex0Ap
+    - TAB-n24XvPagi
+    - TAB-xPLTY-auxU
+  - id: NATIVE_FILTER-cPXtimpkr
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: true
+      inverseSelection: false
+    name: "Versi\xF3n"
+    filterType: filter_select
+    targets:
+    - column:
+        name: course_run
+      datasetUuid: 3c19b952-cc03-49c8-ac40-3ae1ccd9d337
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds:
+    - NATIVE_FILTER-PYZeArLlQ
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1739
+    - 1740
+    - 1757
+    - 1773
+    - 1774
+    - 1775
+    - 1776
+    - 1778
+    - 1779
+    - 1780
+    - 1781
+    - 1782
+    - 1783
+    - 1784
+    - 1785
+    - 1789
+    - 1792
+    - 1800
+    - 1802
+    - 1803
+    - 1804
+    - 1826
+    - 1827
+    - 1828
+    - 1829
+    - 1830
+    - 1838
+    - 1839
+    - 1840
+    - 1841
+    - 1843
+    - 1844
+    - 1845
+    - 1846
+    - 1847
+    - 1848
+    - 1849
+    - 1850
+    - 1852
+    - 1853
+    - 1854
+    - 1855
+    - 1863
+    - 1870
+    - 1873
+    - 1874
+    - 1875
+    - 1876
+    tabsInScope:
+    - TAB--m_SEUs8c
+    - TAB-lZ_J2qcyUq
+    - TAB-FlQNe0nLM
+    - TAB-7hR_w_zXb
+    - TAB-8JHAejhcl
+    - TAB-GW_YOQjlg1
+    - TAB-k6FE43xKx
+    - TAB-RIn8WYAob
+    - TAB-K1XFvA4Fzi
+    - TAB-p6DPLycKa
+    - TAB-GPcf2G2Ew
+    - TAB-9OJS-EqjY
+    - TAB-BmrMWYiW4
+    - TAB-CRka4pvh7
+    - TAB-HmSGljqxcv
+    - TAB-LtP3yV-2l
+    - TAB-Wl0zkDScNS
+    - TAB-X4Ke70cz3
+    - TAB-eK1q2A42I
+    - TAB-ibV5S05pO
+    - TAB-vJI8iex0Ap
+    - TAB-n24XvPagi
+    - TAB-xPLTY-auxU
+  - id: NATIVE_FILTER-tXl8g-gGb
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Usuario del Estudiante
+    filterType: filter_select
+    targets:
+    - column:
+        name: username
+      datasetUuid: 3c19b952-cc03-49c8-ac40-3ae1ccd9d337
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - TAB-lZ_J2qcyUq
+      - TAB-FlQNe0nLM
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1792
+    - 1838
+    tabsInScope:
+    - TAB--m_SEUs8c
+    - TAB-lZ_J2qcyUq
+    - TAB-FlQNe0nLM
+  - id: NATIVE_FILTER-5XDus6_xP
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: "Nombre del V\xEDdeo"
+    filterType: filter_select
+    targets:
+    - column:
+        name: video_name
+      datasetUuid: 6ec360a5-e247-42e7-b301-fa8275fc93f9
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - TAB-xPLTY-auxU
+      - TAB-eK1q2A42I
+      - TAB-9OJS-EqjY
+      - TAB-BmrMWYiW4
+      excluded:
+      - 1784
+      - 1785
+      - 1826
+      - 1827
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1783
+    - 1800
+    - 1802
+    - 1828
+    - 1829
+    - 1830
+    - 1849
+    - 1850
+    - 1863
+    tabsInScope:
+    - TAB-9OJS-EqjY
+    - TAB-BmrMWYiW4
+    - TAB-eK1q2A42I
+    - TAB-n24XvPagi
+    - TAB-xPLTY-auxU
+  shared_label_colors: {}
+  color_scheme_domain:
+  - '#1FA8C9'
+  - '#454E7C'
+  - '#5AC189'
+  - '#FF7F44'
+  - '#666666'
+  - '#E04355'
+  - '#FCC700'
+  - '#A868B7'
+  - '#3CCCCB'
+  - '#A38F79'
+  - '#8FD3E4'
+  - '#A1A6BD'
+  - '#ACE1C4'
+  - '#FEC0A1'
+  - '#B2B2B2'
+  - '#EFA1AA'
+  - '#FDE380'
+  - '#D3B3DA'
+  - '#9EE5E5'
+  - '#D1C6BC'
+version: 1.0.0

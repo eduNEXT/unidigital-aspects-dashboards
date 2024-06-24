@@ -1,0 +1,38 @@
+slice_name: '% de visualizaciones completas'
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 158__table
+  viz_type: big_number_total
+  slice_id: 1690
+  metric:
+    aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: "Tasa de finalizaci\xF3n de v\xEDdeos"
+    optionName: metric_mxwq8d0lg8l_pcraijq6xr
+    sqlExpression: SUM(CASE WHEN verb_id LIKE '%terminated%' THEN 1 ELSE 0 END) /
+      COUNT(verb_id)
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  header_font_size: 0.5
+  subheader_font_size: 0.3
+  y_axis_format: ',.1%'
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: d060cd5b-924a-40b3-9144-41a946f18db0
+version: 1.0.0
+dataset_uuid: e158f1c6-bbef-4ddb-826c-bf9e2aa7d838

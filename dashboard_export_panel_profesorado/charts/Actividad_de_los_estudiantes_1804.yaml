@@ -1,0 +1,142 @@
+slice_name: Actividad de los estudiantes
+description: "Lista a los estudiantes del curso, y para cada uno, mide las cantidad\
+  \ de subsecciones, secciones, unidades en las que ha generado actividad, y el total\
+  \ de visualizaciones de p\xE1ginas que ha tenido."
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 196__table
+  viz_type: table
+  slice_id: 1804
+  query_mode: aggregate
+  groupby:
+  - expressionType: SQL
+    label: Nombre de Usuario
+    sqlExpression: username
+  - expressionType: SQL
+    label: Nombre
+    sqlExpression: name
+  - expressionType: SQL
+    label: Email
+    sqlExpression: email
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    visited_on: true
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: section_with_name
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 3463
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Secciones completadas
+    optionName: metric_kp452za013_jyczijq90e
+    sqlExpression: null
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: subsection_with_name
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 3462
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Subsecciones completadas
+    optionName: metric_06wup5aoc9ce_chtb1zx2old
+    sqlExpression: null
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: block_id
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 3466
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Unidades completadas
+    optionName: metric_1h81lwn0kfl_rkuzy0ashhp
+    sqlExpression: null
+  all_columns:
+  - course_key
+  - course_name
+  - course_run
+  - username
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: visited_on
+  timeseries_limit_metric:
+    aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: false
+    label: '1'
+    optionName: metric_49qh5sgxf9i_5vct8k97d9
+    sqlExpression: '1'
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: false
+  table_timestamp_format: smart_date
+  include_search: true
+  show_cell_bars: false
+  color_pn: false
+  allow_rearrange_columns: true
+  column_config:
+    "P\xE1ginas visitadas":
+      d3NumberFormat: ',d'
+    name:
+      columnWidth: 150
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: 0a19e013-8534-4f5d-95b1-a04445efd9e4
+version: 1.0.0
+dataset_uuid: 1b1cbf0a-1193-4251-ad52-724c2f0190ae

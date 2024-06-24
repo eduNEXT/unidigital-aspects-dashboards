@@ -1,0 +1,73 @@
+slice_name: "N\xFAmero de problemas no evaluables de los cursos"
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 206__table
+  viz_type: big_number_total
+  slice_id: 1694
+  metric:
+    expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-25T20:10:11'
+      column_name: block_id
+      created_on: '2024-04-25T20:10:11'
+      description: null
+      expression: ''
+      extra: null
+      filterable: true
+      groupby: true
+      id: 3805
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      uuid: 37ebc7cc-bc51-41fa-8137-ed0fed5ab0ff
+      verbose_name: null
+    aggregate: COUNT_DISTINCT
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: COUNT_DISTINCT(block_id)
+    optionName: metric_zhegfmltlm_si6rzztxu8o
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: graded
+    operator: IN
+    operatorId: IN
+    comparator:
+    - 'false'
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_dyufw29qk1g_bpu0lol3z5f
+  - expressionType: SIMPLE
+    subject: block_type
+    operator: IN
+    operatorId: IN
+    comparator:
+    - problem
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_1b6z899n85b_wmrp4s7ox7a
+  header_font_size: 0.5
+  subheader_font_size: 0.3
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: a3d1f85b-5c48-4289-af8c-a96a8e9a8b69
+version: 1.0.0
+dataset_uuid: f34fa716-da94-4ace-b8ab-ed25beb48ac1

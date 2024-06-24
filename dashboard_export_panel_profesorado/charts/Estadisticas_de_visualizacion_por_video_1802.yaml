@@ -1,0 +1,119 @@
+slice_name: "Estad\xEDsticas de visualizaci\xF3n por v\xEDdeo"
+description: "Lista los v\xEDdeos del curso organizados inicialmente de acuerdo a\
+  \ la secci\xF3n y subsecci\xF3n en la que se ubican y para cada uno presenta sus\
+  \ estad\xEDsticas de visualizaci\xF3n."
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 189__table
+  viz_type: table
+  slice_id: 1802
+  query_mode: aggregate
+  groupby:
+  - section_with_name
+  - subsection_with_name
+  - video_name
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    emission_time: true
+  metrics:
+  - aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: actor_id
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 2910
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: "N\xFAmero de Aprendices"
+    optionName: metric_59cmv5r6zuv_y1nmu7kqfs
+    sqlExpression: null
+  - aggregate: null
+    column: null
+    datasourceWarning: true
+    expressionType: SQL
+    hasCustomLabel: true
+    label: "Tasa de finalizaci\xF3n"
+    optionName: metric_ojvcgh3x4ml_h9uygm87evh
+    sqlExpression: SUM(CASE WHEN video_position = video_duration THEN 1 ELSE 0 END)
+      * 1.0 / COUNT(*)
+  all_columns:
+  - emission_time
+  - actor_id
+  - course_key
+  - org
+  - video_position
+  - video_duration
+  - section_with_name
+  - subsection_with_name
+  - graded
+  - video_name
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  include_search: true
+  show_cell_bars: true
+  color_pn: true
+  allow_rearrange_columns: true
+  column_config:
+    "Tasa de finalizaci\xF3n":
+      d3SmallNumberFormat: ',.1%'
+    section_with_name:
+      columnWidth: 120
+    subsection_with_name:
+      columnWidth: 120
+    video_name:
+      columnWidth: 150
+  conditional_formatting:
+  - colorScheme: '#ACE1C4'
+    column: Vistas
+    operator: "\u2265"
+    targetValue: 0
+  - colorScheme: '#ACE1C4'
+    column: "N\xFAmero de Aprendices"
+    operator: "\u2265"
+    targetValue: 0
+  - colorScheme: '#FDE380'
+    column: "Tasa de finalizaci\xF3n"
+    operator: "\u2264 x \u2264"
+    targetValueLeft: '0.5'
+    targetValueRight: '0.7'
+  - colorScheme: '#EFA1AA'
+    column: "Tasa de finalizaci\xF3n"
+    operator: <
+    targetValue: 0.5
+  - colorScheme: '#ACE1C4'
+    column: "Tasa de finalizaci\xF3n"
+    operator: '>'
+    targetValue: 0.7
+  extra_form_data: {}
+  dashboards:
+  - 240
+query_context: null
+cache_timeout: null
+uuid: 30afee97-849f-40a3-8fc0-c470a8d8b897
+version: 1.0.0
+dataset_uuid: 6ec360a5-e247-42e7-b301-fa8275fc93f9

@@ -1,0 +1,72 @@
+slice_name: Aprendices que Realizaron Actividades vs los que no
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 209__table
+  viz_type: pie
+  slice_id: 1857
+  groupby:
+  - label: performed_activity
+    sqlExpression: "CASE \r\n    WHEN performed_activity THEN 'S\xED'\r\n    ELSE\
+      \ 'No'\r\nEND"
+    expressionType: SQL
+  metric:
+    aggregate: COUNT_DISTINCT
+    column:
+      advanced_data_type: null
+      changed_on: '2024-04-25T22:40:38'
+      column_name: actor_id
+      created_on: '2024-04-25T22:40:38'
+      description: null
+      expression: null
+      extra: null
+      filterable: true
+      groupby: true
+      id: 3846
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: String
+      type_generic: 1
+      uuid: 425f1f15-feb7-4a97-84b0-9375344d2812
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: COUNT_DISTINCT(actor_id)
+    optionName: metric_u2rob5ie2_ldw8hw8qvj
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  row_limit: 100
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: 5
+  show_legend: false
+  legendType: scroll
+  legendOrientation: top
+  legendMargin: null
+  label_type: key_value_percent
+  number_format: SMART_NUMBER
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  label_line: false
+  show_total: true
+  outerRadius: 70
+  donut: true
+  innerRadius: 55
+  extra_form_data: {}
+  dashboards:
+  - 209
+query_context: null
+cache_timeout: null
+uuid: 946f704a-4c7b-4c0a-a896-4f3c0e4de89e
+version: 1.0.0
+dataset_uuid: 72f4b99b-fd71-4114-9277-683b2596b055
