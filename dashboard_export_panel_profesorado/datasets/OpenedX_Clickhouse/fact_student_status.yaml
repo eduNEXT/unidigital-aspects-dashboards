@@ -1,5 +1,5 @@
 table_name: fact_student_status
-main_dttm_col: null
+main_dttm_col: enrolled_at
 description: null
 default_endpoint: null
 offset: 0
@@ -35,6 +35,16 @@ metrics:
   extra:
     warning_markdown: ''
   warning_text: null
+- metric_name: number_of_learners
+  verbose_name: Number of Learners
+  metric_type: null
+  expression: COUNT(DISTINCT actor_id)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
 - metric_name: graded_learners
   verbose_name: Graded Learners
   metric_type: null
@@ -44,15 +54,6 @@ metrics:
   currency: null
   extra:
     warning_markdown: ''
-  warning_text: null
-- metric_name: number_of_learners
-  verbose_name: Number of Learners
-  metric_type: null
-  expression: COUNT(DISTINCT actor_id)
-  description: null
-  d3format: null
-  currency: null
-  extra: {}
   warning_text: null
 - metric_name: count
   verbose_name: COUNT(*)
@@ -104,6 +105,19 @@ columns:
   python_date_format: null
   extra:
     warning_markdown: null
+- column_name: course_key
+  verbose_name: Course Key
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
 - column_name: course_name
   verbose_name: Course Name
   is_dttm: false
@@ -119,19 +133,6 @@ columns:
     warning_markdown: null
 - column_name: course_run
   verbose_name: Course Run
-  is_dttm: false
-  is_active: true
-  type: String
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: ''
-  description: null
-  python_date_format: null
-  extra:
-    warning_markdown: null
-- column_name: course_key
-  verbose_name: Course key
   is_dttm: false
   is_active: true
   type: String
@@ -178,6 +179,19 @@ columns:
   groupby: true
   filterable: true
   expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: enrolled_at
+  verbose_name: Enrolled At
+  is_dttm: true
+  is_active: true
+  type: DateTime
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
   description: null
   python_date_format: null
   extra:

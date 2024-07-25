@@ -1,0 +1,222 @@
+slice_name: "Evoluci\xF3n de la Actividad y Desempe\xF1o de los Estudiantes a lo Largo\
+  \ del Tiempo"
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 253__table
+  viz_type: echarts_timeseries_line
+  slice_id: 1970
+  x_axis: emission_time
+  time_grain_sqla: P1M
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: total_enrollments
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 5054
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UInt64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Total Inscripciones
+    optionName: metric_jk7i28s1x4_kayvw0svbt
+    sqlExpression: null
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: total_students
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 5055
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UInt64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Total Estudiantes
+    optionName: metric_za7zuc72fu_366dmxy3m2d
+    sqlExpression: null
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: students_with_activity
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 5056
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UInt64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Estudiantes con actividad
+    optionName: metric_g0m7wsby10v_f1196s2pc2f
+    sqlExpression: null
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: current_students
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 5057
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UInt64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Estudiantes Actuales
+    optionName: metric_5exz99nqoov_2cgwq2sel5v
+    sqlExpression: null
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: approved_students
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 5059
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UInt64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Estudiantes Aprobados
+    optionName: metric_fprsu6o3jla_5w80yv9wg99
+    sqlExpression: null
+  - aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: evaluated_students
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 5058
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: UInt64
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Estudiantes Evaluados
+    optionName: metric_r5pnqllwzlj_mhm1alm8cx
+    sqlExpression: null
+  groupby: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: emission_time
+  order_desc: true
+  row_limit: 1000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerSize: 6
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 209
+  - 240
+query_context: '{"datasource":{"id":253,"type":"table"},"force":false,"queries":[{"filters":[{"col":"emission_time","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1M","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1M","columnType":"BASE_AXIS","sqlExpression":"emission_time","label":"emission_time","expressionType":"SQL"}],"metrics":[{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"total_enrollments","description":null,"expression":"","filterable":true,"groupby":true,"id":5054,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Total
+  Inscripciones","optionName":"metric_jk7i28s1x4_kayvw0svbt","sqlExpression":null},{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"total_students","description":null,"expression":"","filterable":true,"groupby":true,"id":5055,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Total
+  Estudiantes","optionName":"metric_za7zuc72fu_366dmxy3m2d","sqlExpression":null},{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"students_with_activity","description":null,"expression":"","filterable":true,"groupby":true,"id":5056,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Estudiantes
+  con actividad","optionName":"metric_g0m7wsby10v_f1196s2pc2f","sqlExpression":null},{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"current_students","description":null,"expression":"","filterable":true,"groupby":true,"id":5057,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Estudiantes
+  Actuales","optionName":"metric_5exz99nqoov_2cgwq2sel5v","sqlExpression":null},{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"approved_students","description":null,"expression":"","filterable":true,"groupby":true,"id":5059,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Estudiantes
+  Aprobados","optionName":"metric_fprsu6o3jla_5w80yv9wg99","sqlExpression":null},{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"evaluated_students","description":null,"expression":"","filterable":true,"groupby":true,"id":5058,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Estudiantes
+  Evaluados","optionName":"metric_r5pnqllwzlj_mhm1alm8cx","sqlExpression":null}],"orderby":[[{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"total_enrollments","description":null,"expression":"","filterable":true,"groupby":true,"id":5054,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Total
+  Inscripciones","optionName":"metric_jk7i28s1x4_kayvw0svbt","sqlExpression":null},false]],"annotation_layers":[],"row_limit":1000,"series_columns":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["emission_time"],"columns":[],"aggregates":{"Total
+  Inscripciones":{"operator":"mean"},"Total Estudiantes":{"operator":"mean"},"Estudiantes
+  con actividad":{"operator":"mean"},"Estudiantes Actuales":{"operator":"mean"},"Estudiantes
+  Aprobados":{"operator":"mean"},"Estudiantes Evaluados":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"flatten"}]}],"form_data":{"datasource":"253__table","viz_type":"echarts_timeseries_line","slice_id":1970,"x_axis":"emission_time","time_grain_sqla":"P1M","x_axis_sort_asc":true,"x_axis_sort_series":"name","x_axis_sort_series_ascending":true,"metrics":[{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"total_enrollments","description":null,"expression":"","filterable":true,"groupby":true,"id":5054,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Total
+  Inscripciones","optionName":"metric_jk7i28s1x4_kayvw0svbt","sqlExpression":null},{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"total_students","description":null,"expression":"","filterable":true,"groupby":true,"id":5055,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Total
+  Estudiantes","optionName":"metric_za7zuc72fu_366dmxy3m2d","sqlExpression":null},{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"students_with_activity","description":null,"expression":"","filterable":true,"groupby":true,"id":5056,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Estudiantes
+  con actividad","optionName":"metric_g0m7wsby10v_f1196s2pc2f","sqlExpression":null},{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"current_students","description":null,"expression":"","filterable":true,"groupby":true,"id":5057,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Estudiantes
+  Actuales","optionName":"metric_5exz99nqoov_2cgwq2sel5v","sqlExpression":null},{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"approved_students","description":null,"expression":"","filterable":true,"groupby":true,"id":5059,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Estudiantes
+  Aprobados","optionName":"metric_fprsu6o3jla_5w80yv9wg99","sqlExpression":null},{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"evaluated_students","description":null,"expression":"","filterable":true,"groupby":true,"id":5058,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"UInt64","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Estudiantes
+  Evaluados","optionName":"metric_r5pnqllwzlj_mhm1alm8cx","sqlExpression":null}],"groupby":[],"adhoc_filters":[{"clause":"WHERE","comparator":"No
+  filter","expressionType":"SIMPLE","operator":"TEMPORAL_RANGE","subject":"emission_time"}],"order_desc":true,"row_limit":1000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"x_axis_title_margin":15,"y_axis_title_margin":15,"y_axis_title_position":"Left","sort_series_type":"sum","color_scheme":"supersetColors","seriesType":"line","only_total":true,"opacity":0.2,"markerSize":6,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","rich_tooltip":true,"tooltipTimeFormat":"smart_date","y_axis_format":"SMART_NUMBER","truncateXAxis":true,"y_axis_bounds":[null,null],"extra_form_data":{},"dashboards":[209,240],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 366babdc-f9b6-4f37-98f5-e918b23ffe21
+version: 1.0.0
+dataset_uuid: a9b24f63-c89d-4e0f-91b5-fd2d9873647b

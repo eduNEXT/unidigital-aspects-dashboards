@@ -1,0 +1,115 @@
+table_name: Approved students
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: reporting
+sql: "WITH enrollment_data AS (\r\n    SELECT \r\n        fes.org,\r\n        fes.course_key,\r\
+  \n        COUNT(DISTINCT fes.actor_id) AS total_enrollments\r\n    FROM reporting.fact_enrollment_status\
+  \ fes\r\n    GROUP BY fes.org, fes.course_key\r\n),\r\napproving_data AS (\r\n \
+  \   SELECT \r\n        fss.org,\r\n        fss.course_key,\r\n        COUNT(DISTINCT\
+  \ fss.actor_id) AS approving_students\r\n    FROM reporting.fact_student_status\
+  \ fss\r\n    WHERE fss.approving_state = 'passed'\r\n    GROUP BY fss.org, fss.course_key\r\
+  \n),\r\ncourse_info AS (\r\n    SELECT \r\n        dcb.org,\r\n        dcb.course_key,\r\
+  \n        MAX(dcb.course_name) AS course_name,\r\n        MAX(dcb.course_run) AS\
+  \ course_run\r\n    FROM reporting.dim_course_blocks dcb\r\n    GROUP BY dcb.org,\
+  \ dcb.course_key\r\n)\r\nSELECT\r\n    ed.org AS org,\r\n    ed.course_key AS course_key,\r\
+  \n    ci.course_name AS course_name,\r\n    ci.course_run AS course_run,\r\n   \
+  \ ed.total_enrollments AS total_enrollments,\r\n    COALESCE(ad.approving_students,\
+  \ 0) AS approving_students\r\nFROM enrollment_data ed\r\nLEFT JOIN approving_data\
+  \ ad\r\nON ed.org = ad.org\r\nAND ed.course_key = ad.course_key\r\nLEFT JOIN course_info\
+  \ ci\r\nON ed.org = ci.org\r\nAND ed.course_key = ci.course_key;\r\n\r\n\r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 4dcf4a5c-d4fd-479b-bfcb-b4aac8d9c9e2
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LowCardinality(String)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: org
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LowCardinality(String)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: approving_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: total_enrollments
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_run
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

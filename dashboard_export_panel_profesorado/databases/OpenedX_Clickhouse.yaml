@@ -1,5 +1,5 @@
 database_name: OpenedX Clickhouse
-sqlalchemy_uri: clickhousedb+connect://ch_report:password@clickhouse:8123/xapi
+sqlalchemy_uri: clickhousedb+connect://ch_report:JlV3Rrtlt0lwHXvqHTrYbkJC@10.3.1.129:8123/xapi
 cache_timeout: null
 expose_in_sqllab: true
 allow_run_async: false

@@ -1,0 +1,359 @@
+table_name: course_summary
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: reporting
+sql: "WITH\r\n    most_recent_overviews AS (\r\n        SELECT org, course_key, MAX(modified)\
+  \ AS last_modified\r\n        FROM event_sink.course_overviews\r\n        GROUP\
+  \ BY org, course_key\r\n    ),\r\n    course_data AS (\r\n        SELECT co.course_key,\r\
+  \n               co.display_name AS course_name, \r\n               splitByString('+',\
+  \ co.course_key)[-1] AS course_run, \r\n               co.org, \r\n            \
+  \   parseDateTimeBestEffortOrNull(co.course_start) AS course_start, \r\n       \
+  \        parseDateTimeBestEffortOrNull(co.course_end) AS course_end,\r\n       \
+  \        CASE \r\n                   WHEN co.course_end IS NULL OR parseDateTimeBestEffortOrNull(co.course_end)\
+  \ < now() \r\n                   THEN 'active' \r\n                   ELSE 'inactive'\
+  \ \r\n               END AS course_status\r\n        FROM event_sink.course_overviews\
+  \ co\r\n        INNER JOIN most_recent_overviews mro\r\n        ON co.org = mro.org\r\
+  \n        AND co.course_key = mro.course_key\r\n        AND co.modified = mro.last_modified\r\
+  \n    ),\r\n    course_enrollments AS (\r\n        SELECT cd.course_key,\r\n   \
+  \            cd.course_name,\r\n               cd.course_run,\r\n              \
+  \ cd.org,\r\n               cd.course_start,\r\n               cd.course_end,\r\n\
+  \               cd.course_status,\r\n               COUNT(DISTINCT CASE WHEN fes.enrollment_status\
+  \ = 'registered' THEN fes.actor_id END) AS current_students,\r\n               COUNT(DISTINCT\
+  \ fes.actor_id) AS total_students,\r\n               COUNT(DISTINCT CASE WHEN fes.enrollment_mode\
+  \ = 'audit' THEN fes.actor_id END) AS audit_students,\r\n               COUNT(DISTINCT\
+  \ CASE WHEN fes.enrollment_mode = 'verified' THEN fes.actor_id END) AS verified_students,\r\
+  \n               COUNT(DISTINCT CASE WHEN fes.enrollment_mode = 'professional' THEN\
+  \ fes.actor_id END) AS professional_students,\r\n               COUNT(DISTINCT CASE\
+  \ WHEN fes.enrollment_mode = 'honor' THEN fes.actor_id END) AS honor_students,\r\
+  \n               COUNT(DISTINCT CASE WHEN fes.enrollment_mode = 'no-id-professional'\
+  \ THEN fes.actor_id END) AS no_id_professional_students,\r\n               COUNT(DISTINCT\
+  \ CASE WHEN fes.enrollment_mode = 'credit' THEN fes.actor_id END) AS credit_students,\r\
+  \n               COUNT(DISTINCT CASE WHEN fes.enrollment_mode = 'masters' THEN fes.actor_id\
+  \ END) AS masters_students,\r\n               COUNT(DISTINCT CASE WHEN fes.enrollment_mode\
+  \ = 'executive-education' THEN fes.actor_id END) AS executive_education_students,\r\
+  \n               COUNT(DISTINCT CASE WHEN fes.enrollment_mode = 'paid-executive-education'\
+  \ THEN fes.actor_id END) AS paid_executive_education_students,\r\n             \
+  \  COUNT(DISTINCT CASE WHEN fes.enrollment_mode = 'unpaid-executive-education' THEN\
+  \ fes.actor_id END) AS unpaid_executive_education_students,\r\n               COUNT(DISTINCT\
+  \ CASE WHEN fes.enrollment_mode = 'paid-bootcamp' THEN fes.actor_id END) AS paid_bootcamp_students,\r\
+  \n               COUNT(DISTINCT CASE WHEN fes.enrollment_mode = 'unpaid-bootcamp'\
+  \ THEN fes.actor_id END) AS unpaid_bootcamp_students\r\n        FROM course_data\
+  \ cd\r\n        LEFT JOIN reporting.fact_enrollment_status fes\r\n        ON cd.course_key\
+  \ = fes.course_key\r\n        GROUP BY cd.course_key, cd.course_name, cd.course_run,\
+  \ cd.org, cd.course_start, cd.course_end, cd.course_status\r\n    )\r\nSELECT\r\n\
+  \    ce.course_key,\r\n    ce.course_name,\r\n    ce.course_run,\r\n    ce.org,\r\
+  \n    formatDateTime(ce.course_start, '%Y-%m-%d') AS course_start,\r\n    formatDateTime(ce.course_end,\
+  \ '%Y-%m-%d') AS course_end,\r\n    ce.course_status,\r\n    ce.current_students,\r\
+  \n    ce.total_students,\r\n    ce.audit_students,\r\n    ce.verified_students,\r\
+  \n    ce.professional_students,\r\n    ce.honor_students,\r\n    ce.no_id_professional_students,\r\
+  \n    ce.credit_students,\r\n    ce.masters_students,\r\n    ce.executive_education_students,\r\
+  \n    ce.paid_executive_education_students,\r\n    ce.unpaid_executive_education_students,\r\
+  \n    ce.paid_bootcamp_students,\r\n    ce.unpaid_bootcamp_students,\r\n    COUNT(DISTINCT\
+  \ flcg.actor_id) AS students_with_grade,\r\n    ROUND(AVG(flcg.course_grade), 2)\
+  \ AS avg_grade\r\nFROM course_enrollments ce\r\nLEFT JOIN reporting.fact_learner_course_grade\
+  \ flcg\r\nON ce.course_key = flcg.course_key\r\nGROUP BY ce.course_key, ce.course_name,\
+  \ ce.course_run, ce.org, ce.course_start, ce.course_end, ce.course_status, ce.current_students,\
+  \ ce.total_students, ce.audit_students, ce.verified_students, ce.professional_students,\
+  \ ce.honor_students, ce.no_id_professional_students, ce.credit_students, ce.masters_students,\
+  \ ce.executive_education_students, ce.paid_executive_education_students, ce.unpaid_executive_education_students,\
+  \ ce.paid_bootcamp_students, ce.unpaid_bootcamp_students;\r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 05b3f5da-5a13-4560-8c3f-8a209e913c4c
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: course_start
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Nullable(String)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_end
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Nullable(String)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: avg_grade
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: unpaid_executive_education_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: paid_executive_education_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: no_id_professional_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: unpaid_bootcamp_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: paid_bootcamp_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: executive_education_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: students_with_grade
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: audit_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: professional_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: masters_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: total_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: credit_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: current_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: verified_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: honor_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_status
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_run
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: org
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

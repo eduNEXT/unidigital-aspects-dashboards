@@ -84,7 +84,61 @@ params:
   extra_form_data: {}
   dashboards:
   - 209
-query_context: null
+query_context: "{\"datasource\":{\"id\":159,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"filters\":[{\"col\":\"fg.Fecha de Emisi\xF3n\",\"op\":\"TEMPORAL_RANGE\"\
+  ,\"val\":\"No filter\"}],\"extras\":{\"having\":\"\",\"where\":\"\"},\"applied_time_extras\"\
+  :{},\"columns\":[{\"columnType\":\"BASE_AXIS\",\"sqlExpression\":\"age\",\"label\"\
+  :\"age\",\"expressionType\":\"SQL\"},{\"expressionType\":\"SQL\",\"label\":\"gender\"\
+  ,\"sqlExpression\":\"case when gender = 'f' then 'Femenino'\\nwhen gender = 'm'\
+  \ then 'Masculino'\\nelse 'No Reportado'\\nend\"}],\"metrics\":[{\"aggregate\":\"\
+  COUNT_DISTINCT\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"actor_id\",\"description\":null,\"\
+  expression\":null,\"filterable\":true,\"groupby\":true,\"id\":2855,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"String\",\"type_generic\"\
+  :1,\"verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"\
+  expressionType\":\"SIMPLE\",\"hasCustomLabel\":false,\"label\":\"COUNT_DISTINCT(actor_id)\"\
+  ,\"optionName\":\"metric_gz2lzo9c91l_aj5m4jte3ag\",\"sqlExpression\":null}],\"orderby\"\
+  :[[{\"aggregate\":\"COUNT_DISTINCT\",\"column\":{\"advanced_data_type\":null,\"\
+  certification_details\":null,\"certified_by\":null,\"column_name\":\"actor_id\"\
+  ,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"\
+  id\":2855,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"\
+  type\":\"String\",\"type_generic\":1,\"verbose_name\":null,\"warning_markdown\"\
+  :null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\"\
+  :false,\"label\":\"COUNT_DISTINCT(actor_id)\",\"optionName\":\"metric_gz2lzo9c91l_aj5m4jte3ag\"\
+  ,\"sqlExpression\":null},false]],\"annotation_layers\":[],\"row_limit\":100,\"series_columns\"\
+  :[{\"expressionType\":\"SQL\",\"label\":\"gender\",\"sqlExpression\":\"case when\
+  \ gender = 'f' then 'Femenino'\\nwhen gender = 'm' then 'Masculino'\\nelse 'No Reportado'\\\
+  nend\"}],\"series_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\"\
+  :{},\"custom_form_data\":{},\"time_offsets\":[],\"post_processing\":[{\"operation\"\
+  :\"pivot\",\"options\":{\"index\":[\"age\"],\"columns\":[\"gender\"],\"aggregates\"\
+  :{\"COUNT_DISTINCT(actor_id)\":{\"operator\":\"mean\"}},\"drop_missing_columns\"\
+  :false}},{\"operation\":\"rename\",\"options\":{\"columns\":{\"COUNT_DISTINCT(actor_id)\"\
+  :null},\"level\":0,\"inplace\":true}},{\"operation\":\"flatten\"}]}],\"form_data\"\
+  :{\"adhoc_filters\":[{\"clause\":\"WHERE\",\"comparator\":\"No filter\",\"expressionType\"\
+  :\"SIMPLE\",\"operator\":\"TEMPORAL_RANGE\",\"subject\":\"fg.Fecha de Emisi\xF3\
+  n\"}],\"annotation_layers\":[],\"color_scheme\":\"supersetColors\",\"comparison_type\"\
+  :\"values\",\"contributionMode\":null,\"dashboards\":[209],\"datasource\":\"159__table\"\
+  ,\"extra_form_data\":{},\"forecastInterval\":0.8,\"forecastPeriods\":10,\"groupby\"\
+  :[{\"expressionType\":\"SQL\",\"label\":\"gender\",\"sqlExpression\":\"case when\
+  \ gender = 'f' then 'Femenino'\\nwhen gender = 'm' then 'Masculino'\\nelse 'No Reportado'\\\
+  nend\"}],\"legendMargin\":null,\"legendOrientation\":\"top\",\"legendType\":\"scroll\"\
+  ,\"metrics\":[{\"aggregate\":\"COUNT_DISTINCT\",\"column\":{\"advanced_data_type\"\
+  :null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"actor_id\"\
+  ,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"\
+  id\":2855,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"\
+  type\":\"String\",\"type_generic\":1,\"verbose_name\":null,\"warning_markdown\"\
+  :null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\"\
+  :false,\"label\":\"COUNT_DISTINCT(actor_id)\",\"optionName\":\"metric_gz2lzo9c91l_aj5m4jte3ag\"\
+  ,\"sqlExpression\":null}],\"only_total\":true,\"order_desc\":true,\"orientation\"\
+  :\"vertical\",\"rich_tooltip\":true,\"row_limit\":100,\"show_empty_columns\":true,\"\
+  show_legend\":false,\"slice_id\":1753,\"sort_series_type\":\"sum\",\"tooltipTimeFormat\"\
+  :\"smart_date\",\"truncateXAxis\":true,\"truncate_metric\":true,\"viz_type\":\"\
+  echarts_timeseries_bar\",\"x_axis\":\"age\",\"x_axis_sort_asc\":true,\"x_axis_sort_series\"\
+  :\"name\",\"x_axis_sort_series_ascending\":true,\"x_axis_time_format\":\"smart_date\"\
+  ,\"x_axis_title_margin\":15,\"y_axis_bounds\":[null,null],\"y_axis_format\":\"SMART_NUMBER\"\
+  ,\"y_axis_title_margin\":15,\"y_axis_title_position\":\"Left\",\"force\":false,\"\
+  result_format\":\"json\",\"result_type\":\"full\"},\"result_format\":\"json\",\"\
+  result_type\":\"full\"}"
 cache_timeout: null
 uuid: 42dfc9de-7c61-4dbf-8efe-54c4f0cc7873
 version: 1.0.0

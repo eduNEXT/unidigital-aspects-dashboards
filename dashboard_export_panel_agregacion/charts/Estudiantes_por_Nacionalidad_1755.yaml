@@ -63,7 +63,38 @@ params:
   extra_form_data: {}
   dashboards:
   - 209
-query_context: null
+query_context: "{\"datasource\":{\"id\":159,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"filters\":[{\"col\":\"Fecha de Registo\",\"op\":\"TEMPORAL_RANGE\"\
+  ,\"val\":\"No filter\"}],\"extras\":{\"having\":\"\",\"where\":\"\"},\"applied_time_extras\"\
+  :{},\"columns\":[],\"metrics\":[{\"aggregate\":\"COUNT_DISTINCT\",\"column\":{\"\
+  advanced_data_type\":null,\"changed_on\":\"2024-04-16T18:46:44\",\"column_name\"\
+  :\"actor_id\",\"created_on\":\"2024-04-16T18:46:44\",\"description\":null,\"expression\"\
+  :null,\"extra\":null,\"filterable\":true,\"groupby\":true,\"id\":2855,\"is_active\"\
+  :true,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"String\",\"type_generic\"\
+  :1,\"uuid\":\"4cd1eb10-ee76-4528-88e9-6870d55a1157\",\"verbose_name\":null},\"datasourceWarning\"\
+  :false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"label\":\"N\xFAmero\
+  \ de aprendices\",\"optionName\":\"metric_uyuy2f6zwxd_3dof35qz96z\",\"sqlExpression\"\
+  :null}],\"annotation_layers\":[],\"row_limit\":10000,\"series_limit\":0,\"order_desc\"\
+  :true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"form_data\"\
+  :{\"datasource\":\"159__table\",\"viz_type\":\"world_map\",\"slice_id\":1755,\"\
+  entity\":\"country\",\"country_fieldtype\":\"cca2\",\"metric\":{\"aggregate\":\"\
+  COUNT_DISTINCT\",\"column\":{\"advanced_data_type\":null,\"changed_on\":\"2024-04-16T18:46:44\"\
+  ,\"column_name\":\"actor_id\",\"created_on\":\"2024-04-16T18:46:44\",\"description\"\
+  :null,\"expression\":null,\"extra\":null,\"filterable\":true,\"groupby\":true,\"\
+  id\":2855,\"is_active\":true,\"is_dttm\":false,\"python_date_format\":null,\"type\"\
+  :\"String\",\"type_generic\":1,\"uuid\":\"4cd1eb10-ee76-4528-88e9-6870d55a1157\"\
+  ,\"verbose_name\":null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\"\
+  ,\"hasCustomLabel\":true,\"label\":\"N\xFAmero de aprendices\",\"optionName\":\"\
+  metric_uyuy2f6zwxd_3dof35qz96z\",\"sqlExpression\":null},\"adhoc_filters\":[{\"\
+  clause\":\"WHERE\",\"comparator\":\"No filter\",\"datasourceWarning\":false,\"expressionType\"\
+  :\"SIMPLE\",\"filterOptionName\":\"filter_zo6bl50u9x9_i769hfu4aim\",\"isExtra\"\
+  :false,\"isNew\":false,\"operator\":\"TEMPORAL_RANGE\",\"operatorId\":\"TEMPORAL_RANGE\"\
+  ,\"sqlExpression\":null,\"subject\":\"Fecha de Registo\"}],\"row_limit\":10000,\"\
+  show_bubbles\":false,\"max_bubble_size\":\"25\",\"color_picker\":{\"a\":1,\"b\"\
+  :135,\"g\":122,\"r\":0},\"color_by\":\"metric\",\"linear_color_scheme\":\"superset_seq_1\"\
+  ,\"color_scheme\":\"supersetColors\",\"y_axis_format\":\"SMART_NUMBER\",\"extra_form_data\"\
+  :{},\"dashboards\":[209],\"force\":false,\"result_format\":\"json\",\"result_type\"\
+  :\"full\"},\"result_format\":\"json\",\"result_type\":\"full\"}"
 cache_timeout: null
 uuid: 4306adb4-6225-4b7e-845a-caf03ceb9ddf
 version: 1.0.0

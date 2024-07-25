@@ -12,7 +12,7 @@ position:
     id: CHART--WMShAWckK
     meta:
       chartId: 1740
-      height: 41
+      height: 25
       sliceName: Total de inscripciones
       sliceNameOverride: Inscripciones acumuladas
       uuid: 91249874-8f85-43cf-80ab-f87a3658026e
@@ -31,7 +31,7 @@ position:
     id: CHART-DrwwRxNfJs
     meta:
       chartId: 1739
-      height: 42
+      height: 25
       sliceName: Total de estudiantes
       sliceNameOverride: Inscritos actualmente
       uuid: b6cea62f-caaa-4b3e-a2c0-055f4e0a9850
@@ -70,7 +70,7 @@ position:
     id: CHART-explore-1773-1
     meta:
       chartId: 1773
-      height: 42
+      height: 24
       sliceName: "Estudiantes con actividad en los \xFAltimos 7 d\xEDas"
       uuid: eaa73b5d-25ec-4149-8d19-91947fb6a4da
       width: 6
@@ -88,7 +88,7 @@ position:
     id: CHART-explore-1774-1
     meta:
       chartId: 1774
-      height: 42
+      height: 24
       sliceName: Estudiantes que han trabajado
       sliceNameOverride: Estudiantes con actividad
       uuid: d57281e3-b08d-42ba-9192-135109cf4b7e
@@ -157,60 +157,6 @@ position:
     - TABS-zY2tcrCEmh
     - TAB-Wl0zkDScNS
     - ROW-_44ZKrJo1
-    type: CHART
-  CHART-explore-1780-1:
-    children: []
-    id: CHART-explore-1780-1
-    meta:
-      chartId: 1780
-      height: 50
-      sliceName: Cantidad de accesos mensuales
-      uuid: 2723d6ab-b205-457a-8a6b-faf3faced8ab
-      width: 8
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-qJkT5tDkbG
-    - TAB-g_5M4wCsU
-    - TABS-zY2tcrCEmh
-    - TAB-Wl0zkDScNS
-    - ROW-Pna5SzzGU
-    type: CHART
-  CHART-explore-1781-1:
-    children: []
-    id: CHART-explore-1781-1
-    meta:
-      chartId: 1781
-      height: 50
-      sliceName: Cantidad de accesos Anuales
-      uuid: cf4c0ea0-1c50-4e8a-9b09-98d1a93fd201
-      width: 4
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-qJkT5tDkbG
-    - TAB-g_5M4wCsU
-    - TABS-zY2tcrCEmh
-    - TAB-Wl0zkDScNS
-    - ROW-Pna5SzzGU
-    type: CHART
-  CHART-explore-1782-1:
-    children: []
-    id: CHART-explore-1782-1
-    meta:
-      chartId: 1782
-      height: 50
-      sliceName: Cantidad de accesos diarios
-      uuid: 5ff22af1-48b9-475a-8b25-86b9a2d9735b
-      width: 12
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-qJkT5tDkbG
-    - TAB-g_5M4wCsU
-    - TABS-zY2tcrCEmh
-    - TAB-Wl0zkDScNS
-    - ROW-XDyeaB-WN
     type: CHART
   CHART-explore-1783-1:
     children: []
@@ -895,19 +841,38 @@ position:
     - TAB-073fvdd4u7
     - ROW-8eZTph-RZ
     type: CHART
-  CHART-fsy9UPZ4sj:
+  CHART-explore-1969-1:
     children: []
-    id: CHART-fsy9UPZ4sj
+    id: CHART-explore-1969-1
     meta:
-      chartId: 1873
-      height: 22
-      sliceName: "Informaci\xF3n del curso"
-      uuid: b3c04452-ca7f-474c-be54-b6dfa2262646
+      chartId: 1969
+      height: 29
+      sliceName: "Informaci\xF3n de los cursos"
+      uuid: 0f19f139-3747-4e34-acb4-4946f8a39db0
       width: 12
     parents:
     - ROOT_ID
     - GRID_ID
-    - ROW-ZKQuv3P_1b
+    - ROW-r8z-MLk0J
+    type: CHART
+  CHART-h5hTg921ij:
+    children: []
+    id: CHART-h5hTg921ij
+    meta:
+      chartId: 1970
+      height: 50
+      sliceName: "Evoluci\xF3n de la Actividad y Desempe\xF1o de los Estudiantes a\
+        \ lo Largo del Tiempo"
+      uuid: 366babdc-f9b6-4f37-98f5-e918b23ffe21
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-p-eLEOIWzC
     type: CHART
   CHART-uESIZGcasS:
     children: []
@@ -927,6 +892,25 @@ position:
     - TABS-zY2tcrCEmh
     - TAB-Wl0zkDScNS
     - ROW-jDHWtnGOj
+    type: CHART
+  CHART-yWQT6dEVnO:
+    children: []
+    id: CHART-yWQT6dEVnO
+    meta:
+      chartId: 1971
+      height: 50
+      sliceName: "Evoluci\xF3n de Estudiantes y Modos de Inscripci\xF3n a lo Largo\
+        \ del Tiempo"
+      uuid: 81047a10-c785-43d5-9ad5-32d40e6cf00c
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    - ROW-wd8l_hGBmX
     type: CHART
   COLUMN-H6AsHXvaqB:
     children:
@@ -965,7 +949,7 @@ position:
   DASHBOARD_VERSION_KEY: v2
   GRID_ID:
     children:
-    - ROW-ZKQuv3P_1b
+    - ROW-r8z-MLk0J
     - TABS-qJkT5tDkbG
     id: GRID_ID
     parents:
@@ -1228,21 +1212,6 @@ position:
     - TABS-9GM-ZQeYae
     - TAB-vJI8iex0Ap
     type: ROW
-  ROW-Pna5SzzGU:
-    children:
-    - CHART-explore-1781-1
-    - CHART-explore-1780-1
-    id: ROW-Pna5SzzGU
-    meta:
-      background: BACKGROUND_TRANSPARENT
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-qJkT5tDkbG
-    - TAB-g_5M4wCsU
-    - TABS-zY2tcrCEmh
-    - TAB-Wl0zkDScNS
-    type: ROW
   ROW-SIOf3RI6D:
     children:
     - CHART-explore-1846-1
@@ -1273,20 +1242,6 @@ position:
     - TABS-rN4Z-pBAyq
     - TAB-xPLTY-auxU
     type: ROW
-  ROW-XDyeaB-WN:
-    children:
-    - CHART-explore-1782-1
-    id: ROW-XDyeaB-WN
-    meta:
-      background: BACKGROUND_TRANSPARENT
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-qJkT5tDkbG
-    - TAB-g_5M4wCsU
-    - TABS-zY2tcrCEmh
-    - TAB-Wl0zkDScNS
-    type: ROW
   ROW-XusiVnfD1:
     children:
     - CHART-explore-1789-1
@@ -1314,16 +1269,6 @@ position:
     - TAB-8JHAejhcl
     - TABS-ExQ__odI92
     - TAB-K1XFvA4Fzi
-    type: ROW
-  ROW-ZKQuv3P_1b:
-    children:
-    - CHART-fsy9UPZ4sj
-    id: ROW-ZKQuv3P_1b
-    meta:
-      background: BACKGROUND_TRANSPARENT
-    parents:
-    - ROOT_ID
-    - GRID_ID
     type: ROW
   ROW-_44ZKrJo1:
     children:
@@ -1381,6 +1326,20 @@ position:
     - TABS-ExQ__odI92
     - TAB-K1XFvA4Fzi
     type: ROW
+  ROW-e_9tkzwMk:
+    children:
+    - CHART-uESIZGcasS
+    id: ROW-e_9tkzwMk
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-g_5M4wCsU
+    - TABS-zY2tcrCEmh
+    - TAB-Wl0zkDScNS
+    type: ROW
   ROW-eg4Q3dd31:
     children:
     - CHART-explore-1845-1
@@ -1394,20 +1353,6 @@ position:
     - TAB-g_5M4wCsU
     - TABS-zY2tcrCEmh
     - TAB-CRka4pvh7
-    type: ROW
-  ROW-jDHWtnGOj:
-    children:
-    - CHART-uESIZGcasS
-    id: ROW-jDHWtnGOj
-    meta:
-      background: BACKGROUND_TRANSPARENT
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - TABS-qJkT5tDkbG
-    - TAB-g_5M4wCsU
-    - TABS-zY2tcrCEmh
-    - TAB-Wl0zkDScNS
     type: ROW
   ROW-lyQiUFlly:
     children:
@@ -1423,6 +1368,20 @@ position:
     - TABS-rN4Z-pBAyq
     - TAB-9OJS-EqjY
     type: ROW
+  ROW-p-eLEOIWzC:
+    children:
+    - CHART-h5hTg921ij
+    id: ROW-p-eLEOIWzC
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    type: ROW
   ROW-qwjh2TtmQ:
     children:
     - CHART-explore-1775-1
@@ -1436,6 +1395,16 @@ position:
     - TAB-p4H3aK1ZP7
     - TABS-0qDEsDBt8l
     - TAB-LtP3yV-2l
+    type: ROW
+  ROW-r8z-MLk0J:
+    children:
+    - CHART-explore-1969-1
+    id: ROW-r8z-MLk0J
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
     type: ROW
   ROW-rMTf4aJ9g:
     children:
@@ -1484,6 +1453,20 @@ position:
     - CHART-DrwwRxNfJs
     - CHART--WMShAWckK
     id: ROW-w7N2hsxiq
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-qJkT5tDkbG
+    - TAB-8JHAejhcl
+    - TABS-ExQ__odI92
+    - TAB-GW_YOQjlg1
+    type: ROW
+  ROW-wd8l_hGBmX:
+    children:
+    - CHART-yWQT6dEVnO
+    id: ROW-wd8l_hGBmX
     meta:
       background: BACKGROUND_TRANSPARENT
     parents:
@@ -1658,6 +1641,8 @@ position:
     children:
     - ROW-w7N2hsxiq
     - ROW-12y_bEs2q9
+    - ROW-p-eLEOIWzC
+    - ROW-wd8l_hGBmX
     - HEADER-QuYjxFNkan
     - ROW-NMilfFLpx
     id: TAB-GW_YOQjlg1
@@ -1737,10 +1722,8 @@ position:
     type: TAB
   TAB-Wl0zkDScNS:
     children:
-    - ROW-Pna5SzzGU
+    - ROW-e_9tkzwMk
     - ROW-_44ZKrJo1
-    - ROW-XDyeaB-WN
-    - ROW-jDHWtnGOj
     - ROW-XusiVnfD1
     id: TAB-Wl0zkDScNS
     meta:
@@ -2050,9 +2033,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2081,7 +2061,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2091,6 +2070,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1775':
       id: 1775
       crossFilters:
@@ -2104,9 +2086,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2135,7 +2114,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2145,6 +2123,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1778':
       id: 1778
       crossFilters:
@@ -2158,9 +2139,6 @@ metadata:
         - 1775
         - 1776
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2189,7 +2167,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2199,6 +2176,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1779':
       id: 1779
       crossFilters:
@@ -2212,9 +2192,6 @@ metadata:
         - 1775
         - 1776
         - 1778
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2243,7 +2220,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2253,168 +2229,9 @@ metadata:
         - 1960
         - 1961
         - 1962
-    '1780':
-      id: 1780
-      crossFilters:
-        scope: global
-        chartsInScope:
-        - 1739
-        - 1740
-        - 1757
-        - 1773
-        - 1774
-        - 1775
-        - 1776
-        - 1778
-        - 1779
-        - 1781
-        - 1782
-        - 1783
-        - 1784
-        - 1785
-        - 1789
-        - 1792
-        - 1800
-        - 1802
-        - 1803
-        - 1804
-        - 1826
-        - 1827
-        - 1828
-        - 1829
-        - 1830
-        - 1838
-        - 1839
-        - 1840
-        - 1841
-        - 1843
-        - 1844
-        - 1845
-        - 1846
-        - 1847
-        - 1848
-        - 1849
-        - 1850
-        - 1863
-        - 1870
-        - 1873
-        - 1874
-        - 1875
-        - 1876
-        - 1957
-        - 1958
-        - 1959
-        - 1960
-        - 1961
-        - 1962
-    '1781':
-      id: 1781
-      crossFilters:
-        scope: global
-        chartsInScope:
-        - 1739
-        - 1740
-        - 1757
-        - 1773
-        - 1774
-        - 1775
-        - 1776
-        - 1778
-        - 1779
-        - 1780
-        - 1782
-        - 1783
-        - 1784
-        - 1785
-        - 1789
-        - 1792
-        - 1800
-        - 1802
-        - 1803
-        - 1804
-        - 1826
-        - 1827
-        - 1828
-        - 1829
-        - 1830
-        - 1838
-        - 1839
-        - 1840
-        - 1841
-        - 1843
-        - 1844
-        - 1845
-        - 1846
-        - 1847
-        - 1848
-        - 1849
-        - 1850
-        - 1863
-        - 1870
-        - 1873
-        - 1874
-        - 1875
-        - 1876
-        - 1957
-        - 1958
-        - 1959
-        - 1960
-        - 1961
-        - 1962
-    '1782':
-      id: 1782
-      crossFilters:
-        scope: global
-        chartsInScope:
-        - 1739
-        - 1740
-        - 1757
-        - 1773
-        - 1774
-        - 1775
-        - 1776
-        - 1778
-        - 1779
-        - 1780
-        - 1781
-        - 1783
-        - 1784
-        - 1785
-        - 1789
-        - 1792
-        - 1800
-        - 1802
-        - 1803
-        - 1804
-        - 1826
-        - 1827
-        - 1828
-        - 1829
-        - 1830
-        - 1838
-        - 1839
-        - 1840
-        - 1841
-        - 1843
-        - 1844
-        - 1845
-        - 1846
-        - 1847
-        - 1848
-        - 1849
-        - 1850
-        - 1863
-        - 1870
-        - 1873
-        - 1874
-        - 1875
-        - 1876
-        - 1957
-        - 1958
-        - 1959
-        - 1960
-        - 1961
-        - 1962
+        - 1969
+        - 1970
+        - 1971
     '1784':
       id: 1784
       crossFilters:
@@ -2429,9 +2246,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1785
         - 1789
@@ -2459,7 +2273,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2469,6 +2282,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1785':
       id: 1785
       crossFilters:
@@ -2483,9 +2299,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1789
@@ -2513,7 +2326,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2523,6 +2335,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1789':
       id: 1789
       crossFilters:
@@ -2537,9 +2352,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2567,7 +2379,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2577,6 +2388,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1792':
       id: 1792
       crossFilters:
@@ -2591,9 +2405,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2621,7 +2432,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2631,6 +2441,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1800':
       id: 1800
       crossFilters:
@@ -2645,9 +2458,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2675,7 +2485,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2685,6 +2494,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1802':
       id: 1802
       crossFilters:
@@ -2699,9 +2511,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2729,7 +2538,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2739,6 +2547,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1803':
       id: 1803
       crossFilters:
@@ -2753,9 +2564,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2783,7 +2591,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2793,6 +2600,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1804':
       id: 1804
       crossFilters:
@@ -2807,9 +2617,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2837,7 +2644,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2847,6 +2653,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1826':
       id: 1826
       crossFilters:
@@ -2861,9 +2670,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2891,7 +2697,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2901,6 +2706,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1827':
       id: 1827
       crossFilters:
@@ -2915,9 +2723,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2945,7 +2750,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -2955,6 +2759,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1828':
       id: 1828
       crossFilters:
@@ -2969,9 +2776,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -2999,7 +2803,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3009,6 +2812,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1829':
       id: 1829
       crossFilters:
@@ -3023,9 +2829,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3053,7 +2856,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3063,6 +2865,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1830':
       id: 1830
       crossFilters:
@@ -3077,9 +2882,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3107,7 +2909,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3117,6 +2918,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1838':
       id: 1838
       crossFilters:
@@ -3131,9 +2935,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3161,7 +2962,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3171,6 +2971,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1843':
       id: 1843
       crossFilters:
@@ -3185,9 +2988,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3215,7 +3015,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3225,6 +3024,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1844':
       id: 1844
       crossFilters:
@@ -3239,9 +3041,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3269,7 +3068,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3279,6 +3077,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1846':
       id: 1846
       crossFilters:
@@ -3293,9 +3094,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3323,7 +3121,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3333,6 +3130,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1847':
       id: 1847
       crossFilters:
@@ -3347,9 +3147,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3377,7 +3174,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3387,6 +3183,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1848':
       id: 1848
       crossFilters:
@@ -3401,9 +3200,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3431,7 +3227,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3441,6 +3236,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1849':
       id: 1849
       crossFilters:
@@ -3455,9 +3253,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3485,7 +3280,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3495,6 +3289,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1850':
       id: 1850
       crossFilters:
@@ -3509,9 +3306,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3539,7 +3333,6 @@ metadata:
         - 1849
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3549,6 +3342,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1863':
       id: 1863
       crossFilters:
@@ -3563,9 +3359,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3593,7 +3386,6 @@ metadata:
         - 1849
         - 1850
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3603,6 +3395,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1870':
       id: 1870
       crossFilters:
@@ -3617,9 +3412,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3647,7 +3439,6 @@ metadata:
         - 1849
         - 1850
         - 1863
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3657,60 +3448,9 @@ metadata:
         - 1960
         - 1961
         - 1962
-    '1873':
-      id: 1873
-      crossFilters:
-        scope: global
-        chartsInScope:
-        - 1739
-        - 1740
-        - 1757
-        - 1773
-        - 1774
-        - 1775
-        - 1776
-        - 1778
-        - 1779
-        - 1780
-        - 1781
-        - 1782
-        - 1783
-        - 1784
-        - 1785
-        - 1789
-        - 1792
-        - 1800
-        - 1802
-        - 1803
-        - 1804
-        - 1826
-        - 1827
-        - 1828
-        - 1829
-        - 1830
-        - 1838
-        - 1839
-        - 1840
-        - 1841
-        - 1843
-        - 1844
-        - 1845
-        - 1846
-        - 1847
-        - 1848
-        - 1849
-        - 1850
-        - 1863
-        - 1870
-        - 1874
-        - 1875
-        - 1876
-        - 1957
-        - 1958
-        - 1959
-        - 1960
-        - 1961
-        - 1962
+        - 1969
+        - 1970
+        - 1971
     '1874':
       id: 1874
       crossFilters:
@@ -3725,9 +3465,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3756,7 +3493,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1875
         - 1876
         - 1957
@@ -3765,6 +3501,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1875':
       id: 1875
       crossFilters:
@@ -3779,9 +3518,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3810,7 +3546,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1876
         - 1957
@@ -3819,6 +3554,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1876':
       id: 1876
       crossFilters:
@@ -3833,9 +3571,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3864,7 +3599,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1957
@@ -3873,6 +3607,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1957':
       id: 1957
       crossFilters:
@@ -3887,9 +3624,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3918,7 +3652,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3927,6 +3660,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1958':
       id: 1958
       crossFilters:
@@ -3941,9 +3677,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -3972,7 +3705,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -3981,6 +3713,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1959':
       id: 1959
       crossFilters:
@@ -3995,9 +3730,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -4026,7 +3758,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -4035,6 +3766,9 @@ metadata:
         - 1960
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1960':
       id: 1960
       crossFilters:
@@ -4049,9 +3783,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -4080,7 +3811,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -4089,6 +3819,9 @@ metadata:
         - 1959
         - 1961
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1961':
       id: 1961
       crossFilters:
@@ -4103,9 +3836,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -4134,7 +3864,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -4143,6 +3872,9 @@ metadata:
         - 1959
         - 1960
         - 1962
+        - 1969
+        - 1970
+        - 1971
     '1962':
       id: 1962
       crossFilters:
@@ -4157,9 +3889,6 @@ metadata:
         - 1776
         - 1778
         - 1779
-        - 1780
-        - 1781
-        - 1782
         - 1783
         - 1784
         - 1785
@@ -4188,7 +3917,6 @@ metadata:
         - 1850
         - 1863
         - 1870
-        - 1873
         - 1874
         - 1875
         - 1876
@@ -4197,6 +3925,168 @@ metadata:
         - 1959
         - 1960
         - 1961
+        - 1969
+        - 1970
+        - 1971
+    '1969':
+      id: 1969
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+        - 1970
+        - 1971
+    '1970':
+      id: 1970
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+        - 1969
+        - 1971
+    '1971':
+      id: 1971
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 1739
+        - 1740
+        - 1757
+        - 1773
+        - 1774
+        - 1775
+        - 1776
+        - 1778
+        - 1779
+        - 1783
+        - 1784
+        - 1785
+        - 1789
+        - 1792
+        - 1800
+        - 1802
+        - 1803
+        - 1804
+        - 1826
+        - 1827
+        - 1828
+        - 1829
+        - 1830
+        - 1838
+        - 1839
+        - 1840
+        - 1841
+        - 1843
+        - 1844
+        - 1845
+        - 1846
+        - 1847
+        - 1848
+        - 1849
+        - 1850
+        - 1863
+        - 1870
+        - 1874
+        - 1875
+        - 1876
+        - 1957
+        - 1958
+        - 1959
+        - 1960
+        - 1961
+        - 1962
+        - 1969
+        - 1970
   global_chart_configuration:
     scope:
       rootPath:
@@ -4212,9 +4102,6 @@ metadata:
     - 1776
     - 1778
     - 1779
-    - 1780
-    - 1781
-    - 1782
     - 1783
     - 1784
     - 1785
@@ -4243,7 +4130,6 @@ metadata:
     - 1850
     - 1863
     - 1870
-    - 1873
     - 1874
     - 1875
     - 1876
@@ -4253,6 +4139,9 @@ metadata:
     - 1960
     - 1961
     - 1962
+    - 1969
+    - 1970
+    - 1971
   color_scheme: supersetColors
   refresh_frequency: 0
   expanded_slices: {}
@@ -4289,9 +4178,6 @@ metadata:
     - 1776
     - 1778
     - 1779
-    - 1780
-    - 1781
-    - 1782
     - 1783
     - 1784
     - 1785
@@ -4320,7 +4206,6 @@ metadata:
     - 1850
     - 1863
     - 1870
-    - 1873
     - 1874
     - 1875
     - 1876
@@ -4330,6 +4215,9 @@ metadata:
     - 1960
     - 1961
     - 1962
+    - 1969
+    - 1970
+    - 1971
     tabsInScope:
     - TAB--m_SEUs8c
     - TAB-lZ_J2qcyUq
@@ -4611,7 +4499,78 @@ metadata:
     - TAB-eK1q2A42I
     - TAB-n24XvPagi
     - TAB-xPLTY-auxU
-  shared_label_colors: {}
+  - id: NATIVE_FILTER-uScadxRwn
+    controlValues:
+      enableEmptyFilter: false
+    name: "Agregaci\xF3n de Tiempo"
+    filterType: filter_timegrain
+    targets:
+    - datasetUuid: a9b24f63-c89d-4e0f-91b5-fd2d9873647b
+    defaultDataMask:
+      extraFormData:
+        time_grain_sqla: P1M
+      filterState:
+        label: Month
+        value:
+        - P1M
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - TAB-GW_YOQjlg1
+      - TAB-Wl0zkDScNS
+      excluded:
+      - 1740
+      - 1739
+      - 1773
+      - 1774
+      - 1957
+      - 1958
+      - 1959
+      - 1960
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 1784
+    - 1785
+    - 1800
+    - 1802
+    - 1826
+    - 1827
+    - 1828
+    - 1829
+    - 1830
+    - 1849
+    - 1850
+    - 1863
+    - 1970
+    - 1971
+    tabsInScope:
+    - TAB-8JHAejhcl
+    - TAB-GW_YOQjlg1
+    - TAB-9OJS-EqjY
+    - TAB-eK1q2A42I
+    - TAB-n24XvPagi
+    - TAB-xPLTY-auxU
+  shared_label_colors:
+    Total Estudiantes: '#1FA8C9'
+    Estudiantes Audit: '#FF7F44'
+    Total Inscripciones: '#E04355'
+    Estudiantes Honor: '#A1A6BD'
+    Estudiantes Verified: '#FEC0A1'
+    Estudiantes Actuales: '#5AC189'
+    Estudiantes con actividad: '#FCC700'
+    Estudiantes Evaluados: '#3CCCCB'
+    Estudiantes Aprobados: '#8FD3E4'
+    estudiantes: '#454E7C'
+    "Avg % Visualizaci\xF3n": '#666666'
+    Vistas: '#A868B7'
+    "Minutos de V\xEDdeo": '#A38F79'
+    Minutos Vistos: '#B2B2B2'
+    vistas: '#ACE1C4'
+    Unique Viewers: '#EFA1AA'
+    Repeat Views: '#D3B3DA'
+    Cantidad de Accesos: '#FDE380'
+    "N\xFAmero de aprendices": '#9EE5E5'
   color_scheme_domain:
   - '#1FA8C9'
   - '#454E7C'

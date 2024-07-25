@@ -5,7 +5,51 @@ default_endpoint: null
 offset: 0
 cache_timeout: null
 schema: reporting
-sql: select * from reporting.fact_watched_video_segments
+sql: "with\n    video_events as (\n        select\n            emission_time,\n  \
+  \          org,\n            course_key,\n            splitByString('/xblock/',\
+  \ object_id)[-1] as video_id,\n            actor_id,\n            verb_id,\n   \
+  \         video_position,\n            video_duration\n        from xapi.video_playback_events\n\
+  \        where 1 = 1 {% if filter_values(\"org\") != [] %}\n    and org in {{ filter_values(\"\
+  org\") | where_in }}\n{% endif %}\n\n{% if filter_values(\"course_name\") != []\
+  \ %}\n    and course_key in (\n        select course_key\n        from event_sink.course_names\n\
+  \        where course_name in {{ filter_values(\"course_name\") | where_in }}\n\
+  \    )\n{% endif %}\n    ),\n    starts as (\n        select *\n        from video_events\n\
+  \        where verb_id = 'https://w3id.org/xapi/video/verbs/played'\n    ),\n  \
+  \  ends as (\n        select *\n        from video_events\n        where\n     \
+  \       verb_id in (\n                'http://adlnet.gov/expapi/verbs/completed',\n\
+  \                'https://w3id.org/xapi/video/verbs/seeked',\n                'https://w3id.org/xapi/video/verbs/paused',\n\
+  \                'http://adlnet.gov/expapi/verbs/terminated'\n            )\n  \
+  \  ),\n    segments as (\n        select\n            starts.org as org,\n     \
+  \       starts.course_key as course_key,\n            starts.video_id as video_id,\n\
+  \            starts.actor_id,\n            cast(starts.video_position as Int32)\
+  \ as start_position,\n            cast(ends.video_position as Int32) as end_position,\n\
+  \            starts.emission_time as started_at,\n            ends.emission_time\
+  \ as ended_at,\n            ends.verb_id as end_type,\n            starts.video_duration\
+  \ as video_duration\n        from starts left\n        asof join\n            ends\n\
+  \            on (\n                starts.org = ends.org\n                and starts.course_key\
+  \ = ends.course_key\n                and starts.video_id = ends.video_id\n     \
+  \           and starts.actor_id = ends.actor_id\n                and starts.emission_time\
+  \ < ends.emission_time\n            )\n    ),\n    enriched_segments as (\n    \
+  \    select\n            segments.org as org,\n            segments.course_key as\
+  \ course_key,\n            blocks.course_name as course_name,\n            blocks.course_run\
+  \ as course_run,\n            blocks.section_with_name as section_with_name,\n \
+  \           blocks.subsection_with_name as subsection_with_name,\n            blocks.block_name\
+  \ as video_name,\n            blocks.display_name_with_location as video_name_with_location,\n\
+  \            segments.actor_id as actor_id,\n            segments.started_at as\
+  \ started_at,\n            segments.start_position - (segments.start_position %\
+  \ 5) as start_position,\n            segments.end_position - (segments.end_position\
+  \ % 5) as end_position,\n            segments.video_duration as video_duration\n\
+  \        from segments\n        join\n            reporting.dim_course_blocks_extended\
+  \ blocks\n            on (\n                segments.course_key = blocks.course_key\n\
+  \                and segments.video_id = blocks.block_id\n            )\n    )\n\
+  \nselect\n    org,\n    course_key,\n    course_name,\n    course_run,\n    section_with_name,\n\
+  \    subsection_with_name,\n    video_name,\n    video_name_with_location,\n   \
+  \ actor_id,\n    started_at,\n    arrayJoin(range(start_position, end_position,\
+  \ 5)) as segment_start,\n    video_duration,\n    CONCAT(toString(segment_start),\
+  \ '-', toString(segment_start + 4)) as segment_range,\n    start_position,\n   \
+  \ username,\n    name,\n    email\nfrom enriched_segments\nleft outer join\n   \
+  \ reporting.dim_user_pii users\n    on toUUID(actor_id) = users.external_user_id\n\
+  order by segment_start"
 params: null
 template_params: null
 filter_select_enabled: false
@@ -43,6 +87,15 @@ metrics:
   currency: null
   extra: {}
   warning_text: null
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
 columns:
 - column_name: user_info
   verbose_name: User Info
@@ -68,8 +121,56 @@ columns:
   description: null
   python_date_format: null
   extra: {}
+- column_name: subsection_with_name
+  verbose_name: Subsection With Name
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: section_with_name
+  verbose_name: Section With Name
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
 - column_name: video_duration
   verbose_name: Video Duration
+  is_dttm: false
+  is_active: true
+  type: Int64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: start_position
+  verbose_name: Start Position
+  is_dttm: false
+  is_active: true
+  type: Int64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: segment_start
+  verbose_name: Segment Start
   is_dttm: false
   is_active: true
   type: Int64
@@ -161,18 +262,6 @@ columns:
   groupby: true
   filterable: true
   expression: ''
-  description: null
-  python_date_format: null
-  extra: {}
-- column_name: start_position
-  verbose_name: Start Position
-  is_dttm: false
-  is_active: true
-  type: Int64
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
   description: null
   python_date_format: null
   extra: {}

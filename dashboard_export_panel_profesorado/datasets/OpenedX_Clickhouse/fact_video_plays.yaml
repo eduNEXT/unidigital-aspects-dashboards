@@ -5,14 +5,16 @@ default_endpoint: null
 offset: 0
 cache_timeout: null
 schema: reporting
-sql: "with plays as (\nselect *\nfrom reporting.fact_video_plays\nwhere\n    \n  \
-  \  {% if get_filters('course_name', remove_filter=True) == [] %}\n    1=1\n    {%\
-  \ elif filter_values('course_name') != [] %}\n    course_name in {{ filter_values('course_name')\
-  \ | where_in }}\n    {% else %}\n    1=0\n    {% endif %}\n    \n    {% if filter_values('org')\
-  \ != [] %}\nand org in {{ filter_values('org') | where_in }}\n{% endif %}\n\n{%\
-  \ if filter_values('course_name') != [] %}\nand course_key in (\n    select course_key\n\
-  \    from event_sink.course_names\n    where course_name in {{ filter_values('course_name')\
-  \ | where_in }}\n)\n{% endif %}\n)\n\nselect\n    *\nfrom plays"
+sql: "with\n    plays as (\n        select *\n        from reporting.fact_video_plays\n\
+  \        where\n            \n            {% if get_filters(\"course_name\", remove_filter=True)\
+  \ == [] %} 1 = 1\n            {% elif filter_values(\"course_name\") != [] %}\n\
+  \                course_name in {{ filter_values(\"course_name\") | where_in }}\n\
+  \            {% else %} 1 = 0\n            {% endif %}\n            \n         \
+  \   {% if filter_values(\"org\") != [] %}\n    and org in {{ filter_values(\"org\"\
+  ) | where_in }}\n{% endif %}\n\n{% if filter_values(\"course_name\") != [] %}\n\
+  \    and course_key in (\n        select course_key\n        from event_sink.course_names\n\
+  \        where course_name in {{ filter_values(\"course_name\") | where_in }}\n\
+  \    )\n{% endif %}\n    )\n\nselect *\nfrom plays"
 params: null
 template_params: {}
 filter_select_enabled: false
@@ -23,7 +25,7 @@ always_filter_main_dttm: false
 uuid: 6ec360a5-e247-42e7-b301-fa8275fc93f9
 metrics:
 - metric_name: unique_watchers
-  verbose_name: Unique Watchers
+  verbose_name: Unique Viewers
   metric_type: null
   expression: count(distinct actor_id)
   description: null
@@ -33,7 +35,7 @@ metrics:
     warning_markdown: ''
   warning_text: null
 - metric_name: total_plays
-  verbose_name: Total plays
+  verbose_name: Total Views
   metric_type: null
   expression: count(*)
   description: null
@@ -65,8 +67,8 @@ columns:
   description: null
   python_date_format: null
   extra: {}
-- column_name: video_name_with_location
-  verbose_name: Video Name With Location
+- column_name: subsection_with_name
+  verbose_name: Subsection Location and Name
   is_dttm: false
   is_active: true
   type: String
@@ -76,8 +78,31 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
+- column_name: section_with_name
+  verbose_name: Section Location and Name
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: video_name_with_location
+  verbose_name: Video Location and Name
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: {}
 - column_name: video_position
   verbose_name: Video Position
   is_dttm: false
@@ -89,34 +114,19 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
-- column_name: subsection_with_name
-  verbose_name: Subsection With Name
+  extra: {}
+- column_name: course_order
+  verbose_name: Course Order
   is_dttm: false
   is_active: true
-  type: String
+  type: Int32
   advanced_data_type: null
   groupby: true
   filterable: true
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
-- column_name: section_with_name
-  verbose_name: Section With Name
-  is_dttm: false
-  is_active: true
-  type: String
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: ''
-  description: null
-  python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: video_duration
   verbose_name: Video Duration
   is_dttm: false
@@ -128,8 +138,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: actor_id
   verbose_name: Actor ID
   is_dttm: false
@@ -141,8 +150,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: visualization_bucket
   verbose_name: Visualization Bucket
   is_dttm: false
@@ -154,8 +162,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: course_key
   verbose_name: Course Key
   is_dttm: false
@@ -167,8 +174,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: course_name
   verbose_name: Course Name
   is_dttm: false
@@ -180,8 +186,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: course_run
   verbose_name: Course Run
   is_dttm: false
@@ -193,8 +198,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: emission_time
   verbose_name: Emission Time
   is_dttm: true
@@ -206,8 +210,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: video_id
   verbose_name: Video ID
   is_dttm: false
@@ -219,8 +222,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: video_link
   verbose_name: Video Link
   is_dttm: false
@@ -232,8 +234,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: video_name
   verbose_name: Video Name
   is_dttm: false
@@ -245,8 +246,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: graded
   verbose_name: Graded
   is_dttm: false
@@ -258,8 +258,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: email
   verbose_name: Email
   is_dttm: false
@@ -271,8 +270,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: name
   verbose_name: Name
   is_dttm: false
@@ -284,8 +282,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: org
   verbose_name: Organization
   is_dttm: false
@@ -297,8 +294,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 - column_name: username
   verbose_name: Username
   is_dttm: false
@@ -310,7 +306,6 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra:
-    warning_markdown: null
+  extra: {}
 version: 1.0.0
 database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

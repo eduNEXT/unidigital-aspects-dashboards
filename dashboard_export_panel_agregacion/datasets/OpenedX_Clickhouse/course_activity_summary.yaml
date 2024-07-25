@@ -1,0 +1,230 @@
+table_name: course_activity_summary
+main_dttm_col: emission_time
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: reporting
+sql: "WITH enrollments AS (\r\n    SELECT \r\n        org,\r\n        course_key,\r\
+  \n        toDate(emission_time) AS emission_date,\r\n        COUNT(DISTINCT CASE\
+  \ WHEN enrollment_status = 'registered' THEN actor_id END) AS total_enrollments,\r\
+  \n        COUNT(DISTINCT actor_id) AS total_students,\r\n        COUNT(DISTINCT\
+  \ CASE WHEN enrollment_status = 'registered' THEN actor_id END) AS current_students,\r\
+  \n        COUNT(DISTINCT CASE WHEN enrollment_mode = 'honor' THEN actor_id END)\
+  \ AS honor_students,\r\n        COUNT(DISTINCT CASE WHEN enrollment_mode = 'verified'\
+  \ THEN actor_id END) AS verified_students,\r\n        COUNT(DISTINCT CASE WHEN enrollment_mode\
+  \ = 'audit' THEN actor_id END) AS audit_students\r\n    FROM reporting.fact_enrollment_status\r\
+  \n    GROUP BY org, course_key, emission_date\r\n),\r\nlearner_course_status AS\
+  \ (\r\n    SELECT \r\n        org,\r\n        course_key,\r\n        toDate(emission_time)\
+  \ AS emission_date,\r\n        COUNT(DISTINCT actor_id) AS evaluated_students,\r\
+  \n        COUNT(DISTINCT CASE WHEN approving_state = 'passed' THEN actor_id END)\
+  \ AS approved_students\r\n    FROM reporting.fact_learner_course_status\r\n    GROUP\
+  \ BY org, course_key, emission_date\r\n),\r\nnavigation AS (\r\n    SELECT \r\n\
+  \        org,\r\n        course_key,\r\n        course_run,\r\n        toDate(emission_time)\
+  \ AS emission_date,\r\n        COUNT(DISTINCT actor_id) AS students_with_activity\r\
+  \n    FROM reporting.fact_navigation\r\n    GROUP BY org, course_key, course_run,\
+  \ emission_date\r\n),\r\ncourse_info AS (\r\n    SELECT \r\n        org,\r\n   \
+  \     course_key,\r\n        MAX(course_name) AS course_name,\r\n        MAX(course_run)\
+  \ AS course_run\r\n    FROM reporting.dim_course_blocks\r\n    GROUP BY org, course_key\r\
+  \n)\r\nSELECT \r\n    e.emission_date AS emission_time,\r\n    e.org AS org,\r\n\
+  \    e.course_key AS course_key,\r\n    ci.course_name AS course_name,\r\n    ci.course_run\
+  \ AS course_run,\r\n    e.total_enrollments AS total_enrollments,\r\n    e.total_students\
+  \ AS total_students,\r\n    COALESCE(n.students_with_activity, 0) AS students_with_activity,\r\
+  \n    e.current_students AS current_students,\r\n    COALESCE(lcs.evaluated_students,\
+  \ 0) AS evaluated_students,\r\n    COALESCE(lcs.approved_students, 0) AS approved_students,\r\
+  \n    e.honor_students AS honor_students,\r\n    e.verified_students AS verified_students,\r\
+  \n    e.audit_students AS audit_students\r\nFROM enrollments e\r\nLEFT JOIN learner_course_status\
+  \ lcs\r\nON e.org = lcs.org\r\nAND e.course_key = lcs.course_key\r\nAND e.emission_date\
+  \ = lcs.emission_date\r\nLEFT JOIN navigation n\r\nON e.org = n.org\r\nAND e.course_key\
+  \ = n.course_key\r\nAND e.emission_date = n.emission_date\r\nLEFT JOIN course_info\
+  \ ci\r\nON e.org = ci.org\r\nAND e.course_key = ci.course_key\r\nORDER BY emission_time,\
+  \ org, course_key;\r\n\r\n\r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: a9b24f63-c89d-4e0f-91b5-fd2d9873647b
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LowCardinality(String)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: org
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LowCardinality(String)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: students_with_activity
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: evaluated_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: approved_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: audit_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: total_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: total_enrollments
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: current_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: verified_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: honor_students
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: emission_time
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: Date
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: course_run
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6

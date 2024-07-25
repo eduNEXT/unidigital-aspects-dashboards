@@ -46,6 +46,45 @@ metrics:
     warning_markdown: ''
   warning_text: null
 columns:
+- column_name: course_key
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LowCardinality(String)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: enrollment_mode
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LowCardinality(String)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
+- column_name: org
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LowCardinality(String)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: ''
+  description: null
+  python_date_format: null
+  extra:
+    warning_markdown: null
 - column_name: upa.username
   verbose_name: null
   is_dttm: false
@@ -57,7 +96,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: upa.email
   verbose_name: null
   is_dttm: false
@@ -69,7 +109,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: upa.name
   verbose_name: null
   is_dttm: false
@@ -81,7 +122,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: year_of_birth
   verbose_name: null
   is_dttm: false
@@ -93,7 +135,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: age
   verbose_name: null
   is_dttm: false
@@ -105,7 +148,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: course_grade
   verbose_name: null
   is_dttm: false
@@ -117,7 +161,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: external_user_id
   verbose_name: null
   is_dttm: false
@@ -129,7 +174,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: level_of_education
   verbose_name: null
   is_dttm: false
@@ -141,7 +187,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: approving_state
   verbose_name: null
   is_dttm: false
@@ -153,7 +200,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: grade_bucket
   verbose_name: null
   is_dttm: false
@@ -165,7 +213,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: actor_id
   verbose_name: null
   is_dttm: false
@@ -177,7 +226,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: course_name
   verbose_name: null
   is_dttm: false
@@ -189,7 +239,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: enrollment_status
   verbose_name: null
   is_dttm: false
@@ -201,19 +252,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
-- column_name: course_key
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: String
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: ''
-  description: null
-  python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: course_run
   verbose_name: null
   is_dttm: false
@@ -225,19 +265,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
-- column_name: enrollment_mode
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: String
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: ''
-  description: null
-  python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: language
   verbose_name: null
   is_dttm: false
@@ -249,7 +278,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: country
   verbose_name: null
   is_dttm: false
@@ -261,7 +291,8 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 - column_name: gender
   verbose_name: null
   is_dttm: false
@@ -273,18 +304,7 @@ columns:
   expression: ''
   description: null
   python_date_format: null
-  extra: null
-- column_name: org
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: String
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: ''
-  description: null
-  python_date_format: null
-  extra: null
+  extra:
+    warning_markdown: null
 version: 1.0.0
 database_uuid: 21174b6c-4d40-4958-8161-d6c3cf5e77b6
